@@ -155,7 +155,10 @@ $(document).ready(function() {
             800: {
                 items: 3
             },
-            1000: {
+            1200: {
+                items: 4
+            },
+            1440: {
                 items: 6
             }
         }
