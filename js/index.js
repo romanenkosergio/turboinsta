@@ -35,18 +35,25 @@ $(document).ready(function() {
         $(this).attr('placeholder', $(this).data('placeholder'));
     });
     $(".faq__card").click(function() {
-        $(this).toggleClass("faq-hide")
-        $(this).find(".faq-text").slideToggle(400)
-        $(this).fadeIn(400, function() {
-            $(this).find(".faq__question-text").toggleClass('faq__question-before');
+            $(this).toggleClass("faq-hide")
+            $(this).find(".faq-text").slideToggle(400)
+            $(this).fadeIn(400, function() {
+                $(this).find(".faq__question-text").toggleClass('faq__question-before');
 
-        });
-    })
-    $(".our-blog__card").click(function() {
-        $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full')
+            });
+        })
+        // $(".our-blog__card_toggle").click(function() {
+        //     $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full', )
 
+    // });
+    $(".our-blog__card_toggle").on("click", function(e) {
+        e.preventDefault();
+        $(this).find(".our-blog__content-text").toggleClass("our-blog__content-text_full", 3000, "easeOutSine")
     });
-    $(".our-blog__more").click(function() {
+
+
+    $(".our-blog__more").on("click", function(e) {
+        e.preventDefault();
         $(this).toggleClass('our-blog__more-reverse', 4000);
         $(".our-blog__card-none").slideToggle("slow", function() {
             $(".our-blog__card-none").toggleClass('our-blog__card');
