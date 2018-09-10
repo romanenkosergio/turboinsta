@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="768px" viewBox="0 0 1920 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Фон</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4776E6" offset="0%"></stop>
+            <stop stop-color="#8E54E9" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy" transform="translate(0.000000, -35.000000)" fill="url(#linearGradient-1)">
+            <g id="Первый-экрна" transform="translate(-6.000000, 35.000000)">
+                <g id="Тело-первого-экрана">
+                    <path d="M1929,616.207059 L1932,616.207059 L1929,616.678955 L1929,617.110588 L1926.25596,617.110588 L967.002075,768 L5.75596473,617.110588 L5,617.110588 L5,616.991922 L0,616.207059 L5,616.207059 L5,566.81082 C5,554.965767 5,366.028827 5,0 L1929,0 L1929,616.207059 Z" id="Фон"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
