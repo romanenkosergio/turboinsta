@@ -194,8 +194,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <form action="" class="offer__form">
-                            <input type="tel" class="offer__form-input" placeholder="Введите Ваш номер телефона">
-                            <button class="offer__form-btn btn" data-ga="ga('send', 'event', 'consult', 'Click');">Перезвоните Мне</button>
+                            <input type="tel" class="offer__form-input" placeholder="Введите Ваш номер телефона" required="required">
+                            <button class="offer__form-btn btn" data-ga="ga('send', 'event', 'consult', 'Click');" type="submit">Перезвоните Мне</button>
                         </form>
                         <!-- /.step-one__offer-form -->
                     </div>
@@ -321,7 +321,7 @@
                             </div>
                             <!-- /.promo__card-list -->
                             <div class="row d-flex justify-content-end ">
-                                <a href="" class="promo__card-btn btn" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" class="promo__card-btn btn" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instapro', 'Click');">Узнать стоимость</a>
                             </div>
                             <div class="promo__card-top promo__card-special">
                                 <img src="img/promo/top.svg" alt="top">
@@ -471,7 +471,7 @@
                             </div>
                             <!-- /.row -->
                             <div class="row d-flex justify-content-end ">
-                                <a href="" class="promo__card-btn btn promo__card-btn_off" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" class="promo__card-btn btn promo__card-btn_off" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instastart', 'Click');">Узнать стоимость</a>
                             </div>
                         </div>
                         <!-- /.container-fluid -->
@@ -492,7 +492,7 @@
                                     <!-- /.promo__card-header -->
                                 </div>
                                 <!-- /.promo__card-text -->
-                                <a href="" class="promo__card-btn btn promo__card-btn_top promo__card-btn_top_right" pop="#pop-callback" pop-title="Узнать стоимость TARGET" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" class="promo__card-btn btn promo__card-btn_top promo__card-btn_top_right" pop="#pop-callback" pop-title="Узнать стоимость TARGET" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'target', 'Click');">Узнать стоимость</a>
                             </div>
                             <!-- /.row -->
                             <div class="row">
@@ -1486,9 +1486,9 @@
             <!-- /.row -->
             <div class="row">
                 <form action="">
-                    <input type="text" class="form-block__input" placeholder="Ваше Ваше имя">
-                    <input type="tel" class="form-block__input" placeholder="Номер телефона">
-                    <button href="" class="form-block__btn" pop='#privat-pop' onclick="ga('send', 'event', 'pay', 'Click');">Связаться</button>
+                    <input type="text" class="form-block__input" placeholder="Ваше Ваше имя" required="required">
+                    <input type="tel" class="form-block__input" placeholder="Номер телефона" required="required">
+                    <button type="submit" class="form-block__btn">Связаться</button>
                 </form>
             </div>
             <!-- /.row -->
@@ -1576,11 +1576,11 @@
             <form action="">
                 <label for="">
 					<p>Ваше имя</p>
-					<input type="text" name="name" placeholder="Анатолий">
+					<input type="text" name="name" placeholder="Анатолий" required="required">
 				</label>
                 <label for="">
 					<p>Номер телефона</p>
-					<input type="tel" name="phone" placeholder="+38 096 58 52 32">
+					<input type="tel" name="phone" placeholder="+38 096 58 52 32" required="required">
 					<p>
 						<small>Ваши данные не передаются третьим лицам.</small>
 					</p>
