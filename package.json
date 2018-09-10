@@ -17,7 +17,7 @@
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
     "normalize.css": "^8.0.0",
-    "npm": "^6.1.0"
+    "npm": "^6.4.1"
   },
   "devDependencies": {
     "browser-sync": "^2.24.4"
