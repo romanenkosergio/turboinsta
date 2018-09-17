@@ -83,9 +83,15 @@ h3.subtitle
   border-radius: $brs
   width: 545px
   height: 270px
-  border: 2px solid $white
   position: relative
   box-shadow: 10px 0 14px 1px rgba(0,0,0,0.50)
+  & iframe
+   max-width: 100%
+   max-height: 100%
+   width: 100%
+   height: 100%
+   border-radius: $brs
+   border: 1px solid
  &__arrow
   height: 100%
   display: flex
@@ -218,14 +224,17 @@ h3.subtitle
    max-width: 425px
    flex-wrap: wrap
    display: flex
+   & img
+    width: 90px
+    height: 90px
+    max-width: 100%
+    max-height: 100%
    &_position
     flex-direction: row-reverse
     justify-content: space-between
-   &_left
-    margin-left: 25px
    &_right
-    margin-right: 25px
     flex-direction: row-reverse
+    max-width: 100%
   &-text
    margin-left: 5px
    &_right
@@ -246,14 +255,17 @@ h3.subtitle
     top: 100%
   &-subtitle
    font-size: 1.6rem
-   font-weight: 300
+   font-weight: 400
    line-height: 22px
    margin-top: 10px
   &-list
    display: flex
    margin-top: 20px
+   min-height: 200px
   &-advantages
-   padding-left: 50px
+   padding: 0
+   &:nth-child(2)
+    padding-left: 50px
    & li
     font-size: 1.6rem
     font-weight: 300
@@ -372,7 +384,6 @@ h3.subtitle
    width: 550px
    height: 535px
    position: absolute
-  &__subtitle
   &__title
    margin-top: 30px
    font-weight: 800
@@ -663,6 +674,16 @@ h3.subtitle
     padding-bottom: 10px
 /* Наши Работы */
 .our-work
+ position: relative
+ &::before
+  content: " "
+  position: absolute
+  width: 70%
+  height: 1px
+  background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
+  opacity: 0.4
+  top: 100%
+  left: 15%
  &__title
   margin-top: 50px
   margin-bottom: 0
@@ -702,6 +723,7 @@ h3.subtitle
   left: 15%
  &__title
   margin: 0
+  margin-top: 30px
  &__subtitle
   font-size: 1.8rem
   color: #858585
@@ -713,8 +735,10 @@ h3.subtitle
   margin-top: 50px
   display: flex
   justify-content: center
+  flex-wrap:  wrap
+  height: 100%
  &__card
-  width: 24%
+  width: 48%
   height: 100%
   display: flex
   align-items: center
@@ -743,6 +767,8 @@ h3.subtitle
    color: #858585
    text-align: center
    margin-top: 20px
+   max-width: 80%
+   height: 195px
   &-btn
    background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
    width: 300px
