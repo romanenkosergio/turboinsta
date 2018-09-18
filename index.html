@@ -708,7 +708,7 @@
                         <!-- /.document-block__body -->
                     </div>
                     <!-- /.document-block -->
-                    <a href="" class="document__btn btn">Получить договор</a>
+                    <a href="" class="document__btn btn" pop="#pop-callback" pop-title="Получить договор на продвижение" pop-btn="Получить" class="step-four-button" link-ga="ga('send', 'event', 'dogovor', 'Click');">Получить договор</a>
                 </div>
                 <!-- /.document -->
             </div>
@@ -1007,8 +1007,8 @@
             <!-- /.row -->
             <div class="row">
                 <div class="our-team__cards">
-                    <div class="our-team__card">
-                        <img src="img/review/3.jpg" alt="" class="our-team__card-img">
+                    <div class="our-team__card" pop='#video-pop' pop-video="https://www.youtube-nocookie.com/embed/KY5R0NZl0wM">
+                        <div class="our-team__card-img our-team__card-img_1"></div>
                         <p class="our-team__card-name">Илья</p>
                         <!-- /.our-team__card-name -->
                         <p class="our-team__card-proffesion">Руководитель TurboInsta</p>
@@ -1020,8 +1020,8 @@
                         <a href="" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Илье" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
                     </div>
                     <!-- /.our-team__card -->
-                    <div class="our-team__card">
-                        <img src="img/review/3.jpg" alt="" class="our-team__card-img">
+                    <div class="our-team__card" pop='#video-pop' pop-video="https://www.youtube-nocookie.com/embed/gNnIP0JWFTg">
+                        <div class="our-team__card-img our-team__card-img_2"></div>
                         <p class="our-team__card-name">Яна</p>
                         <!-- /.our-team__card-name -->
                         <p class="our-team__card-proffesion">Менеджер по продажам</p>
@@ -1033,8 +1033,8 @@
                         <a href="" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Яне" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
                     </div>
                     <!-- /.our-team__card -->
-                    <div class="our-team__card">
-                        <img src="img/review/3.jpg" alt="" class="our-team__card-img">
+                    <div class="our-team__card" pop='#video-pop' pop-video="https://www.youtube-nocookie.com/embed/6Jr-cwCf878">
+                        <div class="our-team__card-img our-team__card-img_3"></div>
                         <p class="our-team__card-name">Сергей</p>
                         <!-- /.our-team__card-name -->
                         <p class="our-team__card-proffesion">WEB-Разработчик</p>
@@ -1045,8 +1045,8 @@
                         <a href="" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Сергею" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
                     </div>
                     <!-- /.our-team__card -->
-                    <div class="our-team__card">
-                        <img src="img/review/3.jpg" alt="" class="our-team__card-img">
+                    <div class="our-team__card" pop='#video-pop' pop-video="https://www.youtube-nocookie.com/embed/S1tEVmS9-VE">
+                        <div class="our-team__card-img our-team__card-img_4"></div>
                         <p class="our-team__card-name">Анастасия</p>
                         <!-- /.our-team__card-name -->
                         <p class="our-team__card-proffesion">Таргетолог и специалист по продвижению Instagram-аккаунтов
@@ -1600,7 +1600,7 @@
 			</label>
                 <label for="" class="textarea">
                 <p>Ваше сообщение</p>
-                <textarea name="msg" id="msg" cols="10" rows="7" placeholder="Ваше сообщение..."></textarea>
+                <textarea name="msg" id="msg" cols="10" rows="4" placeholder="Ваше сообщение..."></textarea>
 
                 </label>
                 <p>
@@ -1660,19 +1660,6 @@
         </div>
         <div class="pop-handler-close" pop=''></div>
     </div>
-    <form method="POST" accept-charset="utf-8" action="https://www.liqpay.ua/api/3/checkout">
-        <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJwdWJsaWNfa2V5IjoiaTE5NDk0Mzc3NzMiLCJhbW91bnQiOiI0NTAwIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6Ikluc3RhIFR1cmJvIiwidHlwZSI6ImJ1eSIsInNhbmRib3giOiIxIiwicmVzdWx0X3VybCI6Imh0dHBzOi8vd3d3LmxpcXBheS51YS9ydS9jaGVja291dC9jYXJkL2kxOTQ5NDM3NzczIiwibGV0dGVyX29mX2NyZWRpdCI6IjEiLCJsYW5ndWFnZSI6InJ1IiwibGV0dGVyX29mX2NyZWRpdF9kYXRlIjoiMjAxOC0wOS0xNyAwMDowMDowMCJ9"
-        />
-        <input type="hidden" name="signature" value="xNPm4JTuQut6BVL8GW9xaSiZ82s=" />
-        <button style="border: none !important; display:inline-block !important;text-align: center !important;padding: 7px 20px !important;
-				color: #fff !important; font-size:16px !important; font-weight: 600 !important; font-family:OpenSans, sans-serif; cursor: pointer !important; border-radius: 2px !important;
-				background: rgb(142,84,233) !important;" onmouseover="this.style.opacity='0.5';" onmouseout="this.style.opacity='1';">
-				<img src="https://static.liqpay.ua/buttons/logo-small.png" name="btn_text"
-					style="margin-right: 7px !important; vertical-align: middle !important;"/>
-				<span style="vertical-align:middle !important; ">Оплатить</span>
-			</button>
-    </form>
-
     <!-- Script -->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
