@@ -42,7 +42,7 @@ $(document).ready(function() {
 
         });
     })
-    $(".our-blog__card").click(function() {
+    $(".our-blog__card_toggle").click(function() {
         $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full')
 
     });
