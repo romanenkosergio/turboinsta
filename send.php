@@ -2,11 +2,12 @@
   $query = $_POST["query"];
   $theme = '';
   $body = '';
-
+	$phone = $query['phone'];
+	$msg = $query['msg'];
 if ($query) {
     $phone = $query['phone'];
 
-	$emailTo = "turboinsta.com.ua@gmail.com, turboinstanotice@etlgr.com, turboinsta@mail.ua, info@turboinsta.com.ua";
+	$emailTo = "turboinsta.com.ua@gmail.com, turboinsta@mail.ua, info@turboinsta.com.ua";
 	if($query['theme']){
 		$theme = $query['theme'];
 	}
@@ -22,13 +23,13 @@ if ($query) {
   }
 
   $body .= "\nНомер телефона: " . $query['phone'];
-
+	$body .= "\nСообщение: " . $query['msg'];
   mail($emailTo, $subject, $body, $headers);
 
   // Отправка заявки в телеграм
-	$telegram_text = "*TurboINSTA: Новая заявка*\r\n\n".$query['name']."\r\n".$query['phone'];
+	$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $query['name']."\r\n"."*Номер телефона*: " .$query['phone']."\r\n"."*Сообщение*: " .$query['msg'];
 	include "telegram.php";
-	
+
 	$timetable = array(
         1 => array('08:30', '19:00'),
         2 => array('08:30', '19:00'),

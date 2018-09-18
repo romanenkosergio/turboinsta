@@ -58,6 +58,14 @@ $(document).ready(function() {
         $(this).hide();
         $(".about-us-review-hidden").removeClass("about-us-review-hidden")
     })
+    $(".btn").on("click", function(event) {
+        event.preventDefault();
+        $(".pop-content .textarea").css({ "display": "none" })
+    });
+    $(".our-team__card-btn").on("click", function(event) {
+        event.preventDefault();
+        $(".pop-content .textarea").css({ "display": "block" })
+    });
     $('input[type="tel"]').mask("+38 (999) 999-99-99")
     $("form").submit(function(event) {
         event.preventDefault();
@@ -70,14 +78,19 @@ $(document).ready(function() {
                 res = false
             }
         })
+
         if (res) {
+
             var query = {
                 name: $(this).parent().find("input[name=name]").val(),
                 phone: $(this).parent().find("input[name=phone]").val(),
-                theme: $('#pop-callback h2').text()
+                msg: $(this).parent().find("textarea[name=msg]").val(),
+                theme: $("#pop-callback h2").text()
             }
+            console.log(query);
             $(this).parent().find("input[name=name]").val('')
             $(this).parent().find("input[name=phone]").val('')
+            $(this).parent().find("textarea[name=msg]").val('')
             $.post("send.php", { query: query }, function(data) {
                 console.log(data);
 
@@ -90,7 +103,7 @@ $(document).ready(function() {
 
             });
         }
-    })
+    });
     $("body").on('click', "*[pop]", function() {
         $(".pop").removeClass("active")
         $("html").removeClass("off-scroll")
@@ -115,7 +128,7 @@ $(document).ready(function() {
             }
         }
         return false
-    })
+    });
     $('.slide-one').owlCarousel({
         loop: true,
         margin: 20,
@@ -135,7 +148,7 @@ $(document).ready(function() {
                 items: 3
             }
         }
-    })
+    });
     $('.slide-two').owlCarousel({
         loop: true,
         margin: 20,
