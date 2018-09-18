@@ -195,8 +195,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <form action="" class="offer__form">
-                            <input type="tel" class="offer__form-input" placeholder="Введите Ваш номер телефона">
-                            <button class="offer__form-btn btn" data-ga="ga('send', 'event', 'consult', 'Click');">Перезвоните Мне</button>
+                            <input type="tel" name="phone" class="offer__form-input" placeholder="Введите Ваш номер телефона">
+                            <button class="offer__form-btn btn" data-ga="ga('send', 'event', 'consult', 'Click');" type="submit">Перезвоните Мне</button>
                         </form>
                         <!-- /.step-one__offer-form -->
                     </div>
@@ -780,21 +780,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="review d-flex">
                     <div class="owl-carousel slide-one">
-                        <a class="review__block" href="javascript:void(0)" pop='#video-pop' pop-video="https://www.youtube.com/embed/8b7G8ZmQJ9E">
-                            <div class="review__block-img">
-                                <img src="img/review/1.jpg" alt="Turboinsta">
-                            </div>
-                            <div class="review__block-content">
-                                <p class="review__block-content-title">Turboinsta</p>
-                                <!-- /.review__block-content-title -->
-                                <p class="review__block-content-text">Инстаграмм на сегодняшний день является самой быстрорастущей и динамично развивающейся соц. сетью...
-                                </p>
-                                <!-- /.review__block-content-text -->
-                            </div>
-                            <div class="review__block-author">
-                                <p>Илья Могильдя - Директор Turboinsta</p>
-                            </div>
-                        </a>
+
                         <a class="review__block" href="javascript:void(0)" pop='#video-pop' pop-video="https://www.youtube.com/embed/rlxr0CJjtNQ">
                             <div class="review__block-img">
                                 <img src="img/review/2.jpg" alt="Turboinsta">
@@ -872,6 +858,21 @@
                             </div>
                             <div class="review__block-author">
                                 <p>Виктория Васьковская - Belly_dance</p>
+                            </div>
+                        </a>
+                        <a class="review__block" href="javascript:void(0)" pop='#video-pop' pop-video="https://www.youtube.com/embed/8b7G8ZmQJ9E">
+                            <div class="review__block-img">
+                                <img src="img/review/1.jpg" alt="Turboinsta">
+                            </div>
+                            <div class="review__block-content">
+                                <p class="review__block-content-title">Turboinsta</p>
+                                <!-- /.review__block-content-title -->
+                                <p class="review__block-content-text">Инстаграмм на сегодняшний день является самой быстрорастущей и динамично развивающейся соц. сетью...
+                                </p>
+                                <!-- /.review__block-content-text -->
+                            </div>
+                            <div class="review__block-author">
+                                <p>Илья Могильдя - Директор Turboinsta</p>
                             </div>
                         </a>
                     </div>
@@ -1501,9 +1502,9 @@
             <!-- /.row -->
             <div class="row">
                 <form action="">
-                    <input type="text" class="form-block__input" placeholder="Ваше Ваше имя">
-                    <input type="tel" class="form-block__input" placeholder="Номер телефона">
-                    <button href="" class="form-block__btn" pop='#privat-pop' onclick="ga('send', 'event', 'pay', 'Click');">Связаться</button>
+                    <input type="text" name="name" class="form-block__input" placeholder="Ваше Ваше имя">
+                    <input type="tel" name="phone" class="form-block__input" placeholder="Номер телефона">
+                    <button href="" class="form-block__btn" type="submit">Связаться</button>
                 </form>
             </div>
             <!-- /.row -->
