@@ -44,6 +44,8 @@ $(document).ready(function() {
     })
     $(".our-blog__card").click(function() {
         $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full')
+        $(this).find(".our-blog__content-img").toggleClass('our-blog__content-img-reverse')
+
 
     });
     $(".our-blog__more").click(function() {
@@ -52,8 +54,12 @@ $(document).ready(function() {
             $(".our-blog__card-none").toggleClass('our-blog__card');
         })
     })
-
-
+    $(".btn").click(function() {
+        $(".textarea").css({ "display": "none" })
+    });
+    $(".our-team__card-btn").click(function() {
+        $(".textarea").css({ "display": "block" })
+    });
     $(".about-us-button-more").click(function() {
         $(this).hide();
         $(".about-us-review-hidden").removeClass("about-us-review-hidden")
@@ -74,10 +80,13 @@ $(document).ready(function() {
             var query = {
                 name: $(this).parent().find("input[name=name]").val(),
                 phone: $(this).parent().find("input[name=phone]").val(),
+                msg: $(this).parent().find("textarea[name=msg]").val(),
                 theme: $('#pop-callback h2').text()
             }
+            console.log(query);
             $(this).parent().find("input[name=name]").val('')
             $(this).parent().find("input[name=phone]").val('')
+            $(this).parent().find("textarea[name=msg]").val('')
             $.post("send.php", { query: query }, function(data) {
                 console.log(data);
 
