@@ -20,6 +20,11 @@
     "npm": "^6.4.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.24.4"
+    "browser-sync": "^2.24.4",
+    "gulp-cache": "^1.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-js-minify": "0.0.3",
+    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-pngquant": "^6.0.0"
   }
 }
