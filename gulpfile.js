@@ -9,7 +9,7 @@ imagemin = require('gulp-imagemin');
 imageminJpegRecompress = require('imagemin-jpeg-recompress');
 pngquant = require('imagemin-pngquant');
 cache = require('gulp-cache');
-minifyjs = require('gulp-js-minify');
+minify = require('gulp-minify');
 
 gulp.task('sass', function() {
     return gulp.src('sass/*.sass')
@@ -21,12 +21,10 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({ stream: true }))
 });
-gulp.task('minify-js', function() {
-    gulp.src('js/**/*')
-        .pipe(minifyjs())
-        .pipe(rename({ suffix: '.min' }))
+gulp.task('compress', function() {
+    gulp.src('js/index.js')
+        .pipe(minify())
         .pipe(gulp.dest('js'))
-        .pipe(browserSync.reload({ stream: true }))
 });
 // Clearing the cache
 gulp.task('clear', function(done) {
@@ -40,6 +38,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default', ['sass', 'minify-js', 'clear', 'browser-sync'], function() {
+gulp.task('default', ['sass', 'compress', 'clear', 'browser-sync'], function() {
     gulp.watch("sass/*.sass", ['sass']);
+    gulp.watch("js/*.js", ['compress']);
 });

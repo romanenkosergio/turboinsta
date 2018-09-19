@@ -1,1 +1,197 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(2o).1Q(7(){$(\'h,r\').B(7(){$(4).m(\'u\',$(4).9(\'u\'))$(4).9(\'u\',\'\')});$(\'a[S*="#"]\').A(\'[S="#"]\').A(\'[S="#0"]\').i(7(g){d(17.1g.19(/^\\//,\'\')==4.1g.19(/^\\//,\'\')&&17.11==4.11){o c=$(4.12);c=c.1D?c:$(\'[e=\'+4.12.23(1)+\']\');d(c.1D){g.z();$(\'w, 1s\').2m({2l:c.2k().2j},E,7(){o $c=$(c);$c.B();d($c.2i(":B")){1b v}2h{$c.9(\'2g\',\'-1\');$c.B()}})}}});$(\'h,r\').2d(7(){$(4).9(\'u\',$(4).m(\'u\'))});$(".2b").i(7(){$(4).t("1z-1r")$(4).b(".1z-q").1u(1y)$(4).29(1y,7(){$(4).b(".1x-q").t(\'1x-1d\')})})$(".f-26").i(7(){$(4).b(".f-1w-q").t(\'f-1w-24\')});$(".f-1v").i(7(){$(4).t(\'f-1v-22\',21);$(".f-X-U").1u("1Y",7(){$(".f-X-U").t(\'f-X\')})})$(".W-V-Q-1V").i(7(){$(4).1r();$(".W-V-1o-1n").F("W-V-1o-1n")})$(".K").N("i",7(g){g.z();$(".8-1k .r").T({"J":"U"})});$(".f-1N-K").N("i",7(g){g.z();$(".8-1k .r").T({"J":"1A"})});$(\'h[1f="1L"]\').1K("+1J (1j) 1j-1i-1i")$("1G").1e(7(g){g.z();I=n;$(4).b(".A-Y").2n()o 1t=$(4).b("[1f=\'1e\']").9(\'m-R\')$(4).b("h").2c(7(){d($(4).l()==""){$(4).1d("<p 28=\'A-Y\'>Заполните поле</p>")I=v}})d(I){o C={e:$(4).s().b("h[e=e]").l(),P:$(4).s().b("h[e=P]").l(),O:$(4).s().b("r[e=O]").l(),1X:$("#8-1W 13").q()}10.Z(C);$(4).s().b("h[e=e]").l(\'\')$(4).s().b("h[e=P]").l(\'\')$(4).s().b("r[e=O]").l(\'\')$.1I("1H.1F",{C:C},7(m){10.Z(m);$(".8").F("H")$(".8#8-2a").x("H")$("w").x("M-L")27(1t)})}});$("1s").N(\'i\',"*[8]",7(){$(".8").F("H")$("w").F("M-L")$(".8 1a").9("1q","")o k=$(4).9("8")d(k&&k!=""){$(".8"+k).x("H")$("w").x("M-L")G=$(4).9("8-1E")D=$(4).9("8-K")y=$(4).9("8-2e")o 18=$(4).9("1U-R")$(".8"+k+" Q").9(\'m-R\',18)d(G&&G!=""){$(".8"+k+" 13").q(G)}d(D&&D!=""){$(".8"+k+" Q").q(D)}d(y&&y!=""){$(".8"+k+" 1a")[0].1q=y+"?1P=1"}}1b v});$(\'.1h-1M\').1l({1m:n,1p:20,14:n,15:v,16:{0:{j:1},2f:{j:2},1c:{j:2},E:{j:3}}});$(\'.1h-1Z\').1l({1m:n,1p:20,14:n,15:v,16:{0:{j:2},1c:{j:3},E:{j:5},1S:{j:6}}})$(7(){d(!$.1B(\'1C\')){25(7(){$(\'#1R\').T({\'J\':\'1A\'})},E)}$.1B(\'1C\',n,{1T:1,1O:\'/\'})})})',62,149,'||||this|||function|pop|attr||find|target|if|name|our|event|input|click|items|next_pop|val|data|true|var||text|textarea|parent|toggleClass|placeholder|false|html|addClass|new_video|preventDefault|not|focus|query|new_btn|1000|removeClass|new_title|active|res|display|btn|scroll|off|on|msg|phone|button|ga|href|css|none|us|about|blog__card|valid|log|console|hostname|hash|h2|dots|nav|responsive|location|new_attr|replace|iframe|return|800|before|submit|type|pathname|slide|99|999|content|owlCarousel|loop|hidden|review|margin|src|hide|body|google_target|slideToggle|blog__more|blog__content|faq__question|400|faq|block|cookie|hideModal|length|title|php|form|send|post|38|mask|tel|one|team__card|path|autoplay|ready|newyear_overlay|1500|expires|link|more|callback|theme|slow|two||4000|reverse|slice|text_full|setTimeout|blog__card_toggle|eval|class|fadeIn|thanks|faq__card|each|blur|video|650|tabindex|else|is|top|offset|scrollTop|animate|remove|document'.split('|'),0,{}))
+$(document).ready(function() {
+
+    $('input,textarea').focus(function() {
+        $(this).data('placeholder', $(this).attr('placeholder'))
+        $(this).attr('placeholder', '');
+    });
+    $('a[href*="#"]')
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                location.hostname == this.hostname
+            ) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000, function() {
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) {
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1');
+                            $target.focus();
+                        };
+                    });
+                }
+            }
+        });
+    $('input,textarea').blur(function() {
+        $(this).attr('placeholder', $(this).data('placeholder'));
+    });
+    $(".faq__card").click(function() {
+        $(this).toggleClass("faq-hide")
+        $(this).find(".faq-text").slideToggle(400)
+        $(this).fadeIn(400, function() {
+            $(this).find(".faq__question-text").toggleClass('faq__question-before');
+
+        });
+    })
+    $(".our-blog__card").click(function() {
+        $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full')
+
+    });
+    $(".our-blog__more").click(function() {
+        $(this).toggleClass('our-blog__more-reverse', 4000);
+        $(".our-blog__card-none").slideToggle("slow", function() {
+            $(".our-blog__card-none").toggleClass('our-blog__card');
+        })
+    })
+
+
+    $(".about-us-button-more").click(function() {
+        $(this).hide();
+        $(".about-us-review-hidden").removeClass("about-us-review-hidden")
+    })
+    $('input[type="tel"]').mask("+38 (999) 999-99-99")
+    $("form").submit(function(event) {
+        event.preventDefault();
+        res = true;
+        $(this).find(".not-valid").remove()
+        var google_target = $(this).find("[type='submit']").attr('data-ga')
+        $(this).find("input").each(function() {
+            if ($(this).val() == "") {
+                $(this).before("<p class='not-valid'>Заполните поле</p>")
+                res = false
+            }
+        })
+        if (res) {
+            var query = {
+                name: $(this).parent().find("input[name=name]").val(),
+                phone: $(this).parent().find("input[name=phone]").val(),
+                theme: $('#pop-callback h2').text()
+            }
+            $(this).parent().find("input[name=name]").val('')
+            $(this).parent().find("input[name=phone]").val('')
+            $.post("send.php", { query: query }, function(data) {
+                console.log(data);
+
+
+                $(".pop").removeClass("active")
+                $(".pop#pop-thanks").addClass("active")
+                $("html").addClass("off-scroll")
+
+                eval(google_target)
+
+            });
+        }
+    })
+    $("body").on('click', "*[pop]", function() {
+        $(".pop").removeClass("active")
+        $("html").removeClass("off-scroll")
+        $(".pop iframe").attr("src", "")
+        var next_pop = $(this).attr("pop")
+        if (next_pop && next_pop != "") {
+            $(".pop" + next_pop).addClass("active")
+            $("html").addClass("off-scroll")
+            new_title = $(this).attr("pop-title")
+            new_btn = $(this).attr("pop-btn")
+            new_video = $(this).attr("pop-video")
+            var new_attr = $(this).attr("link-ga")
+            $(".pop" + next_pop + " button").attr('data-ga', new_attr)
+            if (new_title && new_title != "") {
+                $(".pop" + next_pop + " h2").text(new_title)
+            }
+            if (new_btn && new_btn != "") {
+                $(".pop" + next_pop + " button").text(new_btn)
+            }
+            if (new_video && new_video != "") {
+                $(".pop" + next_pop + " iframe")[0].src = new_video + "?autoplay=1";
+            }
+        }
+        return false
+    })
+    $('.slide-one').owlCarousel({
+        loop: true,
+        margin: 20,
+        dots: true,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            650: {
+                items: 2
+            },
+            800: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+    $('.slide-two').owlCarousel({
+        loop: true,
+        margin: 20,
+        dots: true,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            645: {
+                items: 2
+            },
+            800: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            },
+            1500: {
+                items: 6
+            }
+        }
+    })
+
+    $(function() {
+
+        if (!$.cookie('hideModal')) {
+
+            setTimeout(function() {
+                $('#newyear_overlay').css({ 'display': 'block' });
+            }, 1000);
+
+
+
+        }
+        $.cookie('hideModal', true, {
+
+            expires: 1,
+            path: '/'
+        });
+    });
+    "use strict";
+
+    $(".youtube").each(function() {
+        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+
+        $(this).append($('<div/>', { 'class': 'play' }));
+
+        $(document).delegate('#' + this.id, 'click', function() {
+            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+            if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
+
+            var iframe = $('<iframe/>', { 'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+
+            $(this).replaceWith(iframe);
+        });
+    });
+
+})
