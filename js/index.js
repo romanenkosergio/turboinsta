@@ -76,6 +76,7 @@ $(document).ready(function() {
                 res = false
             }
         })
+
         if (res) {
             var query = {
                 name: $(this).parent().find("input[name=name]").val(),

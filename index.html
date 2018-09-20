@@ -14,11 +14,13 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/main.min.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <!-- Owl Carousel -->
     <link href="css/owl.carousel.min.css" rel="stylesheet">
     <!-- Fancybox -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
@@ -140,23 +142,23 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                         <nav class="d-flex align-items-center justify-content-end">
                             <ul class="d-flex align-items-center header__menu">
                                 <li>
-                                    <a href="#step_two" class="header__menu-link d-none d-md-block">Стоимость</a>
+                                    <a href="#step_two" data-type="white" class="header__menu-link d-none d-md-block">Стоимость</a>
                                 </li>
                                 <!-- /.header__menu-link -->
                                 <li>
-                                    <a href="#about-us" class="header__menu-link d-none d-md-block">Отзывы</a>
+                                    <a href="#about-us" data-type="white" class="header__menu-link d-none d-md-block">Отзывы</a>
                                 </li>
                                 <!-- /.header__menu-link -->
                                 <li>
-                                    <a href="#our-blog" class="header__menu-link d-none d-md-block">Наш блог</a>
+                                    <a href="#our-blog" data-type="white" class="header__menu-link d-none d-md-block">Наш блог</a>
                                 </li>
                                 <!-- /.header__menu-link -->
                                 <li>
-                                    <a href="#faq" class="header__menu-link d-none d-md-block">FAQ</a>
+                                    <a href="#faq" data-type="white" class="header__menu-link d-none d-md-block">FAQ</a>
                                 </li>
                                 <!-- /.header__menu-link -->
                                 <li>
-                                    <a href="https://goo.gl/forms/1rVHNq5f8f6h7bTz2" class="header__menu-link header__menu-button btn" target="_blank" onclick="ga('send', 'event', 'brief', 'Click');">Заполнить Бриф</a>
+                                    <a href="https://goo.gl/forms/1rVHNq5f8f6h7bTz2" class="header__menu-link header__menu-button btn" data-type="white" target="_blank" onclick="ga('send', 'event', 'brief', 'Click');">Заполнить Бриф</a>
                                 </li>
                                 <!-- /.header__menu-link -->
                             </ul>
@@ -183,7 +185,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                 <div class="step-one__advantages">
                     <div class="row d-flex justify-content-lg-between justify-content-xl-around">
                         <div class="col-xl-auto col-lg-auto col-md-auto order-md-1">
-                            <div class="step-one__video youtube" id="knbmNoeaSA0" data-params="rel=0&amp;showinfo=0" style="max-width: 100%; max-height: 100%;">
+                            <div class="step-one__video youtube  wow slideInLeft" data-wow-duration="0.1s" id="knbmNoeaSA0" data-params="rel=0&amp;showinfo=0" style="max-width: 100%; max-height: 100%;">
                             </div>
                             <!-- /.step-one__video -->
                         </div>
@@ -232,7 +234,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                         </div>
                         <!-- /.col-lg-4 -->
                         <div class="col-xl-auto col-lg-auto col-md-auto order-md-2 order-lg-3 order-2">
-                            <ul class="step-one__advantages-list">
+                            <ul class="step-one__advantages-list wow slideInRight" data-wow-duration="0.1s">
                                 <li class="step-one__advantages-text">
                                     <img src="img/oval.svg" alt="oval">100% живые подписчики</li>
                                 <li class="step-one__advantages-text">
@@ -278,7 +280,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                     <div class="col-lg-12">
                         <form class="offer__form">
                             <input type="tel" name="phone" class="offer__form-input" placeholder="Введите Ваш номер телефона">
-                            <button type="submit" class="offer__form-btn" pop-title="Получить консультацию" data-ga="ga('send', 'event', 'consult', 'Click');">Получить консультацию</button>
+                            <button type="submit" class="offer__form-btn" data-type="white" pop-title="Получить консультацию" data-ga="ga('send', 'event', 'consult', 'Click');">Получить консультацию</button>
                         </form>
                         <!-- /.step-one__offer-form -->
                     </div>
@@ -348,7 +350,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
             <!-- /.row -->
             <div class="row">
                 <div class="promo">
-                    <div class="promo__card promo__card_left">
+                    <div class="promo__card promo__card_left wow slideInLeft">
                         <div class="container-fluid">
 
                             <div class="row">
@@ -400,7 +402,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                             </div>
                             <!-- /.promo__card-list -->
                             <div class="row d-flex justify-content-end ">
-                                <a href="" class="promo__card-btn btn" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" class="promo__card-btn btn" pop="#pop-callback" data-type="color" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
                             </div>
                             <div class="promo__card-top promo__card-special">
                                 <img src="img/promo/top.svg" alt="top">
@@ -412,7 +414,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                         <!-- /.container-fluid -->
                     </div>
                     <!-- /.promo__card -->
-                    <div class="promo__card promo__card_right">
+                    <div class="promo__card promo__card_right wow slideInRight">
                         <div class="container-fluid">
                             <div class="row promo__card-header_position">
                                 <div class="promo__card-header promo__card-header_right">
@@ -469,7 +471,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                             </div>
                             <!-- /.row -->
                             <div class="row promo__card-btn_position">
-                                <a href="" class="promo__card-btn btn" pop="#pop-callback" pop-title="Узнать стоимость INSTA Turbo" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" class="promo__card-btn btn" data-type="color" pop="#pop-callback" pop-title="Узнать стоимость INSTA Turbo" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
 
 
                             </div>
@@ -488,7 +490,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                         <!-- /.container-fluid -->
                     </div>
                     <!-- /.promo__card -->
-                    <div class="promo__card promo__card_left">
+                    <div class="promo__card promo__card_left wow slideInLeft">
                         <div class="container-fluid">
                             <div class="row justify-content-between">
                                 <div class="promo__card-header promo__card-header_left">
@@ -504,7 +506,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                                 </div>
                                 <!-- /.promo__card-header -->
 
-                                <a href="" class="promo__card-btn btn promo__card-btn_top promo__card-btn_top_left" pop="#pop-callback" pop-title="Узнать стоимость INSTA Start" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" data-type="color" class="promo__card-btn btn promo__card-btn_top promo__card-btn_top_left" pop="#pop-callback" pop-title="Узнать стоимость INSTA Start" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
 
                             </div>
                             <!-- /.row -->
@@ -545,13 +547,13 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                             </div>
                             <!-- /.row -->
                             <div class="row d-flex justify-content-end ">
-                                <a href="" class="promo__card-btn btn promo__card-btn_off" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" data-type="color" class="promo__card-btn btn promo__card-btn_off" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
                             </div>
                         </div>
                         <!-- /.container-fluid -->
                     </div>
                     <!-- /.promo__card -->
-                    <div class="promo__card promo__card_right ">
+                    <div class="promo__card promo__card_right wow slideInRight">
                         <div class="container-fluid">
                             <div class="row promo__card-header_position">
                                 <div class="promo__card-header promo__card-header_right">
@@ -566,7 +568,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                                     <!-- /.promo__card-header -->
                                 </div>
                                 <!-- /.promo__card-text -->
-                                <a href="" class="promo__card-btn btn promo__card-btn_top promo__card-btn_top_right" pop="#pop-callback" pop-title="Узнать стоимость TARGET" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" data-type="color" class="promo__card-btn btn promo__card-btn_top promo__card-btn_top_right" pop="#pop-callback" pop-title="Узнать стоимость TARGET" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
                             </div>
                             <!-- /.row -->
                             <div class="row">
@@ -608,7 +610,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                             </div>
                             <!-- /.row -->
                             <div class="row d-flex justify-content-end ">
-                                <a href="" class="promo__card-btn btn promo__card-btn_off" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
+                                <a href="" data-type="color" class="promo__card-btn btn promo__card-btn_off" pop="#pop-callback" pop-title="Узнать стоимость INSTA Pro" pop-btn="Узнать стоимость" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Узнать стоимость</a>
                             </div>
                             <!-- /.row -->
                         </div>
@@ -654,7 +656,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                 </div>
                 <!-- /.row -->
                 <div class="row d-flex justify-content-center">
-                    <a href="" class="business__btn btn" pop="#pop-callback" pop-title="Создание бизнеса с нуля" pop-btn="Узнать подробнее" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Подробнее</a>
+                    <a href="" data-type="white" class="business__btn btn" pop="#pop-callback" pop-title="Создание бизнеса с нуля" pop-btn="Узнать подробнее" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Подробнее</a>
                 </div>
                 <!-- /.row -->
             </div>
@@ -694,7 +696,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
             <!-- /.row -->
             <div class="row ">
                 <div class="col-xl-12 d-flex justify-content-center">
-                    <a href="https://goo.gl/forms/1rVHNq5f8f6h7bTz2" target="_blank" class="step-three__btn btn">
+                    <a href="https://goo.gl/forms/1rVHNq5f8f6h7bTz2" data-type="color" target="_blank" class="step-three__btn btn">
 						Заполнить БРИФ
 					</a>
                 </div>
@@ -767,7 +769,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                         <!-- /.document-block__body -->
                     </div>
                     <!-- /.document-block -->
-                    <a href="" class="document__btn btn" pop="#pop-callback" pop-title="Получить договор на продвижение" pop-btn="Получить" class="step-four-button" link-ga="ga('send', 'event', 'dogovor', 'Click');">Получить договор</a>
+                    <a href="" data-type="white" class="document__btn btn" pop="#pop-callback" pop-title="Получить договор на продвижение" pop-btn="Получить" class="step-four-button" link-ga="ga('send', 'event', 'dogovor', 'Click');">Получить договор</a>
                 </div>
                 <!-- /.document -->
             </div>
@@ -791,7 +793,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                 </div>
                 <!-- /.col-xl-12 -->
                 <div class="col-xl-12 d-flex justify-content-center">
-                    <a href="" class="finish__btn btn pay_btn" pop="#privat-pop" pop-title="Оплатить услуги продвижения" pop-btn="Оплатить" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Оплатить</a>
+                    <a href="" data-type="color" class="finish__btn btn pay_btn" pop="#privat-pop" pop-title="Оплатить услуги продвижения" pop-btn="Оплатить" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Оплатить</a>
                     <!-- /.finish__btn btn -->
                 </div>
                 <div class="col-xl-12 d-flex justify-content-center">
@@ -1078,7 +1080,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                             не доволен при работе с нами, пожалуйста напишите мне личное сообщение, нажав на кнопку ниже! Я искренне буду Вам за это благодарен и сделаю все возможное, чтоб исправить любую возникшую проблему!
                         </p>
                         <!-- /.our-team__card-text -->
-                        <a href="" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Илье" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
+                        <a href="" data-type="color" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Илье" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
                     </div>
                     <!-- /.our-team__card -->
                     <div class="our-team__card" pop='#video-pop' pop-video="https://www.youtube-nocookie.com/embed/gNnIP0JWFTg">
@@ -1091,7 +1093,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                             понимали, какой результат сможете получить от работы с нами! Если у Вас будут ко мне какие-либо дополнительные вопросы, нажимайте на кнопку ниже и пишите мне, буду рада Вам помочь!
                         </p>
                         <!-- /.our-team__card-text -->
-                        <a href="" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Яне" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
+                        <a href="" data-type="color" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Яне" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
                     </div>
                     <!-- /.our-team__card -->
                     <div class="our-team__card" pop='#video-pop' pop-video="https://www.youtube-nocookie.com/embed/6Jr-cwCf878">
@@ -1103,7 +1105,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                         <p class="our-team__card-text">Моя задача создать качественный, продающий сайт для наших клиентов! Этого позволяет добиться опыт и знания, полученные как благодаря постоянному обучению, так и применению всех своих знаний на практике. За более чем 5 лет в верстке
                             сайтов были созданы большое количество Landing Page, как самописных с нуля, так и сделаны на всевозможных генераторах. Я с радостью отвечу на все Ваши вопросы, а главное - покажу результат, от которого Вы будете в восторге!</p>
                         <!-- /.our-team__card-text -->
-                        <a href="" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Сергею" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
+                        <a href="" data-type="color" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Сергею" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
                     </div>
                     <!-- /.our-team__card -->
                     <div class="our-team__card" pop='#video-pop' pop-video="https://www.youtube-nocookie.com/embed/S1tEVmS9-VE">
@@ -1117,7 +1119,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                             все настраивают и запускают, в итоге остаются не довольны, потратив на это не мало денег и не получив должного результата. Почему так происходит? Все из-за того, что нет правильной настройки через Бизнес Менеджер в Facebook,
                             нет тестов и оптимизаций рекламных компаний, а главное нет опыта! Поэтому - пишите или звоните нам, а мы сделаем свою работу!</p>
                         <!-- /.our-team__card-text -->
-                        <a href="" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Анастасии" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
+                        <a href="" data-type="color" class="our-team__card-btn btn" pop="#pop-callback" pop-title="Задать вопрос Анастасии" pop-btn="Задать вопрос" link-ga="ga('send', 'event', 'lead_done', 'Click')" onclick="ga('send', 'event', 'instaturbo', 'Click');">Задать вопрос</a>
                     </div>
                     <!-- /.our-team__card -->
                 </div>
@@ -1575,7 +1577,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                 <form action="">
                     <input type="text" name="name" class="form-block__input" placeholder="Ваше Ваше имя">
                     <input type="tel" name="phone" class="form-block__input" placeholder="Номер телефона">
-                    <button href="" class="form-block__btn" type="submit" pop-title="Получить консультацию">Связаться</button>
+                    <button href="" data-type="white" class="form-block__btn " type="submit" pop-title="Получить консультацию">Связаться</button>
                 </form>
             </div>
             <!-- /.row -->
@@ -1686,7 +1688,7 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
                 <p>
                     <small>Ваши данные не передаются третьим лицам.</small>
                 </p>
-                <button type="submit">Отправить</button>
+                <button type="submit" data-type="color" class="">Отправить</button>
             </form>
         </div>
         <div class="pop-handler-close" pop=''></div>
@@ -1740,6 +1742,10 @@ src="https://www.facebook.com/tr?id=1561750800588451&ev=PageView
     <script src="js/library/owl.carousel.min.js"></script>
     <!-- Masked -->
     <script src="js/library/jquery.maskedinput.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <!-- Index JS -->
     <script src="js/index-min.js"></script>
 </body>

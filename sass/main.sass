@@ -12,12 +12,19 @@ body
 a
  margin: 0
  padding: 0
+ position: relative
+ z-index: 1
+ overflow: hidden
+ transition: .6s ease all
 a,a:hover
  text-decoration: none
  color: $white
 button
  outline: none
  cursor: pointer
+ z-index: 1
+ overflow: hidden
+ transition: .2s ease all
  &:focus
   outline: none
 
@@ -133,7 +140,8 @@ h3.subtitle
   &-link, &-link:hover
    text-decoration: none
    color: $white
-   margin-right: 23px
+   padding: 10px
+   border-radius: $brs
    font:
     family: 'Open Sans', sans-serif
     size: 1.6rem
@@ -167,6 +175,10 @@ h3.subtitle
    width: 318px
    height: 48px
   &-btn
+   position: relative
+   z-index: 1
+   overflow: hidden
+   transition: .6s ease all
    text-align: center
    display: flex
    justify-content: center
@@ -211,6 +223,7 @@ h3.subtitle
  flex-wrap: wrap
  justify-content: center
  display: flex
+ overflow: hidden
  &__card
   background: $white
   box-shadow: 0 0 10px 3px rgba(133,133,133,0.46)
@@ -286,6 +299,7 @@ h3.subtitle
      width: 20px
      height: 20px
   &-btn
+
    display: flex
    align-items: center
    justify-content: center
@@ -300,6 +314,7 @@ h3.subtitle
    height: 45px
    max-width: 100%
    max-height: 100%
+   transition: 1s ease-out
    &_off
     display: none
 
@@ -1034,6 +1049,9 @@ h3.subtitle
   &::placeholder
    color: $white
  &__btn
+  z-index: 1
+  overflow: hidden
+  transition: .2s ease all
   width: 240px
   height: 35px
   display: flex
@@ -1127,7 +1145,7 @@ h3.subtitle
  filter: alpha(opacity=100)
 
 
-
+@import "hover"
 @import "owl"
 @import "pop"
 @import "media"
