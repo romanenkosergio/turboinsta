@@ -378,7 +378,7 @@ h3.subtitle
   margin-top: 50px
   padding-left: 0
   &:nth-child(2)
-    padding-left: 150px
+    padding-left: 20px
   li
    font-size: 1.6rem
    font-weight: 400
@@ -561,7 +561,7 @@ h3.subtitle
   font-weight: 600
   text-align: center
   margin: 30px auto 0
-  width: 70%
+  width: 50%
   line-height: 24px
  &__btn
   width: 395px
@@ -1050,7 +1050,10 @@ h3.subtitle
   &::placeholder
    color: $white
  &__btn
+  position: relative
   z-index: 1
+  overflow: hidden
+  transition: .6s ease all
   overflow: hidden
   transition: .2s ease all
   width: 240px
