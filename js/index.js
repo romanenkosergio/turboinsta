@@ -148,9 +148,6 @@ $(document).ready(function() {
         nav: false,
         responsive: {
             0: {
-                items: 1
-            },
-            645: {
                 items: 2
             },
             800: {
