@@ -70,12 +70,7 @@ $(document).ready(function() {
         res = true;
         $(this).find(".not-valid").remove()
         var google_target = $(this).find("[type='submit']").attr('data-ga')
-        $(this).find("input").each(function() {
-            if ($(this).val() == "") {
-                $(this).before("<p class='not-valid'>Заполните поле</p>")
-                res = false
-            }
-        })
+
 
         if (res) {
             var query = {
