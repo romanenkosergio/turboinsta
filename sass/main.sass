@@ -73,6 +73,7 @@ h3.subtitle
  &__next
   width: 70px
   height: 80px
+  padding: 8px 0
  &__block
   margin-top: 20px
  &__advantages
@@ -222,7 +223,6 @@ h3.subtitle
  flex-wrap: wrap
  justify-content: center
  display: flex
- overflow: hidden
  &__card
   background: $white
   box-shadow: 0 0 10px 3px rgba(133,133,133,0.46)
@@ -284,7 +284,7 @@ h3.subtitle
   &-advantages
    padding: 0
    &:nth-child(2)
-    padding-left: 50px
+    padding-left: 30px
    & li
     font-size: 1.6rem
     font-weight: 300
@@ -376,8 +376,10 @@ h3.subtitle
  &__advantages
   margin-top: 50px
   padding-left: 0
+  max-width: 350px
+  padding-left: 35px
   &:nth-child(2)
-    padding-left: 20px
+    padding-left: 35px
   li
    font-size: 1.6rem
    font-weight: 400
@@ -385,6 +387,8 @@ h3.subtitle
    padding-bottom: 28px
    display: flex
    align-items: center
+   height: auto
+   min-height: 75px
    img
     min-width: 20px !important
     min-height: 20px !important
@@ -577,7 +581,7 @@ h3.subtitle
   font-weight: 600
   margin-top: 30px
  &__small
-  font-size: 1.6rem
+  font-size: 1.5rem
   font-weight: 300
   margin-top: 20px
   color: #858585
@@ -740,7 +744,6 @@ h3.subtitle
 /* Наш коллектив */
 .our-team
  position: relative
- overflow: hidden
  &::before
   content: " "
   position: absolute
@@ -774,12 +777,44 @@ h3.subtitle
   flex-direction: column
   margin-right: 20px
   cursor: pointer
-  transition: .6s ease all
   padding: 25px 0
   border-radius: $brs
+  transition: .6s ease all
   &:hover
    box-shadow: 0 5px 31px rgba(98,77,187,.5)
    background-color: #ffffff
+   .our-team__card-img
+    position: relative
+
+
+    &::after
+     content: ""
+     height: 13%
+     width: 13%
+     position: absolute
+     display: block
+     max-width: 100%
+     max-height: 100%
+     top: 50%
+     left: 53%
+     transform: translate(-53%, -50%)
+     background-repeat: no-repeat
+     background-color: transparent
+     background-image: url(../img/review/triangle-2.svg)
+     background-position: center center
+    &::before
+     content: ""
+     position: absolute
+     display: block
+     height: 30%
+     width: 30%
+     max-width: 100%
+     max-height: 100%
+     border-radius: 50%
+     background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
+     top: 50%
+     left: 53%
+     transform: translate(-53%, -50%)
   &-img
    width: 200px
    height: 200px
@@ -787,6 +822,8 @@ h3.subtitle
    padding: 8px
    box-shadow: 0 5px 31px rgba(98,77,187,.5)
    background-color: #ffffff
+   position: relative
+   transition: .6s ease all
    &_1
     background: url(../img/our-team/1.jpg)  70%/cover no-repeat
    &_2
@@ -1121,6 +1158,7 @@ h3.subtitle
  width: 100%
  height: 670px
  position: absolute
+
 
 .youtube
  background-position: center
