@@ -1,0 +1,116 @@
+.black-friday
+	display: flex
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	background: rgba(0,0,0,0.5);
+	z-index: 99999
+	overflow: hidden
+	display: block
+	scroll: none
+	&__top, &__bot
+		border: 1px solid #09b6f3
+		background: linear-gradient(to right, #6dd5ed, #2193b0) !important
+		width: 238px
+		height: 81px
+		background: $white
+		position: absolute
+		justify-content: center
+		align-items: center
+		display: flex !important
+	&__top
+		top: 1px
+		right: 50px
+		border-radius: 10px 10px 100px 100px
+		border-radius: 10px 10px 40px 40px
+		&-left
+			left: 50px
+	&__bot
+		bottom: 1px !important
+		right: 50px
+		border-radius: 100px 100px 10px 10px !important
+		border-radius: 40px 40px 10px 10px !important
+		&-left
+			left: 50px
+	&__last, &__new
+		color: #ffffff !important
+		right: 0 !important
+		left: 0 !important
+		position: absolute
+		text-align: center
+
+	&__last
+		margin-top: -20px
+		font-size: 1.3rem !important
+	&__new
+		font-size: 1.5rem !important
+		margin-top: 5px
+		font-weight: 700 !important
+	&__date
+		color: $white
+		bottom: 0
+		position: absolute
+
+.modal
+	max-width: 100%
+	max-height: 100%
+	width: 500px
+	height: auto
+	position: absolute
+	background: linear-gradient(to right, #6dd5ed, #2193b0) !important
+	left: 50%
+	top: 45%
+	transform: translate(-50%,-45%)
+	padding: 40px 20px
+	border-radius: $brs
+	box-shadow: 0 2px 10px rgba(255,255,255, 0.6)
+	&__header
+		text-transform: uppercase
+		color: $white
+		text-align: center
+		font-size: 3.2rem
+		margin-bottom: 15px
+		font-weight: 900
+		text-shadow: 0 12px 117px rgba(255,255,255, 0.28)
+	&__body
+		color: $white
+		font-size: 2.8rem
+		text-align: center
+		margin-bottom: 10px
+	&__date
+		color: $white
+		text-align: center
+		font-size: 1.5rem
+	&__close
+		color: $white
+		font-size: 2.5rem
+		position: absolute
+		right: 1rem
+		top: 0.1rem
+		cursor: pointer
+	&__snowman
+		position: absolute
+		top: 0
+		max-width: 15%
+@media ( max-width: 1300px)
+	.black-friday
+		&__top, &__top-left, &__bot, &__bot-left
+			top: 1px
+			right: 50px !important
+			left: auto
+			border-radius: 10px 10px 100px 100px !important
+			border-radius: 10px 10px 40px 40px !important
+@media ( max-width: 645px)
+	.black-friday
+		&__top, &__top-left, &__bot, &__bot-left
+			right: 0px !important
+			width: 208px
+			height: 65px
+		&__last
+			margin-top: -15px
+			font-size: 1.2rem !important
+		&__new
+			margin-top: 3px
+			font-size: 1.4rem !important
