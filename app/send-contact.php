@@ -25,7 +25,6 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 	// print_r($phone);
 	// print_r($first);
 	// echo '</pre>';
-	if(!preg_match("/^[0-9]{10,10}+$/", $phone)) echo ("Телефон задан в неверном формате");
 	if($first == 3) {
 		try {
 			// Создание клиента
