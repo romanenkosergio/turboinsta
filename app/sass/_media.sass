@@ -8,9 +8,12 @@
 		font-size: 2.5rem
 	.step-one
 		padding-bottom: 20px
-	&__advantages
-		&-text
-			font-size: 1.4rem
+	.special
+		width: 90%
+		&__block
+			&::after
+				right: -14%
+				transform: translateX(-14%)
 	.offer
 		&__form, &__call
 			margin-top: 10px
@@ -41,11 +44,16 @@
 				font-size: 1.5rem
 				min-height: 195px
 				height: 230px
-
 	.footer
 		&__card
 			margin-left: 10px
 @media (max-width: 1440px)
+	.special
+		width: 95%
+		&__block
+			&::after
+				right: -15%
+				transform: translateX(-15%)
 	.promo
 		&__card
 			&-subtitle
@@ -81,17 +89,12 @@
 	h2.title
 		font-size: 2.5rem
 		line-height: 33px
-	.step-one
-		&__video
-			width: 500px
-			height: 250px
-		&__advantages
-			&-list
-				& img
-					width: 8px
-					height: 8px
-			&-text
-				font-size: 1.4rem
+	.special
+		width: 100%
+		&__block
+			&::after
+				right: -13%
+				transform: translateX(-13%)
 	.offer
 		&__title
 			font-size: 2.2rem
@@ -193,24 +196,27 @@
 		font-size: 2.5rem
 		line-height: 28px
 		width: 75%
-	.step-one
-		&__video
-			width: 400px
-			height: 220px
-		&__arrow
-			&-img
-				width: 50px
-				height: 170px
-		&__advantages
-			&-list
-				padding: 0
-			&-text
-				font-size: 1.5rem
 	.special
-		width: 100%
-		margin: 0 auto
+		&__block
+			width: 220px
+			height: 220px
+			&::after
+				right: -16%
+				transform: translateX(-16%)
+		&__img
+			max-width: 65%
+			max-height: 65%
+			margin-bottom: 20px
+			&_inst
+				margin-left: 40px
+		&__text
+			font-size: 1.1rem
+			line-height: normal
+			padding: 0 2px
+			height: 100%
+			display: flex
 	.offer
-		margin-top: 50px
+		margin-top: 20px
 		&__title
 			font-size: 2rem
 			line-height: 23px
@@ -294,12 +300,25 @@
 				border: none
 			&-about
 				display: none
-	.step-one
-		&__arrow
-			&-img
-				height: 130px
-			&-text
-				margin-top: 5px
+	.special
+		&__block
+			width: 180px
+			height: 180px
+			&::after
+				right: -20%
+				transform: translateX(-20%)
+		&__img
+			max-width: 65%
+			max-height: 65%
+			margin-bottom: 20px
+			&_inst
+				margin-left: 40px
+		&__text
+			font-size: 1rem
+			line-height: normal
+			padding: 0 2px
+			height: 100%
+			display: flex
 	.promo
 		&__card
 			max-width: 95%
@@ -398,17 +417,18 @@
 		font-size: 2rem
 		line-height: normal
 	.step-one
-		&__video
-			max-width: 330px
-		&__advantages
-			&-text
-				font-size: 1.4rem
-		&__arrow
-			&-img
-				height: 100px
 		&__next
 			width: 65px
 			height: 70px
+	.special
+		&__block
+			width: 160px
+			height: 160px
+			&::after
+				right: -23%
+				transform: translateX(-23%)
+		&__img
+			margin-bottom: 5px
 	.offer
 		&__title
 			font-weight: 400
@@ -554,17 +574,12 @@
 			align-items: center
 		&__block
 			margin-bottom: 30px
-			max-width: 180px
-			max-height: 180px
-			&_second
-				&::after
-					bottom: -44.5%
-					left: 52%
-					transform: translate(-52%, 44.5%)
-				&::before
-					top: -32.5%
-					right: 38%
-					transform: translate(-38%, 32.5%)
+			width: 200px
+			height: 200px
+			&::after
+				bottom: -37%
+				right: 50%
+				transform: translate(37%, -50%)
 		&__line, &__price-block
 			margin-top: -30px
 		&__line
@@ -673,18 +688,6 @@
 		font-size: 2rem
 		line-height: normal
 		width: 100%
-	.step-one
-		// overflow: hidden
-		&__video
-			width: 100%
-		&__advantages
-			&-list
-				width: 100%
-			&-text
-				font-size: 1.5rem
-		&__arrow
-			&-img
-				height: 90px
 	.offer
 		overflow: hidden
 		&__title
@@ -811,16 +814,6 @@
 		width: 100%
 	.btn
 		height: 40px
-	.step-one
-		&__video
-			height: 220px
-		&__advantages
-			&-list
-				// display: none
-			&-text
-				font-size: 1.6rem
-				padding-bottom: 8px
-				justify-content: center
 	.header
 		&__menu
 			&-button
