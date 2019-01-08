@@ -282,6 +282,49 @@ nav
 	&__subtitle
 		margin-top: 5px
 		color: #4f4fd9
+	&__sale
+		background: url("../img/step-two/sale-bg.svg") no-repeat
+		max-width: 1720px
+		height: 237px
+		margin-top: 50px
+		display: flex
+		align-items: center
+		&_main
+			display: flex
+			align-items: center
+			width: 450px
+			margin-left: 100px !important
+			margin-right: 80px !important
+			img
+				margin-right: 25px
+			p
+				color: $white
+				font-size: 2.2rem
+				font-weight: 300
+				line-height: normal
+				span
+					font-size: 4.2rem
+					font-weight: 600
+		&_action
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			margin-right: 45px
+			max-width: 250px
+			max-height: 195px
+			img
+				max-width: 100%
+				max-height: 100%
+			p
+				font-size: 1.6rem
+				font-weight: 300
+				line-height: 18px
+				color: $white
+				text-align: center
+				margin-top: 6px
+
+
 .promo
 	margin-top: 50px
 	width: 100%
@@ -300,16 +343,16 @@ nav
 		transition: .6s ease all
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
 		&:nth-child(odd)
-			padding: 50px 90px 50px 50px
-		&:nth-child(even)
 			padding: 50px 50px 50px 90px
+		&:nth-child(even)
+			padding: 50px 90px 50px 50px
 		&:hover
 			box-shadow: 0 5px 31px rgba(61,200,89,.5)
 			background-color: #fff
 		&_header
 			display: flex
 			width: 385px
-			max-height: 155px
+			max-height: 165px
 			height: 100%
 			img
 				width: 120px
@@ -319,25 +362,35 @@ nav
 		&_title
 			display: flex
 			flex-direction: column
-			margin-left: 20px
 			height: 120px
+			&:last-child
+				align-items: flex-end
+			&:nth-child(even)
+				margin-left: 20px
+			&:nth-child(odd)
+				margin-right: 20px
 			span
 				position: relative
+				width: 100%
 			span:first-child
+				width: 200px
+				max-width: 216px
 				top: -20px
 				text-transform: uppercase
 				color: #7260e7
 				font-size: 5.8rem
 				font-weight: 600
 			span:nth-child(2)
-				top: -45px
+				top: -35px
 				left: 2px
 				color: #7260e7
 				font-size: 2.9rem
 				font-weight: 300
-			span:last-child
-				top: -55px
-				left: 2px
+				line-height: 30px
+				&:last-child
+					text-align: right
+			span:nth-child(3)
+				top: -40px
 				font-size: 3.6rem
 				font-weight: 400
 				color: #6665e7
@@ -357,9 +410,10 @@ nav
 					background: #6566e7
 					margin-right: 13px
 		&_advantages
+			width: 715px
+			max-width: 100%
 			display: flex
 			justify-content: space-between
-			width: 100%
 		&_special
 			width: 330px
 			max-width: 100%
@@ -381,6 +435,35 @@ nav
 				font-weight: 400
 				text-align: center
 				line-height: normal
+		&_btn
+			width: 286px
+			height: 63px
+			border-radius: 32px
+			color: $white
+			background: #6765e7
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 2.4rem
+			font-weight: 400
+			&-top
+				margin-top: 90px
+		&_price
+			width: 395px
+			height: 107px
+			position: absolute
+			bottom: 45px
+			font-size: 6.2rem
+			text-align: center
+			font-weight: 600
+			color: $white
+			&-r
+				background: url("../img/step-two/promo/price-r.svg") no-repeat
+				right: 0
+			&-l
+				background: url("../img/step-two/promo/price-l.svg") no-repeat
+				left: 0
+
 .our-case
 	margin-top: 30px
 .case
