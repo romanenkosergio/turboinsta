@@ -28,10 +28,9 @@ button
 	transition: .2s ease all
 	&:focus
 		outline: none
-
-ul li
+ul, li
 	list-style-type: none
-	margin: 0
+	margin: 0 !important
 	padding: 0
 p
 	margin: 0
@@ -47,94 +46,123 @@ h1.main-title
 	margin: auto
 	width: 60%
 h2.title
-	font-size: 3.2rem
+	font-size: 4.2rem
 	font-weight: 700
 	text-align: center
 	margin-bottom: 0
-h3.subtitle
+.subtitle
 	text-align: center
-	font-size: 2.8rem
-	font-weight: 600
+	font-size: 1.6rem
+	font-weight: 400
 .btn
-	border-radius: $brs
 	border: 2px solid $white
 	color: $white
-
 	&:hover
 		color: $white
-
+nav
+	height: 100% !important
 
 /* Конец Спецификации */
 /* Шаг 1 */
 .step-one
 	width: 100%
-	min-height: 100vh
-	//  height: 100vh
-	background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%)
-	&__next
-		margin: 0 auto 20px
-		width: 40px
-		height: 40px
-		padding: 5px 0
-		svg
-			width: 95%
-			height: 95%
-	&__block
-		margin-top: 20px
-	&__advantages
-		margin-top: 20px
+	height: 100vh
+	max-height: 100%
+	background: linear-gradient(-180deg,#4776E6 0,#8E54E9 100%) center/cover no-repeat
+	padding-bottom: 20px
 .header
 	width: 100%
-	border-bottom: 1px solid #6687E9
-	height: 65px
-	&__logo-img svg
-		max-width: 143px
-		height: 48px
-		border-right: 2px solid $white
+	height: 45px
+	padding-top: 11px
+	&-logo-img
+		img
+			max-width: 103px
+			height: 42px
+		&::after
+			content: ""
+			width: 2px
+			height: 100%
+			background: $white
+			display: block
+			margin-left: 17px
 	&__logo-about
 		color: $white
-		margin-left: 20px
+		margin-left: 17px
 		margin-bottom: 0
 		font:
-			size: 1.6rem
+			size: 1.4rem
 			weight: 300
 	&__menu
 		display: flex
 		margin: 0
+		height: 100%
 		& li
 			display: flex
 		&-link, &-link:hover
 			text-decoration: none
 			color: $white
-			padding: 10px
-			border-radius: $brs
+			padding-bottom: 3px
+			margin-right: 25px
 			font:
 				family: 'Open Sans', sans-serif
 				size: 1.6rem
-				weight: 400
-		&-button, &-button:hover
-			border: 2px solid $white
-			border-radius: $brs
-			padding: 8px 13px
+				weight: 300
+			position: relative
+			display: inline-block
+		&-link
+			&::after
+				display: block
+				content: " "
+				height: 2px
+				width: 0%
+				left: 50%
+				position: absolute
+				transition: width .3s ease-in-out
+				transform: translateX(-50%)
+				background: $white
+			&:hover
+				&::after
+					width: 100%
+	&__button
+		border: 2px solid $white
+		border-radius: 22px
+		padding: 8px 15px
+		text-decoration: none
+		color: $white
+		margin-left: 50px
+		transition: .2s ease-in-out
+		font:
+			family: 'Open Sans', sans-serif
+			size: 1.6rem
+			weight: 400
+		&:hover
 			text-decoration: none
-			color: $white
-			margin-left: 50px
-			font:
-				family: 'Open Sans', sans-serif
-				size: 1.6rem
-				weight: 400
-.special
-	width: 70%
-	margin: 0 auto
+			background: $hover
+			box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
+			border: 2px solid $hover
+.offer
+	margin-top: 30px
+	position: relative
+	max-width: 100%
 	&__blocks
 		display: flex
 		justify-content: space-around
-		width: 100%
-		margin-bottom: 20px
+		width: 70%
+		margin: 0 auto
+		position: relative
+		&::after
+			content: ""
+			display: block
+			height: 5px
+			width: 95%
+			bottom: -20px
+			background: $white
+			position: absolute
 	&__block
 		padding: 15px 0
 		max-width: 100%
 		max-height: 100%
+		margin-top: 50px
 		width: 267px
 		height: 267px
 		border-radius: 40px
@@ -168,20 +196,14 @@ h3.subtitle
 		max-height: 100%
 		&_inst
 			margin-left: 50px
-	&__line
-		width: 100%
-		height: 5px
-		background: $white
-		margin: 0
-		padding: 0
 	&__price-block
 		width: 250px
 		height: 140px
-		background: url("../img/special/special-bg.svg") center/cover no-repeat
+		background: url("../img/step-one/offer/offer-bg.svg") center/cover no-repeat
 		position: relative
 		left: 50%
 		transform: translateX(-50%)
-		margin: 0
+		margin-top: 20px
 		padding: 0
 		&_text
 			display: flex
@@ -206,81 +228,60 @@ h3.subtitle
 			color: #6a63e7
 			position: relative
 			top: -10px
-.offer
-	position: relative
-	max-width: 100%
-	&__title
-		color: $white
-		font-size: 2.5rem
-		font-weight: 700
-		text-align: center
-		width: 45%
-		margin: auto
 	&__subtitle
 		color: $white
-	&__form
-		display: flex
-		justify-content: center
+		margin: auto
 		margin-top: 20px
-		&-input, &-btn
-			width: 318px
-			height: 48px
-		&-btn
-			position: relative
-			z-index: 1
-			overflow: hidden
-			transition: .6s ease all
-			text-align: center
-			display: flex
-			justify-content: center
-			align-items: center
-			font-size: 2rem
-			font-weight: 600
-			margin-left: 35px
-			background: none
-			color: #ffffff
-		&-input, &-btn
-			border: 2px solid $white
-			border-radius: $brs
-			font-size: 1.6rem
-			color: $white
-			font-weight: 400
-			padding-left: 20px
-			background: none
-			outline: none
-			&::placeholder
-				color: #B09DF1
+	&__btn
+		width: 400px
+		height: 70px
+		border-radius: 35px
+		background: $button
+		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
+		transition: .2s ease-in-out
+		display: block
+		font-size: 2.4rem
+		font-weight: 600
+		margin-top: 10px
+		&:hover
+			background: $hover
 	&__call
 		text-align: center
+		margin-top: 10px
 		color: $white
-		margin-top: 20px
 		font-size: 1.5rem
 		font-weight: 300
 		line-height: 28px
-
 		a
 			font-size: 2.5rem
 			font-weight: 600
+	&__next
+		margin-top: 10px
+		img
+			animation-name: slideDown
+			animation-duration: 1s
+			animation-timing-function: linear
+			visibility: visible !important
+			animation-iteration-count: infinite
+
+	@keyframes slideDown
+		0%
+			transform: translateY(3px)
+		50%
+			transform: translateY(-3px)
+		100%
+			transform: translateY(3px)
+
 /* Шаг 2 */
 .step-two
-	margin-top: 30px
 	&__title
-		margin: 10px auto 0
+		margin: 50px auto 0
 		line-height: 40px
-		width: 90%
-	&__action
-		font-size: 2.3rem
-		font-weight: 600
-		text-align: center
-		max-width: 75%
-		margin: 25px auto 0
-		background: -webkit-gradient(linear,left top,left bottom,from(#EC008C),to(#FC6767))
-		background: -webkit-linear-gradient(top,#EC008C 0,#FC6767 100%)
-		background: -o-linear-gradient(top,#EC008C 0,#FC6767 100%)
-		background: linear-gradient(-180deg,#EC008C 0,#FC6767 100%)
-		-webkit-background-clip: text;
-		-webkit-text-stroke: 1px transparent;
-		color: transparent;
+		text-transform: uppercase
+		color: #6566e7
+	&__subtitle
+		margin-top: 5px
+		color: #4f4fd9
 .promo
 	margin-top: 50px
 	width: 100%
@@ -298,17 +299,17 @@ h3.subtitle
 		bottom: 0
 		opacity: .4
 	&__card
-		box-shadow: 0 0 10px 3px rgba(133,133,133,0.46)
-		border-radius: $brs
-		width: 100%
-		max-width: 852px
-		min-height: 395px
-		margin: 25px
 		display: flex
 		position: relative
+		width: 100%
+		max-width: 840px
+		min-height: 596px
+		border-radius: 40px
+		margin: 30px
 		transition: .6s ease all
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
 		&:hover
-			box-shadow: 0 5px 31px rgba(98,77,187,.5)
+			box-shadow: 0 5px 31px rgba(61,200,89,.5)
 			background-color: #fff
 		&-header
 			margin-top: 20px

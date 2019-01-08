@@ -1,10 +1,4 @@
 $(document).ready(function() {
-    setTimeout(function() {
-        $(".black-friday").css({ 'display': 'none' });
-    }, 15000);
-    $(".black-friday").find(".modal__close").click(function() {
-        $(".black-friday").css({ 'display': 'none' });
-    })
 
     $('input,textarea').focus(function() {
         $(this).data('placeholder', $(this).attr('placeholder'))
