@@ -46,7 +46,6 @@ h1.main-title
 	margin: auto
 	width: 60%
 h2.title
-	font-size: 4.2rem
 	font-weight: 700
 	text-align: center
 	margin-bottom: 0
@@ -57,8 +56,7 @@ h2.title
 .btn
 	border: 2px solid $white
 	color: $white
-	&:hover
-		color: $white
+	transition: all .2s ease
 nav
 	height: 100% !important
 
@@ -68,7 +66,7 @@ nav
 	width: 100%
 	height: 100vh
 	max-height: 100%
-	background: linear-gradient(-180deg,#4776E6 0,#8E54E9 100%) center/cover no-repeat
+	background: linear-gradient(#8557e8 0%, #6268e7 100%)
 	padding-bottom: 20px
 .header
 	width: 100%
@@ -279,9 +277,13 @@ nav
 		line-height: 40px
 		text-transform: uppercase
 		color: #6566e7
+		font-size: 4.8rem
+		font-weight: 600
 	&__subtitle
-		margin-top: 5px
+		margin-top: 7px
 		color: #4f4fd9
+		font-weight: 1.8rem
+		font-weight: 400
 	&__sale
 		background: url("../img/step-two/sale-bg.svg") no-repeat
 		max-width: 1720px
@@ -345,7 +347,7 @@ nav
 		&:nth-child(even)
 			padding: 50px 90px 50px 50px
 		&:hover
-			box-shadow: 0 5px 31px rgba(61,200,89,.5)
+			box-shadow: 0 5px 31px rgba(103,101,231,.5)
 			background-color: #fff
 		&_header
 			display: flex
@@ -446,6 +448,9 @@ nav
 			font-weight: 400
 			&-top
 				margin-top: 90px
+			&:hover
+				border: 2px solid $white
+				box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
 		&_price
 			width: 395px
 			height: 107px
@@ -461,164 +466,210 @@ nav
 			&-l
 				background: url("../img/step-two/promo/price-l.svg") no-repeat
 				left: 0
-
-.our-case
-	margin-top: 30px
-.case
-	max-width: 100%
-	margin-top: 20px
-
-	&__body
-		position: relative
-		cursor: pointer
-		transition: .6s ease all
-		&:hover
-			box-shadow: 0 5px 22px rgba(98,77,187,.5)
-	&__more
-		max-width: 40px
+.services
+	margin-top: 40px
+	width: 100%
+	&__title
+		text-align: center
+		color: #7260e7
+		font-size: 3.2rem
+		font-weight: 600
+	&__blocks
+		margin-top: 30px
 		display: flex
-		justify-content: center
-		margin: 0 auto
-		transition: .6s ease all
-		padding: 10px 0
-		&_text
-			color: #858585
-			font-size: 1.4rem
-			display: block
-			&-dis
-				display: none
-		&-reverse
-			transform: rotate(180deg)
-			transition: .6s ease all
-	&__text
-		padding-top: 15px;
-		font-size: 1.4rem;
-		font-weight: 400;
-		color: #858585;
-		line-height: 19px;
-		margin: 0;
-		padding-bottom: 15px;
-		min-height: 100%;
-		&_full
-			display: none
-			&-active
-				display: block
+		justify-content: space-between
+		width: 100%
 	&__block
-		position: relative
-		padding: 10px 25px
-		margin-bottom: 10px
-		&::before
-			content: " "
-			position: absolute;
-			width: 90%;
-			height: 2px;
-			background: linear-gradient(-180deg,#4776E6 0,#8E54E9 100%);
-			bottom: 0
-			left: 5%
-		&-promo, &-date, &-result
-			font-size: 1.6rem
+		width: 400px
+		height: 410px
+		border-radius: 40px
+		padding: 20px 40px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+		background: #fff
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
+	&__img
+		max-width: 100px
+		max-height: 100px
+	&__text
+		margin-top: 20px
+		width: 322px
+		text-align: center
+		color: #7260e7
+		height: 120px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		line-height: normal
+		p
+			font-size: 2.8rem
 			font-weight: 600
-			text-align: left
-
-			& span
-				font-weight: 900
-
+		span
+			font-size: 2.2rem
+			margin-top: -5px
+			font-weight: 400
+			text-align: center
+			height: 30px
+			&.sub
+				font-weight: 1.6rem
+				font-weight: 300
+				font-style: italic
+	&__price
+		font-size: 4.2rem
+		font-weight: 600
+		color: #fb8c2a
+		margin-top: 10px
+		sub
+			font-size: 2.4rem
+	&__btn
+		margin-top: 15px
+		width: 238px
+		height: 63px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 32px
+		color: #6765e7
+		border: 3px solid #6765E7
+		font-size: 2.2rem
+		font-weight: 400
+		&:hover
+			box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
+			color: $white
+			background: #6765E7
+			border: 3px solid $white
 .business
 	margin-top: 50px
-	background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%)
+	background: linear-gradient(#6566e7 0%, #9392f5 100%)
 	width: 100%
 	height: 100%
+	padding: 50px 0
 	&__title
 		color: $white
-		padding-top: 50px
-	&__subtitle
-		color: $white !important
-		margin-top: 10px !important
+		font-size: 3.2rem
+		font-weight: 600
 	&__advantages
-		margin-top: 50px
+		margin-top: 60px
 		padding-left: 0
-		max-width: 350px
 		padding-left: 35px
 		&:nth-child(2)
-				padding-left: 35px
+				padding-left: 165px
 		li
-			font-size: 1.6rem
+			font-size: 3rem
 			font-weight: 400
 			color: $white
-			padding-bottom: 28px
+			padding-bottom: 50px
 			display: flex
 			align-items: center
 			height: auto
 			min-height: 75px
 			img
-				min-width: 20px !important
-				min-height: 20px !important
-				width: 20px !important
-				height: 20px !important
-				margin-right: 10px
+				width: 55px
+				height: 55px
+				margin-right: 20px
 	&__btn
-		width: 855px
-		height: 66px
-		max-width: 100%
-		max-height: 100%
+		width: 364px
+		height: 63px
 		display: flex
 		align-items: center
 		justify-content: center
-		font-size: 2.5rem
-		font-weight: 600
+		font-size: 2.2rem
+		font-weight: 400
 		margin-bottom: 50px
+		border-radius: 32px
+		background: $white
+		box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
+		color: #6765e7
+		&:hover
+			background: #9392F5
+			border: 2px solid $white
+			color: $white
+
 /* Шаг 3 */
 .step-three
-
 		position: relative
-		height: 635px
-		max-height: 100%
+		min-height: 800px
+		margin-top: 50px
 		&__img
-			width: 550px
-			height: 535px
-			position: absolute
+			position: relative
+			top: -100px
+			left: 0
+			max-width: 890px
+			max-height: 790px
 		&__title
-			margin-top: 30px
-			font-weight: 800
-		&__text
-			margin: 30px auto 0
-			width: 60%
-			text-align: center
-			font-size: 2.5rem
+			font-weight: 600
+			font-size: 4.8rem
+			color: #7260e7
+			text-transform: uppercase
+		&__subtitle
+			font-size: 1.8rem
+			color: #7260e7
 			font-weight: 400
-			line-height: 34px
-			& span
-				color: #F01883
-				font-weight: 600
+			margin-top: 7px
+		&__content
+			display: flex
+			position: relative
+			align-items: flex-start
+			justify-content: space-between
+			margin-top: 50px
+		&__block
+			width: 715px
+			position: relative
+			top: 0
+			right: 0
+			margin-left: 40px
+		&__text
+			color: #4f4fd9
+			text-align: left
+			font-size: 3rem
+			font-weight: 400
+			line-height: 47px
 		&__btn
-			width: 395px
-			height: 70px
+			width: 365px
+			height: 65px
+			background: #3DC859
 			border: none
-			max-height: 100%
-			max-width: 100%
-			background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
 			color: $white
 			display: flex
 			justify-content: center
 			align-items: center
-			font-size: 2.5rem
-			font-weight: 600
-			margin-top: 30px
+			font-size: 2.2rem
+			font-weight: 400
+			margin-top: 50px
+			border-radius: 32px
+			box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
+			&-block
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				justify-content: center
+				width: 365px
+			&:hover
+				background: $hover
+				border: 2px solid $white
+				box-shadow: 0px 15px 20px rgba(61, 200, 89, 0.16)
 		&__small
-			color: #858585
-			font-size: 1.8rem
-			margin-top: 15px
+			color: #4F4FD9
+			font-size: 1.6rem
+			margin-top: 12px !important
+			font-weight: 400
+			align-self: center
 /* Шаг 4 */
 .step-four
-	background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%)
+	background: linear-gradient(#6566e7 0%, #9392f5 100%)
 	width: 100%
 	height: 100%
 	color: $white
-	&__subtitle
-		margin-top: 50px
-		margin-bottom: 0
+	margin-top: -100px
 	&__title
 		margin-top: 10px
+		margin-bottom: 0
+		text-transform: uppercase
+	&__subtitle
+		margin-top: 50px
 		margin-bottom: 0
 	&__text
 		text-align: center
