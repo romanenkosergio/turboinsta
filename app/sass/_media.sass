@@ -1,22 +1,28 @@
 @media (max-width: 1440px)
-	h1.main-title
-		font-size: 3.2rem
-		line-height: 38px
-	h2.title
-		font-size: 2.8rem
-	h3.subtitle
-		font-size: 2.5rem
-	.step-one
-		padding-bottom: 20px
-	.special
-		width: 90%
-		&__block
-			&::after
-				right: -14%
-				transform: translateX(-14%)
 	.offer
-		&__form, &__call
+		&__blocks
+			width: 95%
+		&__call
 			margin-top: 10px
+	.step-two
+		&__sale
+			background-size: 100%
+			height: 200px
+			&_main
+				width: 350px
+				margin-left: 30px
+				img
+					width: 130px
+					height: 130px
+				p
+					font-size: 1.6rem
+					span
+						font-size: 3.5rem
+			&_action
+				margin-right: 25px
+				img
+					width: 120px
+					height: 120px
 	.promo
 		margin-top: 30px
 		justify-content: space-between
@@ -25,19 +31,35 @@
 			width: 49%
 			margin: 0
 			margin-bottom: 25px
-			min-height: 410px
-			&-top
-				right: 20px
-			&-money
-				left: 20px
-			&-header
-				margin-left: 0
-			&-btn_top_left
-				margin-left: 0
-			&-btn_top_right
-				margin-right: 0
-			&-list
-				height: 195px
+			&:nth-child(odd)
+				padding: 50px 30px 50px 50px
+			&:nth-child(even)
+				padding: 50px 50px 50px 30px
+			&_header
+				img
+					max-width: 100px
+					max-height: 100px
+			&_title
+				&:nth-child(even)
+					margin-left: 10px
+				&:nth-child(odd)
+					margin-right: 0
+				span:first-child
+					font-size: 4.8rem
+				span:nth-child(2)
+					font-size: 2.5rem
+				span:nth-child(3)
+					font-size: 3rem
+			&_btn
+				&-top
+					margin-top: 0
+					position: absolute
+					bottom: 50px
+			&_price
+				max-width: 350px
+				background-size: 350px 100px
+				bottom: 35px
+				max-height: 100px
 	.our-team
 		&__card
 			&-text
@@ -154,25 +176,6 @@
 		&__text
 			max-width: 90%
 			margin: 20px auto
-	.document
-		margin: 20px 0 30px 0
-		&-block
-			&__link, &__link img
-				width: 220px
-				height: 220px
-			&__link_after
-				&::after
-					display: none
-			&__text
-				font-size: 1.6rem
-				line-height: 20px
-			&__body
-				width: auto
-				height: auto
-		&__btn
-			font-size: 2.2rem
-			width: 450px
-			height: 65px
 	.finish
 		&__text
 			width: 70%
@@ -330,29 +333,6 @@
 			max-width: 95%
 			font-size: 1.8rem
 			line-height: normal
-	.document
-		&__btn
-			margin-left: 0
-			height: 50px
-			width: 290px
-		&-block
-			justify-content: normal
-			margin-left: 15px
-			width: auto
-			&__body
-				width: 170px
-				height: 170px
-				margin-right: 15px
-			&__link
-				width: 170px
-				height: 170px
-				& img
-					width: 170px
-					height: 170px
-				& p
-					font-size: 1.4rem
-					line-height: normal
-					margin-top: 8px
 	.finish
 		&__text
 			width: 90%
@@ -468,12 +448,6 @@
 			margin-top: 20px
 	.step-four
 		padding-bottom: 0
-	.document
-		flex-direction: column
-		&-block
-			height: 250px
-			&__body
-				margin-right: 25px
 	.finish
 		margin-top: 30px
 		padding-bottom: 30px
@@ -727,21 +701,6 @@
 				font-size: 1.4rem
 	.step-three
 		overflow: hidden
-	.document
-		overflow: hidden
-		&-block
-			flex-direction: column
-			height: auto
-			&__link
-				width: 200px
-				height: 200px
-				& img
-					width: 200px
-					height: 200px
-			&__body
-				width: 200px
-				height: 200px
-				margin-bottom: 65px
 	.our-team
 		&__card
 			width: 100%

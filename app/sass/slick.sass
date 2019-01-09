@@ -1,0 +1,21 @@
+.slick
+	&-track
+		width: 100%
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+	&-initialized &-slide
+		max-width: 460px !important
+	&-prev, &-next
+		position: absolute
+		display: block
+		max-width: 29px
+		max-height: 91px
+		top: 50%
+		transform: translateY(-50%)
+	&-prev
+		&:before
+			background: url("../img/step-four/arrow-r.svg") no-repeat
+	&-next
+		&:before
+			background: url("../img/step-four/arrow-l.svg") no-repeat
