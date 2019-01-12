@@ -37,29 +37,68 @@
 				padding: 50px 50px 50px 30px
 			&_header
 				img
-					max-width: 100px
-					max-height: 100px
+					max-width: 90px
+					max-height: 90px
 			&_title
 				&:nth-child(even)
 					margin-left: 10px
 				&:nth-child(odd)
-					margin-right: 0
+					margin-right: 10px
 				span:first-child
-					font-size: 4.8rem
+					font-size: 5rem
+					// display: inline-block
+					width: 100%
 				span:nth-child(2)
 					font-size: 2.5rem
 				span:nth-child(3)
 					font-size: 3rem
 			&_btn
+				width: 230px
+				height: 50px
 				&-top
 					margin-top: 0
 					position: absolute
-					bottom: 50px
+					bottom: 55px
 			&_price
 				max-width: 350px
 				background-size: 350px 100px
 				bottom: 35px
 				max-height: 100px
+	.services
+		&__block
+			width: 300px
+			height: 400px
+			padding: 15px 30px
+		&__img
+			max-width: 80px
+			max-height: 80px
+		&__text
+			p
+				font-size: 2.5em
+				line-height: 30px
+	.step-three
+		&__img
+			max-width: 80%
+			max-height: 80%
+			left: -5%
+			top: -50px
+		&__content
+			width: 100%
+	.step-four
+		margin-top: -200px
+		&__text
+			line-height: normal
+	.finish
+		&__pay
+			&-cart
+				max-width: 85%
+				max-height: 85%
+			a
+				img
+					max-width: 65%
+					max-height: 65%
+		&__text
+			line-height: normal
 	.our-team
 		&__card
 			&-text
@@ -70,32 +109,6 @@
 		&__card
 			margin-left: 10px
 @media (max-width: 1440px)
-	.special
-		width: 95%
-		&__block
-			&::after
-				right: -15%
-				transform: translateX(-15%)
-	.promo
-		&__card
-			&-subtitle
-				font-size: 1.5rem
-			&-special
-				width: 210px
-				justify-content: space-between
-				& img
-					width: 50px
-					height: 50px
-				& p
-					font-size: 1.6rem
-					line-height: 20px
-			&-img
-				width: 89px
-				height: 89px
-			&-title
-				font-size: 2.2rem
-			&-subtitle
-				font-size: 1.4rem
 	.our-team
 		&__card
 			&-img

@@ -349,6 +349,8 @@ nav
 			max-width: 385px
 			max-height: 165px
 			height: 100%
+			align-items: center
+			justify-content: space-between
 			img
 				width: 100%
 				height: 100%
@@ -357,18 +359,16 @@ nav
 		&_title
 			display: flex
 			flex-direction: column
-			height: 120px
-			&:last-child
-				align-items: flex-end
+			max-height: 120px
+			text-align-last: right
+			align-items: flex-start
 			&:nth-child(even)
 				margin-left: 20px
 			&:nth-child(odd)
 				margin-right: 20px
 			span
 				position: relative
-				width: 100%
 			span:first-child
-				max-width: 216px
 				top: -20px
 				text-transform: uppercase
 				color: #7260e7
@@ -378,16 +378,16 @@ nav
 				top: -35px
 				left: 2px
 				color: #7260e7
-				font-size: 2.9rem
+				font-size: 2.5rem
 				font-weight: 300
 				line-height: 30px
-				&:last-child
-					text-align: right
+				left: 8px
 			span:nth-child(3)
 				top: -40px
 				font-size: 3.6rem
 				font-weight: 400
 				color: #6665e7
+				left: 8px
 		ul
 			margin-top: 45px !important
 			li
@@ -416,10 +416,10 @@ nav
 			top: 0
 			padding: 27.5px 0
 			&-l
-				background: url("../img/step-two/promo/turbo-l.svg")
+				background: url("../img/step-two/promo/turbo-l.svg") no-repeat
 				right: 0
 			&-r
-				background: url("../img/step-two/promo/turbo-r.svg")
+				background: url("../img/step-two/promo/turbo-r.svg") no-repeat
 				left: 0
 			p
 				display:
@@ -458,10 +458,10 @@ nav
 			color: $white
 			transform: rotate(0deg)
 			&-r
-				background: url("../img/step-two/promo/price-r.svg")
+				background: url("../img/step-two/promo/price-r.svg") no-repeat
 				right: 0
 			&-l
-				background: url("../img/step-two/promo/price-l.svg")
+				background: url("../img/step-two/promo/price-l.svg") no-repeat
 				left: 0
 .services
 	margin-top: 40px
@@ -474,7 +474,7 @@ nav
 	&__blocks
 		margin-top: 30px
 		display: flex
-		justify-content: space-between
+		justify-content: space-around
 		width: 100%
 	&__block
 		width: 400px
@@ -584,7 +584,6 @@ nav
 			background: #9392F5
 			border: 2px solid $white
 			color: $white
-
 /* Шаг 3 */
 .step-three
 		position: relative
@@ -702,6 +701,8 @@ nav
 	&-block
 		width: 100%
 		margin: 0 auto
+		display: flex
+		justify-content: space-around
 		a
 			width: 100%
 			height: 100%
@@ -777,123 +778,74 @@ nav
 			background: $hover
 /* О нас */
 .about-us
+	background: linear-gradient(#6566e7 0%, #9392f5 100%)
 	position: relative
-	&::before
-		content: " "
-		position: absolute
-		width: 70%
-		height: 1px
-		background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-		opacity: 0.4
-		top: 100%
-		left: 15%
+	color: $white
+	min-height: 800px
 	&__title
 		margin-top: 50px
-	&__text
-		text-align: center
+		font-size: 4.8rem
+		font-weight: 600
+	&__subtitle
+		margin-top: 7px
 		font-size: 1.8rem
-		font-weight: 400
-		color: #858585
-		line-height: 24px
-		padding: 0
-		margin: 15px auto 0
-		max-width: 75%
+		text-align: center
 .review
-	width: 85%
-	justify-content: space-between
-	flex-wrap: wrap
-	margin-top: 50px
-
+	width: 65%
+	margin-top: 40px
+	&__blocks
+		display: flex
+		justify-content: space-between
 	&__block
-		width: 350px !important
-		height: 350px
-		min-width: 100%
-		max-height: 100%
-
-		border-radius: $brs
-		color: #000
-		text-align: left
-
+		max-width: 100% !important
+		width: 280px
+		// max-height: 360px
+		display: flex !important
+		flex-direction: column
+		align-items: center
+		justify-content: center
 		&-img
-			width: 100%
-			position: relative
+			max-width: 100%
+			max-height: 100%
+			height: 170px
+			width: 170px
+			border-radius: 100%
 			img
-				width: 100%
-				border-radius: $brs $brs 0  0
-			&::before
-				content: " "
-				bottom: 0px
-				transform: translateY(50%)
-				right: 27px
-				position: absolute
-				content: ''
-				width: 71px
-				height: 71px
-				background-color: #fff
-				border-radius: 50%
-				box-shadow: 0 0 1px 0 #27509E
-			&::after
-				bottom: 0
-				transform: translateY(50%)
-				right: 33px
-				position: absolute
-				content: ''
-				width: 59px
-				height: 59px
-				border-radius: 50%
-				background-repeat: no-repeat
-
-				background-color: white
-				background-image: url(../img/review/triangle.svg)
-				-webkit-font-smoothing: antialiased
-				-moz-osx-font-smoothing: grayscale
-				background-position: center center
-		&:hover
-			color: #000
-		&:hover &-img::before
-			-webkit-font-smoothing: antialiased
-			-moz-osx-font-smoothing: grayscale
-			box-shadow: 0 0 12px #3552A9
-			background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-			background-position: center center
-		&:hover &-img::after
-			background-image: url(../img/review/triangle-2.svg)
-			background-color: transparent
+				max-width: 100%
+				max-height: 100%
+				height: 170px
+				width: 170px
+				border-radius: 100%
 		&-content
-			width: 90%
-			margin: 0 auto
-			padding-top: 15px
-			position: relative
-
-			&::after
-				content: ""
-				width: 100%
-				position: absolute
-				height: 2px
-				background-color: #EDEDED
-
+			text-align: center
+			margin-top: 20px
+			max-width: 280px
 			&-title
-				font-size: 1.6rem
+				font-size: 2.8rem
 				font-weight: 600
 				margin: 0
+				line-height: 25px
+				height: 50px
 			&-text
-				padding-top: 15px
-				font-size: 1.4rem
-				font-weight: 400
-				color: #858585
-				line-height: 19px
-				width: 275px
-				margin: 0
-				padding-bottom: 35px
-				min-height: 125px
+				margin-top: 15px
+				font-size: 1.8rem
+				font-weight: 300
+				max-height: 100%
+				height: 80px
+				line-height: 20px
 		&-author
-			text-align: center
-			font-size: 1.4rem
-			font-weight: 600
-			margin-top: 0.7rem
+			margin-top: 15px
+			display: flex
+			line-height: 20px
+			height: 42px
+			align-items: center
 			p
-				margin: 0
-				padding-bottom: 10px
+				font-size: 1.6rem
+				font-weight: 400
+				font-style: italic
+			span
+				font-size: 1rem
+				text-align: right
 /* Наши Работы */
 .our-work
 	position: relative
