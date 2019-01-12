@@ -131,7 +131,8 @@ $(document).ready(function() {
     $('.review__blocks').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
-        variableWidth: true
+        // variableWidth: true,
+        draggable: false
     });
 
     $('.slide-one').owlCarousel({
