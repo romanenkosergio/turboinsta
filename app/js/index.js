@@ -104,35 +104,41 @@ $(document).ready(function() {
         return false
     })
 
-    // $('.document-block').slick({
-    //     dots: false,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3,
-    //     infinite: true,
-    //     speed: 300,
-    //     prevArrow: $('.slick-prev'),
-    //     nextArrow: $('.slick-next'),
-    //     responsive: [{
-    //             breakpoint: 1400,
-    //             settings: {
-    //                 slidesToShow: 3,
-    //                 slidesToScroll: 3
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 769,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //     ]
-    // });
+    $('.document-block').slick({
+        dots: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        speed: 300,
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next'),
+        responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
     $('.review__blocks').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
-        // variableWidth: true,
-        draggable: false
+        draggable: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
     });
 
     $('.slide-one').owlCarousel({
