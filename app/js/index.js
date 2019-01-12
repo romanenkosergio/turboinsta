@@ -132,6 +132,7 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 3,
         draggable: false,
+        infinite: false,
         responsive: [{
             breakpoint: 768,
             settings: {
