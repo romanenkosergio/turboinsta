@@ -1,23 +1,34 @@
-
-.owl-item
- text-align: center
- margin: 8px 0
-
-
-.owl-dots
- margin-top: 15px
- text-align: center
-
-.owl-dot
- width: 15px
- height: 15px
- margin: 10px 7px 30px
- box-shadow: 0 0 12px #3552A9
- border-radius: $brs
- background-color: #fcfcfc
- display: inline-block
- &.active
-  background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-  -webkit-box-shadow: 0 0 6px 0 #3552A9
-  box-shadow: 0 0 6px 0 #3552A9
-
+.owl
+	&-carousel
+		position: relative
+		z-index: 100
+	&-carousel &-nav
+		top: 0
+		width: 100% !important
+		height: 91px
+		z-index: 0
+		display: block
+		button.owl-prev,button.owl-next
+			position: absolute
+			width: 29px
+			height: 91px
+			&.disabled
+				opacity: .5
+.review__blocks.owl-carousel .owl-nav button.owl-prev
+	background: url("../img/step-four/arrow-l.svg") no-repeat
+	left: -8%
+	top: calc(50% - 91px)
+	margin-right: 60px
+.review__blocks.owl-carousel .owl-nav button.owl-next
+	background: url("../img/step-four/arrow-r.svg") no-repeat 100%
+	right: -8%
+	top: calc(50% - 91px)
+	margin-left: 60px
+.our-case__slider.owl-carousel .owl-nav button.owl-prev
+	background: url("../img/our-case/arrow-l.svg") no-repeat
+	top: calc(50% - 91px)
+	left: 0
+.our-case__slider.owl-carousel .owl-nav button.owl-next
+	background: url("../img/our-case/arrow-r.svg") no-repeat 100%
+	top: calc(50% - 91px)
+	right: 0

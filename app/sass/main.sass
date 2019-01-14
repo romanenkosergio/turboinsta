@@ -704,10 +704,10 @@ nav
 		display: flex
 		justify-content: space-around
 		a
-			width: 100%
-			height: 100%
-			max-width: 460px
-			max-height: 460px
+			width: 460px !important
+			height: 460px
+			max-width: 100%
+			max-height: 100%
 			border-radius: 40px
 			margin-right: 50px
 			&:last-child
@@ -783,20 +783,24 @@ nav
 	color: $white
 	min-height: 800px
 	position: relative
-	// &::before, &::after
-	// 	position: absolute
-	// 	content: ""
-	// 	color: $white
-	// &::before
-	// 	content: ",,"
-	// 	white-space: nowrap
-	// 	text-align: center
-	// 	font-family: OpineHeavy
-	// 	font-style: normal
-	// 	font-weight: 400
-	// 	font-size: 597px
-	// 	color: rgba(255,255,255,1)
-	// 	top: 0
+	&::before, &::after
+		position: absolute
+		content: ",,"
+		color: $white
+		white-space: nowrap
+		text-align: center
+		font-family: "Gill Sans"
+		font-style: normal
+		font-weight: 900
+		font-size: 545px
+		color: rgba(255,255,255,1)
+	&::after
+		top: -70%
+		right: 0
+	&::before
+		bottom: -70%
+		left: 0
+		transform: rotate(180deg)
 	&__title
 		margin-top: 50px
 		font-size: 4.8rem
@@ -806,22 +810,30 @@ nav
 		font-size: 1.8rem
 		text-align: center
 .review
-	width: 65%
+	width: 70%
 	margin-top: 40px
+	position: relative
+	height: 100%
+	z-index: 99
 	&__blocks
-		// display: flex
-		justify-content: space-between
+		width: 100% !important
+		z-index: 99
 	&__block
-		max-width: 100% !important
 		width: 280px
 		display: flex !important
 		flex-direction: column
 		align-items: center
 		justify-content: center
-		padding: 15px 0
+		z-index: 1000
+		&:first-child
+			margin-left: 30px
+		&:nth-child(3)
+			margin-right: 0 !important
 		&-img
 			max-width: 100%
 			max-height: 100%
+			height: 150px
+			width: 150px
 			border-radius: 100%
 			position: relative
 			overflow: hidden
@@ -899,44 +911,95 @@ nav
 					height: 25px
 					margin-right: 10px
 /* Наши Работы */
-.our-work
-	position: relative
-	&::before
-		content: " "
-		position: absolute
-		width: 70%
-		height: 1px
-		background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-		opacity: 0.4
-		top: 100%
-		left: 15%
+.our-case
+	margin-top: 50px
+	width: 100%
+	height: 100%
 	&__title
-		margin-top: 50px
-		margin-bottom: 0
+		font-size: 4.8rem
+		text-transform: uppercase
+		font-weight: 600
+		color: #8158e7
 	&__subtitle
 		font-size: 1.8rem
-		font-weight: 600
+		font-weight: 400
+		margin-top: 7px
+		color: #8158e7
+	&__headline
+		text-transform: uppercase
+		color: #8158e7
+		position: relative
 		text-align: center
-		color: #858585
-		margin: 0
-		margin-top: 15px
-		line-height: 24px
-	& a
-		width: 250px
-		height: 430px
-		max-width: 100%
-		max-height: 100%
-
-		& img
-			width: inherit
-			height: inherit
-			transition: .6s ease all
-			&:hover
-				box-shadow: 0 5px 31px rgba(98,77,187,.5)
-	&__carousel
-
-		margin-top: 50px
+		display: flex
+		margin: 0 auto
+		font-size: 3rem
+		font-weight: 400
+		margin-top: 40px
+		&::after
+			content: ""
+			height: 2px
+			width: 100%
+			position: absolute
+			background: #8158e7
+			bottom: -10px
+			left: 0
+	&__slider
+		margin-top: 35px
+		min-height: 1100px
+	&__slide
 		width: 100%
+		display: flex !important
+		align-items: center
+		justify-content: space-around
+		height: 100%
+		position: relative
+		&_img
+			width: 45%
+		&_result
+			width: 45%
+			color: #8158e7
+			span
+				font-size: 3rem
+				font-weight: 400
+				text-decoration: underline
+				&.price
+					font-size: 7rem
+					font-weight: 600
+					text-decoration: none
+			p.first
+				font-size: 4.2rem
+				font-weight: 600
+			p.second
+				font-size: 3.4rem
+				font-weight: 600
+				margin-top: 10px
+			p.text
+				font-size: 2.8rem
+				font-weight: 400
+				line-height: 40px
+				text-align: left
+				margin-top: 30px
+			a
+				max-width: 100%
+				max-height: 100%
+				width: 365px
+				height: 60px
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 2.2rem
+				font-weight: 400
+				border-radius: 32px
+				color: $white
+				background: $button
+				margin-top: 55px
+				margin-bottom: 10px
+				&:hover
+					background: $hover
+					box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
+
+
+
 /* Наш коллектив */
 .our-team
 	position: relative
@@ -1362,9 +1425,7 @@ nav
 	height: 670px
 	position: absolute
 
-@import "hover"
-@import "owl"
-@import "slick"
 @import "pop"
+@import "owl"
 @import "blackfriday"
 @import "media"

@@ -104,103 +104,51 @@ $(document).ready(function() {
         return false
     })
 
-    $('.document-block').slick({
+    $('.document-block').owlCarousel({
         dots: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        speed: 300,
-        prevArrow: $('.slick-prev'),
-        nextArrow: $('.slick-next'),
-        responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
+        nav: true,
+        loop: false,
+        navText: false,
+        slideBy: 3,
+        margin: 55,
+        responsive: {
+            0: {
+                items: 1
             },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+            800: {
+                items: 1
+            },
+            1000: {
+                items: 3
             }
-        ]
+        }
     });
-    $('.review__blocks').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        draggable: false,
-        infinite: false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
+    $('.review__blocks').owlCarousel({
+        dots: false,
+        nav: true,
+        loop: false,
+        navText: false,
+        slideBy: 3,
+        margin: 60,
+        responsive: {
+            0: {
+                items: 1
+            },
+            800: {
+                items: 2
+            },
+            1000: {
+                items: 3
             }
-        }]
+        }
     });
 
-    $('.slide-one').owlCarousel({
-        loop: true,
-        margin: 20,
-        dots: true,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            650: {
-                items: 2
-            },
-            800: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
-        }
-    });
-    $('.slide-two').owlCarousel({
-        loop: true,
-        margin: 20,
-        dots: true,
-        nav: false,
-        responsive: {
-            0: {
-                items: 2
-            },
-            800: {
-                items: 3
-            },
-            1000: {
-                items: 5
-            },
-            1500: {
-                items: 6
-            }
-        }
-    });
-    $('.slide-three').owlCarousel({
-        loop: true,
-        margin: 20,
-        dots: true,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            800: {
-                items: 3
-            },
-            1000: {
-                items: 4
-            },
-            1500: {
-                items: 4
-            }
-        }
+    $('.our-case__slider').owlCarousel({
+        dots: false,
+        nav: true,
+        loop: false,
+        navText: false,
+        items: 1
     });
     $(document).snowfall({
         flakeCount: 200,
@@ -211,4 +159,4 @@ $(document).ready(function() {
         shadow: false,
     });
     new WOW().init();
-});
+})
