@@ -915,6 +915,7 @@ nav
 	margin-top: 50px
 	width: 100%
 	height: 100%
+	position: relative
 	&__title
 		font-size: 4.8rem
 		text-transform: uppercase
@@ -945,7 +946,8 @@ nav
 			left: 0
 	&__slider
 		margin-top: 35px
-		min-height: 1100px
+		height: 100%
+		position: relative
 	&__slide
 		width: 100%
 		display: flex !important
@@ -955,6 +957,30 @@ nav
 		position: relative
 		&_img
 			width: 45%
+			margin-right: 30px
+			display: flex
+			margin-left: 100px
+		&_before, &_after
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-end
+			outline: 1px solid green
+			height: 790px
+			p
+				font-size: 3.6rem
+				font-weight: 600
+				color: #8158e7
+		&_before
+			width: 325px
+			margin-right: 15px
+			img
+				width: 325px
+		&_after
+			width: 360px
+			img
+				width: 360px
+				height: 790px
 		&_result
 			width: 45%
 			color: #8158e7
@@ -1002,211 +1028,148 @@ nav
 
 /* Наш коллектив */
 .our-team
+	margin-top: 50px
 	position: relative
-	&::before
-		content: " "
-		position: absolute
-		width: 70%
-		height: 1px
-		background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-		opacity: 0.4
-		top: 100%
-		left: 15%
 	&__title
-		margin: 0
-		margin-top: 30px
+		font-size: 4.8rem
+		font-weight: 600
+		text-transform: uppercase
+		color: #8158e7
 	&__subtitle
 		font-size: 1.8rem
-		color: #858585
-		font-weight: 600
+		color: #8158e7
+		font-weight: 400
 		text-align: center
-		margin: 15px auto 0
-		max-width: 70%
+		margin-top: 7px
 	&__cards
-		margin-top: 50px
+		margin-top: 70px
 		display: flex
-		justify-content: center
-		flex-wrap:  wrap
+		justify-content: space-between
 		height: 100%
+		width: 100%
 	&__card
-		width: 45%
-		height: 100%
+		width: 520px
+		min-height: 475px
 		display: flex
 		align-items: center
 		flex-direction: column
 		margin-right: 20px
 		cursor: pointer
 		padding: 25px 0
-		border-radius: $brs
-		transition: .6s ease all
-		&:hover
-			box-shadow: 0 5px 31px rgba(98,77,187,.5)
-			background-color: #ffffff
-			.our-team__card-img
-				position: relative
-
-
-				&::after
-					content: ""
-					height: 13%
-					width: 13%
-					position: absolute
-					display: block
-					max-width: 100%
-					max-height: 100%
-					top: 50%
-					left: 53%
-					transform: translate(-53%, -50%)
-					background-repeat: no-repeat
-					background-color: transparent
-					background-image: url(../img/review/triangle-2.svg)
-					background-position: center center
-				&::before
-					content: ""
-					position: absolute
-					display: block
-					height: 30%
-					width: 30%
-					max-width: 100%
-					max-height: 100%
-					border-radius: 50%
-					background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-					top: 50%
-					left: 53%
-					transform: translate(-53%, -50%)
+		&_mane
+			width: 455px
+			min-height: 525px
+			margin: 50px auto 0
 		&-img
-			width: 200px
-			height: 200px
+			width: 170px
+			height: 170px
 			border-radius: 50%
-			padding: 8px
-			box-shadow: 0 5px 31px rgba(98,77,187,.5)
 			background-color: #ffffff
-			position: relative
-			transition: .6s ease all
 			&_1
-				background: url(../img/our-team/1.jpg)  70%/cover no-repeat
+				background: url(../img/our-team/1.svg)
+				width: 220px
+				height: 220px
 			&_2
-				background: url(../img/our-team/2.jpg)  center/cover no-repeat
+				background: url(../img/our-team/2.svg)  center/cover no-repeat
 			&_3
-				background: url(../img/our-team/3.jpg)  center/cover no-repeat
+				background: url(../img/our-team/3.svg)  center/cover no-repeat
 			&_4
-				background: url(../img/our-team/4.jpg)  100%/cover no-repeat
-
+				background: url(../img/our-team/4.svg)  100%/cover no-repeat
 		&-name
-			margin-top: 20px
-			margin-bottom: 0
-			font-size: 2.2rem
-			font-weight: 700
+			font-size: 3rem
+			font-weight: 600
+			color: #8158e7
 		&-proffesion
 			margin-top: 5px
-			margin-bottom: 0
-			font-size: 1.8rem
-			font-weight: 400
-			color: #858585
+			font-size: 1.6rem
+			font-weight: 300
+			font-style: italic
+			color: #8158E7
 			text-align: center
 		&-text
-			margin-bottom: 0
-			font-size: 1.6rem
-			font-weight: 400
-			color: #858585
+			font-size: 1.8rem
+			font-weight: 300
+			color: #8158E7
 			text-align: center
-			margin-top: 20px
-			max-width: 80%
-			height: 195px
+			margin-top: 15px
+			line-height: 23px
+			height: 120px
+			span
+				display: none
 		&-btn
-			background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-			width: 300px
-			height: 50px
+			background: $button
+			width: 365px
+			height: 65px
+			border-radius: 32px
 			max-width: 100%
 			max-height: 100%
 			font-size: 2.2rem
-			font-weight: 600
+			font-weight: 400
 			display: flex
 			justify-content: center
 			align-items: center
-			margin-top: 50px
+			margin-top: 30px
+			&:hover
+				color: $hover
+				box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
 
 /* FAQ */
 .faq
-	margin-top: 50px
+	margin: 50px auto
+	width: 1200px
 	&__title
-		text-align: left !important
-		margin-left: 50px
+		font-size: 4.8rem
+		font-weight: 600
+		color: #8158e7
+	&__subtitle
+		font-size: 1.8rem
+		font-weight: 400
+		margin-top: 7px
+		color: #8158e7
 	&__block
-		counter-reset: list 0
-		padding-top: 50px
+		margin-top: 50px
+		color: $white
 		width: 100%
-		margin-left: 50px
-		margin-right: 50px
 	&_single_title
 		font-size: 2.3rem
 		font-weight: 700
-		color: #494949
 		margin: 16px 0
 	&-text
-		color: #858585
 		font-size: 1.6rem
 		font-weight: 400
-		line-height: 22px
+		line-height: 20px
 		display: none
-
-		padding: 16px 35px 26px 35px
+		padding-top: 20px
 		& ul li
 			margin: 5px 0
 		& b
 			font-weight: 700
 	&__card
-		box-shadow: 0 0 16px rgba(142, 84, 233, 0.3)
-		border-radius: 8px
-		background-color: #ffffff
-		margin-bottom: 18px
+		background: #6268e7
+		border-radius: 85px
+		padding: 35px 100px
+		margin-bottom: 20px
+		width: 100%
 		cursor: pointer
-		-webkit-user-select: none
-		-moz-user-select: none
-		-ms-user-select: none
-		-o-user-select: none
-		user-select: none
+		&:last-child
+			margin-bottom: 0
 	&__question
-		color: #000000
-		font-size: 1.8rem
-		font-weight: 600
-		position: relative
-		padding: 22px 10px 22px 35px
-		counter-increment: list
-
-		&-before
-			display: inline
-			position: relative
-			padding-bottom: 25px
-			&::before
-				content: ""
-				position: absolute
-				width: 100%
-				height: 1px
-				background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-				top: 100%
-				opacity: 0.6
-				transition: all 0.4 ease
-
-		&:before
-			content: counter(list)
-			left: 0
-			top: 50%
-			position: absolute
-			width: 22px
-			height: 22px
-			box-shadow: 0 0 19px #3552A9
-			border-radius: 12px
-			background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-			text-align: center
-			-webkit-transform: translate(-50% , -50%)
-			-ms-transform: translate(-50% , -50%)
-			-o-transform: translate(-50% , -50%)
-			transform: translate(-50% , -50%)
-			color: #ffffff
-			font-size: 1.1rem
-			line-height: 22px
-			font-weight: 700
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&-text
+			font-size: 3.2rem
+			font-weight: 400
+			line-height: 20px
+		&_img
+			width: 70px
+			height: 70px
+			max-width: 100%
+			max-height: 100%
+			transition: all .4s ease
+			&-reverse
+				transition: all .4s ease
+				transform: rotate(180deg)
 .three_column
 	display: flex
 	justify-content: space-between
@@ -1220,37 +1183,23 @@ nav
 				font-family: Circe
 				font-size: 18px
 				font-weight: 700
-				color: #494949
 				margin: 0 0 8px 0
 				border-bottom: 1px dashed
 				display: inline-block
 /* Наш блог */
 .our-blog
-	margin-top: 50px
-	&__date
-		position: absolute
-		right: 30px
-		top: 30px
-		font-size: 1.4rem
+	color: #8158e7
+	width: 1500px
+	max-width: 100%
+	margin: 0 auto
+	&__title
+		font-size: 4.8rem
 		font-weight: 600
-	&__more
-		width: 100%
-		transition: .6s ease all
-		&-reverse
-			transform: rotate(180deg)
-			transition: .6s ease all
-		img
-			width: 45px
-			height: 45px
-
-			&:hover
-				cursor: pointer
 	&__subtitle
 		text-align: center
 		font-size: 1.8rem
-		color: #858585
-		font-weight: 600
-		margin-top: 15px
+		font-weight: 400
+		margin-top: 7px
 	&__cards
 		margin-top: 50px
 	&__card
@@ -1258,66 +1207,73 @@ nav
 		height: fit-content
 		display: flex !important
 		justify-content: center
-		border: 1px solid  lighten(#8E54E9, .6)
-		border-radius: $brs
-		margin-bottom: 50px
+		padding: 40px 25px 40px 0
 		transition: all 1s
 		position: relative
+		border-top: 1px solid #8158E7
+		border-bottom: 1px solid #8158E7
+		margin-bottom: 35px
+		&:last-child
+			margin-bottom: 0
 		&-hidden
 			display: none
 			transition: all 1s
 		&:hover
 			cursor: pointer
+	&__more
+		width: 365px
+		height: 65px
+		background: $button
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 32px
+		font-size: 2.2rem
+		font-weight: 400
+		margin: 50px auto
+
 	&__img
-		margin-left: 35px
-		margin-top: 41px
-		margin-bottom: 41px
-		width: 225px
-		height: 225px
-		border-radius: $brs
+		width: 480px
+		height: 270px
+		border-radius: 49px
 	&__content
 		height: auto
 		max-height: 100%
 		margin-left: 50px
-		margin-top: 50px
 		padding-right: 50px
+		text-align: left
 		&-name
-			font-size: 2.5rem
-			font-weight: 700
-			text-align: left
+			font-size: 3.4rem
+			font-weight: 600
 			position: relative
-			display: inline
-			padding-bottom: 10px
-			&::before
-				content: " "
-				position: absolute
-				width: 100%
-				height: 1px
-				background: linear-gradient(-180deg, #4776E6 0%, #8E54E9 100%)
-				opacity: 0.7
-				top: 100%
-		&-img
-			width: 30px
-			height: 15px
-			margin: 0 auto
-			display: flex
-			transition: .6s ease all
-			margin-bottom: 20px
-			&-reverse
-				transform: rotate(180deg)
-				transition: .6s ease all
-		&-text
-			margin-top: 30px
+		&-date
 			font-size: 1.6rem
-			font-weight: 400
-			color: #858585
-			height: 95px
+			font-weight: 300
+			margin-top: 10px
+			opacity: 0.8
+		&-text
+			margin-top: 15px
+			font-size: 2.2rem
+			font-weight: 300
+			height: 154px
 			overflow: hidden
-			margin-bottom: 50px
 			transition: .6s ease all
+			max-width: 957px
+			line-height: 25px
+			word-wrap: break-word
 			&_full
 				height: auto
 				transition: .6s ease all
+		&-img
+			width: 54px
+			height: 54px
+			display: flex
+			transition: .6s ease all
+			margin-top: 10px
+			&-reverse
+				transform: rotate(180deg)
+				transition: .6s ease all
+
 /* Блок с Формой */
 .form-block
 	margin-top: 50px
