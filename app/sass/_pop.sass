@@ -1,23 +1,27 @@
-#video-pop
-	.pop-content
-		width: 768px
-		padding: 40px
-	.pop-close
-		top: 12px
-		right: 12px
-		width: 36px
-		height: 36px
-		border-radius: 100%
-.pop-content
-	display: block
-	max-width: 100%
-	width: 580px
-	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
-	border-radius: 40px
-	background-color: #6765E7
-	padding: 55px 70px
-	position: relative
-	color: $white
+.pop
+	display: none
+	position: fixed
+	width: 100%
+	height: 100%
+	align-items: center
+	justify-content: center
+	background-color: rgba(0, 0, 0, 0.4)
+	top: 0
+	left: 0
+	z-index: 300
+	padding: 10px
+	&.active
+		display: flex
+	&-content
+		max-width: 100%
+		width: 580px
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
+		border-radius: 40px
+		background-color: #6765E7
+		padding: 55px 70px
+		position: relative
+		color: $white
+		z-index: 600
 	small
 		color: #797979
 		font-size: 11px
@@ -53,13 +57,36 @@
 		font-size: 2.8rem
 		font-weight: 600
 		text-align: center
+		text-transform: uppercase
 	p
-		color: #3a3a3a
-		font-size: 1.4rem
+		color: $white
+		font-size: 1.6rem
 		font-weight: 600
 		margin-bottom: 15px
 		display: inline-block
 		width: auto
+	&-handler-close
+		position: absolute
+		z-index: 500
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		cursor: pointer
+	&-close
+		position: absolute
+		width: 36px
+		height: 36px
+		border-radius: 100%
+		background: $white
+		top: 20px
+		right: 20px
+		cursor: pointer
+		color: #6765e7
+		font-size: 2rem
+		display: flex
+		align-items: center
+		justify-content: center
 	.not-valid
 		color: #4776E6
 		text-align: right
@@ -96,63 +123,6 @@
 		display: none
 		border-radius: 29px
 		min-height: 142px
-.pop-handler-close
-	position: absolute
-	z-index: 500
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	cursor: pointer
-
-#privat-pop
-	b
-		&.number
-			color: #000000
-			font-size: 2rem
-			text-align: center
-
-.pop-close
-	position: absolute
-	width: 36px
-	height: 36px
-	border-radius: 100%
-	background: $white
-	top: 20px
-	right: 20px
-	cursor: pointer
-	color: #6765e7
-	font-size: 2rem
-	display: flex
-	align-items: center
-	justify-content: center
-
-.pop
-	display: none
-	position: fixed
-	width: 100%
-	height: 100%
-	-webkit-align-items: center
-	-moz-align-items: center
-	-ms-align-items: center
-	-o-align-items: center
-	align-items: center
-	-webkit-justify-content: center
-	-moz-justify-content: center
-	-ms-justify-content: center
-	-o-justify-content: center
-	justify-content: center
-	background-color: rgba(0, 0, 0, 0.4)
-	top: 0
-	left: 0
-	z-index: 300
-	padding: 10px
-	&.active
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
 .popup
 	&-pay-cart
 		max-width: 100%
@@ -164,4 +134,24 @@
 			max-width: 200px
 			width: 100%
 			margin-top: 8px
+#video-pop
+	.pop-content
+		width: 768px
+		padding: 40px
+	.pop-close
+		top: 12px
+		right: 12px
+		width: 26px
+		height: 26px
+		border-radius: 100%
+
+
+#privat-pop
+	h2
+		line-height: 36px
+	p
+		font-size: 2rem
+		margin-top: 26px
+	form
+		margin-top: 10px
 

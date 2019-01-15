@@ -141,5 +141,12 @@ $(document).ready(function() {
         navText: false,
         items: 1
     });
+    $('.our-work__slider').owlCarousel({
+        dots: false,
+        nav: true,
+        loop: false,
+        navText: false,
+        items: 5
+    });
     new WOW().init();
 })
