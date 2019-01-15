@@ -124,6 +124,7 @@
 @media (max-width: 1300px)
 	.btn
 		height: 55px
+		width: 363px
 	.offer
 		&__title
 			font-size: 4rem
@@ -171,113 +172,214 @@
 				img
 					width: 35px
 					height: 35px
+	.our-work
+		&__slider
+			height: 700px
+		&__slide
+			width: 280px
+			&_block
+				img
+					width: 280px !important
+			&_btn
+				width: 280px
+	.our-team
+		&__cards
+			margin-top: 20px
 	.faq
 		&__card
 			padding: 20px 90px
 @media (max-width: 1100px)
 	.header
-		&__menu
-			padding: 0
-			&-button
-				margin-left: 0
-				padding: 5px 10px
-				font-size: 1.6rem
-	h1.main-title
-		font-size: 2.5rem
-		line-height: 28px
-		width: 75%
-	.special
-		&__block
-			width: 220px
-			height: 220px
-			&::after
-				right: -16%
-				transform: translateX(-16%)
-		&__img
-			max-width: 65%
-			max-height: 65%
-			margin-bottom: 20px
-			&_inst
-				margin-left: 40px
-		&__text
-			font-size: 1.1rem
-			line-height: normal
-			padding: 0 2px
-			height: 100%
-			display: flex
-	.offer
-		margin-top: 20px
-		&__title
-			font-size: 2rem
-			line-height: 23px
-		&__form
-			margin-top: 20px
-			&-input, &-btn
-				width: 295px
-				height: 45px
-			&-btn
-				font-size: 1.8rem
+		height: 55px
+		padding-top: 11px
+		&__button
+			width: 180px
+			height: 43px
+			font-size: 1.6rem
+			font-weight: 400
 	.step-two
+		&__sale
+			&_action
+				max-width: 200px
+				margin-right: 15px
+			& .col-auto
+				padding: 0
+	.offer
 		&__title
-			width: 95%
-	.step-three
-		height: 580px
+			font-size: 3rem
+			line-height: 28px
+		&__blocks
+			width: 100%
+		&__block
+			margin-top: 20px
+			&::after
+				right: -13%
+				transform: translateX(-17%)
+	.promo
+		flex-direction: column
+		&__card
+			width: 800px
+			height: 596px
+			margin-bottom: 35px
+			&_special
+				max-width: 380px
+				background-size: center
+				height: 100%
+				p
+					font-size: 2.2rem
+			&_header
+				img
+					max-width: 120px
+					max-height: 120px
+			&_btn
+				&-big
+					display: none
+				&-bot
+					display: flex
+					margin-top: 0
+					position: absolute
+					bottom: 55px
+	.services
+		&__blocks
+			flex-wrap: wrap
+		&__block
+			flex: 1 1 calc(33.33% - 30px)
+			width: 480px
+			min-width: 430px
+			height: 410px
+			margin-bottom: 30px
+			margin-left: 30px
+		&__img
+			width: 100px
+			height: 100px
+			max-width: 100%
+			max-height: 100%
+	.business
+		&__advantages
+			li
+				padding-bottom: 20px
+				font-size: 2rem
+				line-height: 25px
 		&__btn
-			width: 350px
-			height: 55px
-			font-size: 2rem
+			margin-top: 20px
+			margin-bottom: 20px
+	.step-three
+		&__content
+			flex-direction: column
+		&__img
+			left: 50%
+			transform: translateX(-50%)
+			top: -12%
+			max-width: 100%
+			max-height: 100%
+			width: 100%
+			height: 100%
+		&__block
+			margin-left: 0
+			position: relative
+			top: -20%
+			left: 50%
+			transform: translateX(-50%)
+			justify-content: center
+		&__text
+			text-align: center
+		&__btn
+			margin-top: 0
+			&-block
+				margin: 20px auto 0
 	.step-four
 		&__text
-			font-size: 2rem
-			margin: 15px auto
-			font-weight: 400
-	.finish
-		&__btn
-			width: 350px
-			height: 55px
-			font-size: 2rem
+			font-size: 2.8rem
+			line-height: 35px
+	.about-us
+		&::before, &::after
+			font-size: 450px
+		&::before
+			bottom: -60%
+		&::after
+			top: -60%
 	.review
+		width: 91%
 		&__block
-			&-content
-				&-text
-					width: auto
-				&-title
-					font-size: 1.2rem
+			&:first-child
+				margin-left: 0
+	.our-case
+		&__slider
+			&.owl-carousel .owl-nav button.owl-prev, &.owl-carousel .owl-nav button.owl-next
+				top: calc(30% - 91px)
+		&__slide
+			flex-direction: column !important
+			&_img
+				margin: 0 auto
+				width: 100%
+				display: flex
+				justify-content: space-around
+			&_result
+				width: 100%
+				margin-top: 30px
+				margin-left: 150px
+				text-align: center
+				p.first
+					font-size: 3rem
+					span
+						font-size: 2.5rem
+				p.second
+					font-size: 2.5rem
+					span
+						font-size: 2.5rem
+					span.price
+						font-size: 5rem
+				p.text
+					text-align: center
+				a
+					margin: 15px auto 0
 	.our-team
-		&__card
-			&-img
-				width: 150px
-				height: 150px
-			&-text
-				margin-top: 10px
-				font-size: 1.4rem
-			&-btn
-				height: 40px
-				font-size: 1.6rem
-	.faq
-		&_single
-			&_title
-				font-size: 2rem
-				margin: 10px 0
-		&-text
-			font-size: 1.4rem
-	.our-blog
 		&__cards
-			margin-top: 30px
+			flex-direction: column
+			align-items: center
 		&__card
-			margin-bottom: 30px
-		&__img
-			width: 180px
-			height: 180px
-		&__content
-			margin-left: 20px
-			padding-right: 20px
-			&-name
-				font-size: 2rem
+			margin-right: 0
+			&_mane
+				margin: 0 auto
+			&-btn
+				margin-top: 15px
 			&-text
-				font-size: 1.4rem
-				min-height: 68px
-				line-height: normal
+				max-height: 120px
+				height: auto
+	.faq
+		width: 100%
+		margin-top: 30px
+		&__block
+			margin-top: 20px
+	.our-blog
+		&__more
+			margin: 30px auto 0
+	.footer
+		margin: 20px auto 15px
+		height: auto
+		& .col-auto
+			padding: 0
+		&__menu
+			margin-left: 30px
+			ul
+				a
+					font-size: 1.4rem
+		&__social
+			margin-left: 30px
+			margin-right: 30px
+			&_block
+				img
+					width: 30px
+					height: 30px
+		&__adress
+			&_block
+				img
+					width: 45px
+					height: 65px
+				p
+					font-size: 1.6rem
+			&_btn
+				width: 250px
 @media (max-width: 900px)
 	.container-fluid
 		padding-left: 20px

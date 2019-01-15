@@ -129,7 +129,12 @@ $(document).ready(function() {
                 items: 2
             },
             1000: {
-                items: 3
+                items: 3,
+                margin: 0
+            },
+            1200: {
+                items: 3,
+                margin: 60
             }
         }
     });
@@ -150,13 +155,20 @@ $(document).ready(function() {
         slideBy: 5,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                slideBy: 1
             },
             800: {
-                items: 3
+                items: 3,
+                slideBy: 3
             },
-            1000: {
-                items: 5
+            1300: {
+                items: 4,
+                slideBy: 4
+            },
+            1600: {
+                items: 5,
+                slideBy: 5
             }
         }
     });
