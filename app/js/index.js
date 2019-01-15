@@ -56,22 +56,12 @@ $(document).ready(function() {
             $(".our-blog__card-none").toggleClass('our-blog__card');
         })
     })
-    $(".case__body").click(function() {
-        $(this).find('.case__more').toggleClass('our-blog__more-reverse', 4000);
-        $(this).find('.case__text_full').toggleClass('case__text_full-active');
-        $(this).find('.case__more_text').toggleClass('case__more_text-dis');
-    });
-
     $(".btn").click(function() {
         $(".textarea").css({ "display": "none" })
     });
     $(".our-team__card-btn").click(function() {
         $(".textarea").css({ "display": "block" })
     });
-    $(".about-us-button-more").click(function() {
-        $(this).hide();
-        $(".about-us-review-hidden").removeClass("about-us-review-hidden")
-    })
     $('input[type="tel"]').mask("+38 (999) 999-99-99")
 
     $("form").submit(function() {
@@ -150,14 +140,6 @@ $(document).ready(function() {
         loop: false,
         navText: false,
         items: 1
-    });
-    $(document).snowfall({
-        flakeCount: 200,
-        image: "img/snow/2.png",
-        minSize: 5,
-        maxSize: 10,
-        round: true,
-        shadow: false,
     });
     new WOW().init();
 })

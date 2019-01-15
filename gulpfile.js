@@ -72,9 +72,9 @@ gulp.task('js', function() {
     return gulp.src([
             'app/libs/jquery/dist/jquery.min.js',
             'app/libs/masked/jquery.maskedinput.min.js',
-            'app/libs/wow/wow.min.js',
+            // 'app/libs/wow/wow.min.js',
             'app/libs/owl/owl.carousel.min.js',
-            'app/libs/snowfall/snowfall.js',
+            // 'app/libs/snowfall/snowfall.js',
             'app/js/index.js', // Always at the end
         ])
         .pipe(concat('index.min.js'))
