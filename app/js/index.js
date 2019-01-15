@@ -146,7 +146,19 @@ $(document).ready(function() {
         nav: true,
         loop: false,
         navText: false,
-        items: 5
+        items: 5,
+        slideBy: 5,
+        responsive: {
+            0: {
+                items: 1
+            },
+            800: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
     });
     new WOW().init();
 })

@@ -104,107 +104,76 @@
 			font-size: 520px
 	.review
 		width: 80%
+	.our-case
+		&__slide
+			&_result
+				p.text
+					font-size: 2.6rem
 	.our-team
 		&__card
 			&-text
-				font-size: 1.5rem
-				min-height: 195px
-				height: 230px
+				font-size: 1.4rem
+			&-proffesion
+				font-size: 1.3rem
 	.footer
-		&__card
-			margin-left: 10px
-@media (max-width: 1440px)
-	.our-team
-		&__card
-			&-img
-				width: 180px
-				height: 180px
-			&-btn
-				font-size: 2rem
-				margin-top: 20px
+		&__social
+			flex-direction: column
+			&_block
+				margin-right: 0
+				margin-bottom: 10px
 @media (max-width: 1300px)
-	h1.main-title
-		font-size: 3rem
-		line-height: 35px
-	h2.title
-		font-size: 2.5rem
-		line-height: 33px
-	.special
-		width: 100%
-		&__block
-			&::after
-				right: -13%
-				transform: translateX(-13%)
+	.btn
+		height: 55px
 	.offer
 		&__title
-			font-size: 2.2rem
-			line-height: 28px
-			width: 70%
-		&__form
-			&-btn
-				font-size: 2rem
-	.step-two
-		&__action
-			font-size: 2rem
-			max-width: 90%
+			font-size: 4rem
+			line-height: 45px
+		&__block
+			max-width: 230px
+			max-height: 230px
+		&__text
+			font-size: 1.4rem
+			line-height: 18px
+		&__img
+			max-width: 150px
+			max-height: 130px
 	.promo
-		display: block
 		&__card
-			display: block
-			max-width: 950px
-			width: 100%
-			margin: 0 auto 30px auto
-			&-img
-				width: 95px
-				height: 95px
-			&-title
-				font-size: 2.5rem
-			&-subtitle
-				font-size: 1.8rem
-			&-header
-				max-width: 100%
-				&_position
-					flex-direction: row
-				&_right
-					flex-direction: row !important
-			&-text
-				&_right
-					text-align: left
-			&-advantages
-				& li
-					font-size: 1.8rem
-			&-btn
-				width: 250px
-				height: 55px
-				font-size: 1.8rem
-				&_position
-					justify-content: flex-end
-				&_top
-					display: none
-				&_off
-					display: flex
-			&-money
-				top: 1px
-				right: 20px
-				left: auto
+			&_special
+				max-width: 300px
+				background-size: 100%
+				p
+					font-size: 1.6rem
+	.step-two
+		&__sale
+			background: linear-gradient(#8557e8 0%, #6268e7 100%)
+			margin-top: 10px
+			&_main
+				margin: 0
+	.services
+		&__block
+			width: 280px
+		&__text
+			max-width: 270px
+			p
+				font-size: 2rem
+				line-height: 2.2rem
+		&__price
+			font-size: 3.5rem
 	.business
 		margin-top: 20px
-	.step-four
-		padding-bottom: 8%
-		&__text
-			max-width: 90%
-			margin: 20px auto
-	.finish
-		&__text
-			width: 70%
-	.our-team
-		&__subtitle
-			max-width: 90%
+		&__advantages
+			&:last-child
+				padding-left: 80px
+			li
+				font-size: 2.5rem
+				padding-bottom: 35px
+				img
+					width: 35px
+					height: 35px
+	.faq
 		&__card
-			&-btn
-				width: 90%
-				font-size: 1.8rem
-				font-weight: 400
+			padding: 20px 90px
 @media (max-width: 1100px)
 	.header
 		&__menu

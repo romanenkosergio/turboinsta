@@ -153,11 +153,11 @@ nav
 			position: absolute
 	&__block
 		padding: 15px 0
-		max-width: 100%
-		max-height: 100%
+		max-width: 267px
+		max-height: 267px
 		margin-top: 50px
-		width: 267px
-		height: 267px
+		width: 100%
+		height: 100%
 		border-radius: 40px
 		display: flex
 		flex-direction: column
@@ -185,8 +185,8 @@ nav
 		line-height: 20px
 		padding: 0 8px
 	&__img
-		max-width: 100%
-		max-height: 100%
+		max-width: 200px
+		max-height: 200px
 		&_inst
 			margin-left: 50px
 	&__price-block
@@ -440,6 +440,8 @@ nav
 			align-items: center
 			font-size: 2.4rem
 			font-weight: 400
+			&-bot
+				display: none
 			&-top
 				margin-top: 90px
 			&:hover
@@ -946,7 +948,7 @@ nav
 			bottom: -10px
 			left: 0
 	&__slider
-		margin-top: 35px
+		margin-top: 50px
 		height: 100%
 		position: relative
 	&__slide
@@ -1024,13 +1026,35 @@ nav
 					background: $hover
 /* Наши Работы */
 .our-work
-	height: 961px
+	height: 100%
 	position: relative
 	&__slider
-		margin-top: 35px
+		margin-top: 50px
+		width: 100%
+		height: 720px
+		display: block
+		padding: 0 30px
 	&__slide
+		width: 330px
+		height: 100%
+		cursor: pointer
+		margin: 0 auto
+		&_block
+			margin-bottom: 20px
+			// transition: all .2s ease
+		&:hover
+			width: 330px !important
+			.our-work__slide_btn
+				display: flex
+			img
+				background: url("../img/our-work/bg.png")  no-repeat
+				background-size: cover
+				// padding: 20px
+				height: 100%
+				margin-right: 0 !important
 		&_btn
-			width: 365px
+			// transition: all .2s ease
+			width: 330px
 			height: 63px
 			background: $button
 			color: $white
@@ -1038,10 +1062,17 @@ nav
 			justify-content: center
 			align-items: center
 			margin-top: 15px
-			box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
 			border-radius: 32px
+			font-size: 2.2rem
+			display: none
 			&:hover
+				// transition: all .2s ease
 				background: $hover
+		img
+			height: 580px
+			width: 330px !important
+			margin-right: 0
+			// transition: all .2s ease
 /* Наш коллектив */
 .our-team
 	margin-top: 50px
@@ -1350,8 +1381,6 @@ nav
 			color: $white
 			border: 3px solid $white
 /* Футер */
-
-
 .footer
 	margin: 35px auto 48px
 	height: 192px
