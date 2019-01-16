@@ -35,6 +35,10 @@ $(document).ready(function() {
         $(this).parent(".services__block").find(".services__list-item").toggleClass('services__list-hidden');
         $(this).toggleClass('services__down-reverse');
     });
+    $(".promo__down").click(function() {
+        $(this).parent(".promo__card_advantages").find(".promo__card_list-active").toggleClass('promo__card_list-hidden');
+        $(this).toggleClass('promo__down-reverse');
+    });
     $('input,textarea').blur(function() {
         $(this).attr('placeholder', $(this).data('placeholder'));
     });

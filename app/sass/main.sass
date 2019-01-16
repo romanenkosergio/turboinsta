@@ -338,6 +338,13 @@ nav
 	display: flex
 	position: relative
 	padding-bottom: 20px
+	&__down
+		cursor: pointer
+		transition: all .2s ease
+		margin-top: 10px
+		&-reverse
+			transform: rotate(180deg)
+			transition: all .2s ease
 	&__card
 		position: relative
 		width: 100%
@@ -398,8 +405,11 @@ nav
 				font-weight: 400
 				color: #6665e7
 				left: 8px
-		ul
+		&_list
 			margin-top: 45px !important
+			min-height: auto
+			&:nth-child(2)
+				margin-top: 0 !important
 			li
 				font-size: 2.2rem
 				color: #6566e7
@@ -413,11 +423,13 @@ nav
 					border-radius: 50%
 					background: #6566e7
 					margin-right: 13px
+			&-hidden
+				display: none
 		&_advantages
 			width: 715px
 			max-width: 100%
 			display: flex
-			justify-content: space-between
+			flex-direction: column
 		&_special
 			width: 100%
 			max-width: 330px
