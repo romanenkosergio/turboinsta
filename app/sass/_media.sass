@@ -1,9 +1,24 @@
 @media (max-width: 1440px)
+	.header
+		height: 55px
+		padding-top: 11px
+		&__button
+			width: 180px
+			height: 43px
+			font-size: 1.6rem
+			font-weight: 400
 	.offer
+		margin-top: 10px
+		&__title
+			font-size: 3rem
+			line-height: 32px
 		&__blocks
-			width: 95%
-		&__call
-			margin-top: 10px
+			width: 90%
+		&__block
+			margin-top: 15px
+			&::after
+				right: -13%
+				transform: translateX(-17%)
 	.step-two
 		&__sale
 			background-size: 100%
@@ -50,6 +65,8 @@
 					width: 100%
 				span:nth-child(2)
 					font-size: 2.5rem
+					&:last-child
+						left: -5%
 				span:nth-child(3)
 					font-size: 3rem
 			&_btn
@@ -84,8 +101,11 @@
 			top: -50px
 		&__content
 			width: 100%
+		&__text
+			font-size: 2.8rem
+			line-height: 35px
 	.step-four
-		margin-top: -200px
+		margin-top: -300px
 		&__text
 			line-height: normal
 	.finish
@@ -121,17 +141,22 @@
 			&_block
 				margin-right: 0
 				margin-bottom: 10px
-@media (max-width: 1300px)
+@media (max-width: 1366px)
 	.btn
 		height: 55px
 		width: 363px
 	.offer
-		&__title
-			font-size: 4rem
-			line-height: 45px
+		&__subtitle
+			margin-top: 10px
+		&__btn
+			margin-top: 10px
+		&__call
+			margin-top: 0px
 		&__block
-			max-width: 230px
-			max-height: 230px
+			max-width: 250px
+			max-height: 240px
+			&::after
+				right: -14%
 		&__text
 			font-size: 1.4rem
 			line-height: 18px
@@ -151,9 +176,10 @@
 			margin-top: 10px
 			&_main
 				margin: 0
+	.step-four
+		&__text
+			width: 90%
 	.services
-		&__block
-			width: 280px
 		&__text
 			max-width: 270px
 			p
@@ -161,6 +187,8 @@
 				line-height: 2.2rem
 		&__price
 			font-size: 3.5rem
+		&__btn
+			width: 250px
 	.business
 		margin-top: 20px
 		&__advantages
@@ -188,7 +216,7 @@
 	.faq
 		&__card
 			padding: 20px 90px
-@media (max-width: 1100px)
+@media (max-width: 1280px)
 	.header
 		height: 55px
 		padding-top: 11px
@@ -197,6 +225,14 @@
 			height: 43px
 			font-size: 1.6rem
 			font-weight: 400
+	.offer
+		&__title
+			font-size: 3rem
+			line-height: 32px
+		&__block
+			margin-top: 20px
+			&::after
+				right: -11%
 	.step-two
 		&__sale
 			&_action
@@ -204,41 +240,24 @@
 				margin-right: 15px
 			& .col-auto
 				padding: 0
-	.offer
-		&__title
-			font-size: 3rem
-			line-height: 28px
-		&__blocks
-			width: 100%
-		&__block
-			margin-top: 20px
-			&::after
-				right: -13%
-				transform: translateX(-17%)
 	.promo
-		flex-direction: column
 		&__card
-			width: 800px
+			width: 600px
 			height: 596px
 			margin-bottom: 35px
-			&_special
-				max-width: 380px
-				background-size: center
-				height: 100%
-				p
-					font-size: 2.2rem
 			&_header
+				max-width: 300px
 				img
-					max-width: 120px
-					max-height: 120px
-			&_btn
-				&-big
-					display: none
-				&-bot
-					display: flex
-					margin-top: 0
-					position: absolute
-					bottom: 55px
+					max-width: 110px
+					max-height: 110px
+			&_special
+				width: 280px
+				height: 117px
+				background-size: 280px 100px
+			&_price
+				width: 280px
+				height: 100px
+				background-size: 280px 100px
 	.services
 		&__blocks
 			flex-wrap: wrap
@@ -386,476 +405,463 @@
 		padding-right: 20px
 	.step-one
 		height: 100%
-	.header
-		&__logo
-			&-img svg
-				border: none
-			&-about
-				display: none
-	.special
-		&__block
-			width: 180px
-			height: 180px
-			&::after
-				right: -20%
-				transform: translateX(-20%)
-		&__img
-			max-width: 65%
-			max-height: 65%
-			margin-bottom: 20px
-			&_inst
-				margin-left: 40px
-		&__text
-			font-size: 1rem
-			line-height: normal
-			padding: 0 2px
-			height: 100%
-			display: flex
-	.promo
-		&__card
-			max-width: 95%
-	.step-three
-		&__text
-			width: 90%
-	.step-four
-		&__text
-			max-width: 95%
-			font-size: 1.8rem
-			line-height: normal
-	.finish
-		&__text
-			width: 90%
-	.about-us
-		&__text
-			max-width: 90%
-	.review
-		&__block
-			min-height: 340px
-			&-img
-				&::before
-					width: 45px
-					height: 45px
-				&::after
-					width: 25px
-					height: 35px
-			&-content
-				padding-top: 25px
-				&-text
-					min-height: 145px
-			&-author
-				& p
-					font-size: 1.15rem
-	.our-blog
-		margin-top: 30px
-		&__subtitle
-			margin-top: 10px
-		&__cards
-			margin-top: 20px
-		&__card
-			max-width: 95%
-			margin: 0 auto 20px
-	.form-block
-		&__subtitle
-			margin-top: 10px
-	.footer
-		&__card
-			width: 330px
-			height: 430px
-			margin-left: 15px
-			padding-left: 0
-			width: auto
-		& h2
-			font-size: 2.5rem
-		&__contact
-			height: 100%
-			margin-top: 20px
-			padding-left: 20px
-		&__social
-			&-title
-				font-size: 2rem
-			& a
-				font-size: 1.8rem
-			img
-				width: 15px
-				height: 15px
-				margin-right: 10px
-	#map
-		height: 500px
-@media (max-width: 800px)
-	h2.title
-		font-size: 2rem
-		line-height: normal
-	.step-one
-		&__next
-			width: 65px
-			height: 70px
-	.special
-		&__block
-			width: 160px
-			height: 160px
-			&::after
-				right: -23%
-				transform: translateX(-23%)
-		&__img
-			margin-bottom: 5px
 	.offer
-		&__title
-			font-weight: 400
-	.promo
-		&__card
-			height: auto
-			&-list
-				margin-left: 10px
-			&-advantages
-				& li
-					font-size: 1.6rem
-					padding-bottom: 5px
-	.business
-		margin-top: 10px
-		&__advantages
-			margin-top: 20px
-			& li
-				padding-bottom: 10px
-				font-size: 1.4rem
-		&__title
-			padding-top: 20px
-		&__btn
-			width: 55%
-			height: 55px
-			font-size: 1.8rem
-			margin-bottom: 30px
-	.step-three
-		height: 420px
-		&__title
-			margin-top: 0
-		&__text
-			margin-top: 20px
-			max-width: 95%
-			font-size: 1.8rem
-			line-height: normal
-		&__btn
-			margin-top: 20px
-	.step-four
-		padding-bottom: 0
-	.finish
-		margin-top: 30px
-		padding-bottom: 30px
-		&__img
-			width: 350px
-			height: 350px
-		&__title
-			margin-top: 0
-		&__text
-			margin-top: 20px
-			font-size: 1.8rem
-		&__btn
-			margin-top: 20px
-	.about-us
-		&__title
-			margin-top: 30px
-	.review
-		&__block
-			&-img
-				&::after
-					width: 59px
-					height: 59px
-				&::before
-					width: 71px
-					height: 71px
-			&-content
-				padding-top: 15px
-				&-title
-					font-size: 1.4rem
-	.our-team
-		display: flex
-		&__cards
-			display: flex
-			flex-wrap: wrap
-		&__card
-			width: 100%
-			height: 100%
-			&-text
-				min-height: 100%
-				height: 100%
-				max-width: 85%
-			&-btn
-				margin-bottom: 30px
-				max-width: 45%
-	.faq
-		margin-top: 30px
-		&__block
-			padding-top: 20px
-	.our-blog
-		&__img
-			width: 150px
-			height: 150px
-		&__content
-			margin-left: 15px
-			padding-right: 15px
-			&-name
-				font-size: 1.8rem
-			&-text
-				margin: 20px 0 30px
-	.form
-		&-block
-			& form
-				margin: 25px 0 50px
-			&__input
-				margin-right: 15px
-@media (max-width: 645px)
-	h1.main-title
-		width: 95%
-	h2.title
-		font-size: 1.8rem
-	.btn
-		width: 250px
-		height: 50px
-		font-size: 1.6rem
-	.header
-		&__menu
-			&-button
-				width: 160px
-				height: 40px
-				margin-right: 0
-	.step-one
-		background: linear-gradient(90deg,#4776E6 0,#8E54E9 100%) !important
-		&__video
-			width: 90%
-			max-width: 100%
-			margin: auto
-			height: 250px
-		&__advantages
-			&-list
-				margin: 15px auto 0
-				width: 90%
-			&-text
-				font-size: 1.6rem
-	.special
 		&__blocks
-			flex-direction: column
-			justify-content: center
-			align-items: center
+			flex-wrap: wrap
+			height: 100%
+			position: relative
+			&::before
+				content: "+"
+				position: absolute
+				font-size: 7rem
+				color: $white
+				font-family: 'Open Sans', sans-serif
+				font-weight: 600
+				top: 50%
+				left: 51%
+				transform: translate(-51%,-50%)
 		&__block
-			margin-bottom: 30px
-			width: 200px
-			height: 200px
+			flex: 1 1 calc(33.33% - 30px)
+			max-width: 400px
+			min-width: 350px
+			min-height: 320px
+			margin-bottom: 16px
+			margin-left: 16px
 			&::after
-				bottom: -37%
-				right: 50%
-				transform: translate(37%, -50%)
-		&__line, &__price-block
-			margin-top: -30px
-		&__line
-			width: 90%
-			margin: -30px auto
+				display: none
 		&__text
-			font-size: 1.2rem
-	.offer
-		margin-top: 35px
-		&__form
-			&-input, &-btn
-				width: 250px
-				font-size: 1.6rem
-			&-input
-				padding-left: 10px
-				&::placeholder
-					font-size: 1.4rem
-		&__title
-			width: 90%
-	.step-two
-		&__action
 			font-size: 1.8rem
-			max-width: 100%
-			margin-top: 10px
+		&__img
+			max-width: 250px
+			max-height: 200px
 	.promo
 		&__card
-			&-subtitle
-				font-size: 1.6rem
-			&-special
-				right: 5px
-				width: 150px
+			&_btn
+				width: 300px
+				height: 60px
+	.step-two
+		&__sale
+			width: 98%
+			height: 100%
+			padding: 30px 0
+			&_main
+				margin: 0 auto
+				margin-bottom: 20px
+			&_block
+				flex-wrap: wrap
+				align-items: center
+				justify-content: center
+			&_action
+				min-width: 400px
+				margin-right: 0
 				img
-					display: none
-			&-list
+					width: 140px
+					height: 140px
+	.services
+		&__block
+			min-width: 380px
+	.document
+		margin: 30px auto
+		display: flex
+		align-items: center
+		justify-content: center
+		&-block
+			padding: 0 215px
+			align-self: flex-end
+			&.owl-carousel .owl-stage-outer
+				min-width: 100%
+	.step-four
+		&__text
+			font-size: 2.2rem
+			line-height: 28px
+			width: 100%
+	.finish
+		&__block
+			margin-top: 30px
+			flex-direction: column
+		&__pay
+			width: 80%
+			margin: 10px auto 0
+			a
+				img
+					max-width: 100%
+					max-height: 100%
+			&-cart
+				width: 80%
+				margin: 0 auto
+				align-self: center
+			&_block
+				height: 100%
 				display: flex
 				flex-direction: column
-				width: 100%
-			&-advantages
-				padding-left: 10px
-				margin: auto
-				width: 90%
-				&:nth-child(2)
-					margin-top: 0
-	.business
-		&__advantages
-			margin-top: 10px
-			margin-bottom: 0
-			width: 90%
-			padding-left: 0
-			width: 100%
-			&:nth-child(2)
-				margin-top: 0
-				padding-left: 0
-				margin-bottom: 20px
-			&:nth-child(2)
-				padding-left: 0
-			li
-				height: auto
-				min-height: auto
-	.step-three
-		height: 320px
 		&__text
-			max-width: 100%
+			margin-top: 30px
 			width: 100%
-			font-size: 1.6rem
-		&__img
-			width: 350px
-			height: 350px
-	.step-four
-		&__text
-			font-size: 1.6rem
-			max-width: 100%
-	.finish
-		margin-top: 20px
-		&__title
-			margin-top: 0
-		&__text
-			width: 100%
+			p
+				text-align: center
+			a
+				align-self: center
 	.about-us
-		&__text
-			max-width: 100%
-	.our-team
-		&__subtitle
-			max-width: 100%
-			line-height: normal
-			font-size: 1.6rem
+		&::before, &::after
+			font-size: 320px
+		&::after
+			top: -40%
+		&::before
+			bottom: -40%
+	.review
+		&__blocks
+			padding: 0 40px
+			&.owl-carousel .owl-nav button.owl-next
+				right: 0
+			&.owl-carousel .owl-nav button.owl-prev
+				left: 0
+	.our-case__slider.owl-carousel .owl-nav button.owl-next, .our-work__slider.owl-carousel .owl-nav button.owl-next
+		margin-right: 0
+	.our-case__slider.owl-carousel .owl-nav button.owl-prev, .our-work__slider.owl-carousel .owl-nav button.owl-prev
+		margin-left: 0
+	.our-case
+		&__slide
+			&_result
+				margin: 20px 0 0
+				p.text
+					width: 100%
+	.faq
+		&__card
+			padding: 20px 70px
+		&__question
+			&-text
+				font-size: 2.5rem
+			&_img
+				width: 45px
+				height: 45px
+	.our-blog
 		&__cards
 			margin-top: 30px
 		&__card
-			margin-top: 15px
-	.form-block
-		margin-top: 30px
-		&__title
-			margin-top: 20px
-		&__subtitle
-			font-size: 1.6rem
-		&__input
-			font-size: 1.4rem
-			width: 180px
-			&::placeholder
-				font-size: 1.4rem
-		&__btn
-			width: 180px
-@media (max-width: 465px)
-	h1.main-title
-		font-size: 2rem
-		line-height: normal
-		width: 100%
-	.offer
-		overflow: hidden
-		&__title
-			font-size: 1.6rem
-		&__form
 			flex-direction: column
-			&-input
-				&::placeholder
-					font-size: 1.1rem
-			&-btn, &-input
-				margin-left: 0
-				margin: 0 auto
-				width: 280px
-			&-btn
-				margin-top: 20px
-
+			align-items: center
+			justify-content: center
+		&__content
+			text-align: center
+			&-img
+				margin: 10px auto 0
+	.footer
+		&__menu
+			margin: 0
+		&__social
+			margin: 0
+		&__adress
+			align-items: center
+			&_btn
+				width: 200px
+				height: 40px
+				font-size: 1.6rem
+				margin-top: 15px
+@media (max-width: 800px)
+	h2.title
+		font-size: 3.5rem
 	.promo
 		&__card
-			&-header
-				margin-top: 40px
-				align-items: center
-				padding-left: 10px
-			&-subtitle
-				font-size: 1.3rem
-			&-list
-				margin-top: 10px
-				height: auto
+			width: 700px
+			&_special
+				max-width: 300px
+				p
+					font-size: 1.8rem
+	.step-two
+		&__sale
+			width: 100%
+			&_action
+				min-width: 350px
+	.services
+		&__block
+			min-width: 350px
+			&:first-child, &:nth-child(3)
 				margin-left: 0
-			&-advantages
-				&:nth-child(2)
-					padding-left: 10px
-			&-img
-				display: none
-			&-btn
-				width: 170px
-				margin-right: 15px
-				font-size: 1.4rem
+		&__btn
+			width: 280px
+	.business
+		&__advantages
+			&:last-child
+				padding-left: 50px
 	.step-three
-		overflow: hidden
-	.our-team
+		margin-bottom: 20px
+	.document
+		&-block
+			padding: 0 165px
+	.our-case
+		&__slide
+			&_img
+				width: 80%
+	.our-work
+		margin-top: -80px
+	.footer
+		&__menu
+			margin-left: 15px
+		&__social
+			margin-left: 15px
+			&_block
+				a
+					font-size: 1.6rem
+				img
+					width: 20px
+					height: 20px
+					margin-right: 8px
+		&__adress
+			&_block
+				img
+					width: 30px
+					height: 50px
+				p
+					font-size: 1.4rem
+					line-height: 16px
+			&_btn
+					width: 170px
+					font-size: 1.4rem
+@media (max-width: 645px)
+	h2.title
+		font-size: 2.5rem
+	h3.subtitle
+		font-size: 1.8rem
+		margin-top: 5px
+	.offer
+		&__blocks
+			&::before
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+		&__block
+			min-width: 280px
+			max-width: 280px
+			&:first-child, &:nth-child(3)
+				margin-left: 0
+	.promo
+		margin-top: 15px
 		&__card
 			width: 100%
+			max-width: 608px
+			height: 595px
+			&:nth-child(odd)
+				padding: 40px 25px
+			&:nth-child(even)
+				padding: 40px 25px
+			&_header
+				img
+					max-width: 100px
+					max-height: 100px
+			&_advantages
+				width: 100%
+				max-width: 600px
+				justify-content: flex-start
+			ul
+				&:last-child
+					margin-left: 50px
+				li
+					font-size: 2rem
+					&::before
+						width: 10px
+						height: 10px
+			&_special
+				width: 266px
+				height: 117px
+				p
+					font-size: 1.6rem
+			&_price
+				max-width: 300px
+				height: 107px
+				background-size: 300px 107px
+			&_btn
+				width: 256px
+				height: 63px
+	.step-two
+		&__sale
+			&_action
+				min-width: 180px
+	.services
+		&__block
+			min-width: 280px
+			margin-bottom: 20px
+			margin-left: 20px
+	.business
+		&__advantages
+			width: 383px
+			margin: 0 auto
+			&:last-child
+				padding-left: 0
+			&:first-child
+				margin-top: 20px
+			li
+				padding-bottom: 20px
+				min-height: 30px
+	.step-three
+		&__block
+			max-width: 600px
+	.document
+		margin-bottom: 0
+		&-block
+			padding: 0 170px
+			a
+				width: 100%
+				height: 100%
+				display: block
+				max-width: 300px
+				max-height: 300px
+				padding: 0 10px
+				img
+					max-width: 300px
+					max-height: 300px
+	.step-four
+		&__text
+			margin-top: 20px
+	.finish
+		&__block
+			margin-top: 20px
+	.about-us
+		min-height: 600px
+		height: 700px
+		&::after, &::before
+			font-size: 280px
+	.review
+		width: 100%
+		&__blocks
+			padding: 0 180px
+			margin: 0 auto
+			width: 100%
+			&.owl-carousel .owl-nav button.owl-next
+				right: 10%
+			&.owl-carousel .owl-nav button.owl-prev
+				left: 10%
+	.our-case
+		&__slide
+			padding: 0 35px
+			&_img
+				width: 100%
+				height: 70%
+			&_after
+				img
+					height: auto
+			&_result
+				p.text
+					font-size: 2.2rem
+					line-height: 35px
+				p.first
+					font-size: 2.7rem
+					span
+						font-size: 2.2rem
+				p.second
+					font-size: 2.2rem
+					span
+						font-size: 2.4rem
+					span.price
+						font-size: 4.7rem
+	.our-work
+		&__slider
+			&.owl-carousel .owl-nav button.owl-next
+				right: 10%
+			&.owl-carousel .owl-nav button.owl-prev
+				left: 10%
+		&__slide
+			&:hover
+				width: 280px !important
+				.our-work__slide_btn
+					display: flex
+				img
+					background: url("../img/our-work/bg.png")  no-repeat
+					background-size: cover
+					height: 100%
+					margin-right: 0 !important
+	.faq
+		width: 95%
+		&__card
+			padding: 20px 50px
+		&__question
 			&-text
-				max-width: 95%
-				font-size: 1.4rem
-				margin-top: 15px
-			&-btn
-				max-width: 100%
-			&-proffesion
 				line-height: normal
 	.our-blog
-		&__date
-			right: 50%
-			transform: translateX(50%)
-			top: 10px
-		&__card
-			flex-direction: column
 		&__content
-			margin-top: 15px
-			&-name
-				font-size: 1.6rem
-		&__img
-			margin: 35px auto 0
-			width: 180px
-			height: 180px
-	.faq
-		overflow: hidden
-		&_single
-			&_title
-				font-size: 1.6rem
+			padding-right: 0
+			&-text
+				font-size: 2rem
 	.form-block
-		overflow: hidden
-		& form
-			flex-direction: column
-			margin-bottom: 20px
-		&__input, &__btn
-			width: 90%
-			height: 45px
-			margin: 0 auto 15px
-		&__input
-			font-size: 1.6rem
-			&::placeholder
-				font-size: 1.6rem
-	#map
-		display: none
-	.footer
-		overflow: hidden
-		width: 100%
-		height: 500px
-		&__social
-			padding-left: 40px
-		& h2
-			font-size: 2rem
-		&__card
-			margin-left: 0px
+		form
 			margin-top: 20px
-			width: 100%
-			height: 100%
-	.pop-content
-		padding: 60px 20px 40px
-		& button
-			width: 100%
-	.owl-dot
-		width: 12px
-		height: 12px
+			flex-direction: column
+			align-items: center
+		&__input
+			margin-right: 0
+			margin-bottom: 25px
+	.footer
+		&__menu
+			display: flex
+			flex-direction: column
+			ul
+				flex-direction: row
+				max-width: 600px
+				li
+					margin-right: 10px
+		&__social
+			margin-left: 120px
+			margin-right: 20px
+		&__adress
+			&_btn
+				width: 100%
+@media (max-width: 465px)
+	.header
+		&__logo
+			&-about
+				display: none
+		&-logo-img
+			&::after
+				display: none
+	.offer
+		&__blocks
+			&::before
+				display: none
+		&__block
+			&::after
+				display: block
+				bottom: -15%
+				left: 56%
+	.promo
+		align-items: center
+		justify-content: center
+		min-height: 595px
+		&__card
+			max-width: 350px
+			&:nth-child(even), &:nth-child(odd)
+				padding: 20px 0
+				& .row
+					max-width: 350px
+					margin: 0 auto
+			&_header
+				text-align: center
+				margin: 0 auto
+				flex-direction: column
+				max-width: 350px
+				height: 100%
+				max-height: 100%
+				img
+					max-width: 120px
+					max-height: 120px
+			&_title
+				margin-top: 10px
+				text-align: center
+				&:nth-child(even)
+					margin-left: 0
+				&:nth-child(odd)
+					margin-right: 0
+			&_special
+				display: none
+				&-mob
+					display: flex
+					align-items: center
+					width: 100%
+					height: 66px
+					color: $white
+					background: $button
+					text-align: center
+					font-size: 2rem
+					line-height: normal
+
 @media (max-width: 365px)
 	html, body
 		max-width: 365px

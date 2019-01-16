@@ -1,10 +1,9 @@
 $(document).ready(function() {
-
     $('input,textarea').focus(function() {
         $(this).data('placeholder', $(this).attr('placeholder'))
         $(this).attr('placeholder', '');
     });
-
+    console.log(2);
     $('a[href*="#"]')
         .not('[href="#"]')
         .not('[href="#0"]')
@@ -32,6 +31,10 @@ $(document).ready(function() {
                 }
             }
         });
+    $(".services__down").click(function() {
+        $(this).parent(".services__block").find(".services__list-item").toggleClass('services__list-hidden');
+        $(this).toggleClass('services__down-reverse');
+    });
     $('input,textarea').blur(function() {
         $(this).attr('placeholder', $(this).data('placeholder'));
     });
@@ -39,22 +42,21 @@ $(document).ready(function() {
         $(this).toggleClass("faq-hide")
         $(this).find(".faq-text").slideToggle(400)
         $(this).fadeIn(400, function() {
-            $(this).find(".faq__question-text").toggleClass('faq__question-before');
             $(this).find(".faq__question_img").toggleClass('faq__question_img-reverse');
 
         });
 
     })
     $(".our-blog__card_toggle").click(function() {
-        $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full')
-        $(this).find(".our-blog__content-img").toggleClass('our-blog__content-img-reverse')
-
-
+        $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full');
+        $(this).find(".our-blog__content-img").toggleClass('our-blog__content-img-reverse');
     });
     $(".our-blog__more").click(function() {
+        this.textContent = this.textContent === 'Скрыть' ? 'Смотреть еще' : 'Скрыть';
         $(".our-blog__card-none").slideToggle("slow", function() {
             $(".our-blog__card-none").toggleClass('our-blog__card');
         })
+
     })
     $(".btn").click(function() {
         $(".textarea").css({ "display": "none" })
@@ -100,17 +102,22 @@ $(document).ready(function() {
         nav: true,
         loop: false,
         navText: false,
-        slideBy: 3,
+        slideBy: 1,
         margin: 55,
+        mouseDrag: false,
         responsive: {
             0: {
-                items: 1
-            },
-            800: {
-                items: 1
+                items: 1,
+                nav: true,
+                autoWidth: true,
+                margin: 0,
+                // center: true
             },
             1000: {
-                items: 3
+                items: 3,
+                nav: false,
+                margin: 58,
+                center: false
             }
         }
     });
@@ -121,12 +128,14 @@ $(document).ready(function() {
         navText: false,
         slideBy: 3,
         margin: 60,
+        mouseDrag: false,
         responsive: {
             0: {
                 items: 1
             },
             800: {
-                items: 2
+                items: 2,
+                margin: 40
             },
             1000: {
                 items: 3,
@@ -144,7 +153,8 @@ $(document).ready(function() {
         nav: true,
         loop: false,
         navText: false,
-        items: 1
+        items: 1,
+        mouseDrag: false
     });
     $('.our-work__slider').owlCarousel({
         dots: false,
@@ -153,14 +163,15 @@ $(document).ready(function() {
         navText: false,
         items: 5,
         slideBy: 5,
+        mouseDrag: false,
         responsive: {
             0: {
                 items: 1,
                 slideBy: 1
             },
             800: {
-                items: 3,
-                slideBy: 3
+                items: 2,
+                slideBy: 2
             },
             1300: {
                 items: 4,
@@ -172,5 +183,4 @@ $(document).ready(function() {
             }
         }
     });
-    new WOW().init();
-})
+});
