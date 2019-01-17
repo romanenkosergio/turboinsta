@@ -349,64 +349,53 @@ nav
 		position: relative
 		width: 100%
 		max-width: 840px
-		min-height: 520px
 		border-radius: 40px
+		max-height: 100%
+		mih-height: 600px
 		margin: 30px
-		transition: .6s ease all
+		transition: .3s
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
-		&:nth-child(odd)
-			padding: 50px 50px 50px 90px
-		&:nth-child(even)
-			padding: 50px 90px 50px 50px
+		padding: 50px 30px
 		&:hover
 			box-shadow: 0 5px 31px rgba(103,101,231,.5)
 			background-color: #fff
 		&_header
 			display: flex
-			max-width: 385px
 			max-height: 165px
 			height: 100%
 			align-items: center
-			justify-content: space-between
 			img
 				width: 100%
 				height: 100%
 				max-width: 120px
 				max-height: 120px
+			&-block
+				display: flex
 		&_title
 			display: flex
 			flex-direction: column
-			max-height: 120px
-			text-align-last: right
 			align-items: flex-start
-			&:nth-child(even)
-				margin-left: 20px
-			&:nth-child(odd)
-				margin-right: 20px
-			span
-				position: relative
-			span:first-child
-				top: -20px
+			max-width: 250px
+			color: #7260e7
+			width: 100%
+			span.title
 				text-transform: uppercase
-				color: #7260e7
-				font-size: 5.8rem
+				font-size: 4rem
 				font-weight: 600
-			span:nth-child(2)
-				top: -35px
-				left: 2px
-				color: #7260e7
-				font-size: 2.5rem
+				line-height: 30px
+			&:nth-child(4)
+				align-items: flex-end
+			span.subtitle
+				font-size: 3rem
 				font-weight: 300
 				line-height: 30px
-				left: 8px
-			span:nth-child(3)
-				top: -40px
-				font-size: 3.6rem
+				&:last-child
+					text-align: right
+			span.month
+				font-size: 3.5rem
 				font-weight: 400
-				color: #6665e7
-				left: 8px
+				line-height: 30px
 		&_list
-			margin-top: 45px !important
 			min-height: auto
 			&:nth-child(2)
 				margin-top: 0 !important
@@ -425,11 +414,12 @@ nav
 					margin-right: 13px
 			&-hidden
 				display: none
+				margin-bottom: 50px
 		&_advantages
-			width: 715px
 			max-width: 100%
 			display: flex
 			flex-direction: column
+			margin-bottom: 20px
 		&_special
 			width: 100%
 			max-width: 330px
@@ -466,23 +456,22 @@ nav
 			font-weight: 400
 			&-bot
 				display: none
-			&-top
-				margin-top: 50px
 			&:hover
 				border: 2px solid $white
 				box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
 		&_price
 			max-width: 395px
 			width: 100%
-			max-height: 107px
 			height: 100%
-			position: absolute
-			bottom: 45px
 			font-size: 6.2rem
 			text-align: center
 			font-weight: 600
 			color: $white
 			transform: rotate(0deg)
+			&-block
+				display: flex
+				height: 107px
+				margin-bottom: 50px
 			&-r
 				background: url("../img/step-two/promo/price-r.svg") no-repeat
 				right: 0
