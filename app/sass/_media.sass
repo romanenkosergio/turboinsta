@@ -603,6 +603,9 @@
 			min-width: 400px
 			&:first-child, &:nth-child(3)
 				margin-left: 0
+		&__list
+			margin-top: 10px
+			min-height: auto
 		&__btn
 			width: 280px
 	.business
@@ -698,7 +701,6 @@
 			margin-bottom: 20px
 			margin-left: 20px
 		&__list
-			min-height: 57px
 			li
 				font-size: 1.4rem
 	.business
@@ -840,6 +842,12 @@
 			&_btn
 				width: 100%
 @media (max-width: 465px)
+	h2.title
+		font-size: 2rem
+	h3.subtitle
+		font-size: 1.8rem
+		margin-top: 3px
+		line-height: normal
 	.header
 		&__logo
 			&-about
@@ -847,46 +855,53 @@
 		&-logo-img
 			&::after
 				display: none
+	.step-two
+		&__title
+			margin-top: 20px
 	.offer
+		&__title
+			font-size: 2.5rem
+			line-height: 28px
+		&__subtitle
+			font-size: 1.4rem
+			line-height: normal
 		&__blocks
+			width: 100%
 			&::before
 				display: none
 		&__block
+			margin-left: 0
 			&::after
 				display: block
 				bottom: -15%
 				left: 56%
+	.step-two
+		&__sale
+			&_block
+				margin-left: 0
 	.promo
 		align-items: center
 		justify-content: center
 		min-height: 595px
 		&__card
 			max-width: 350px
-			&:nth-child(even), &:nth-child(odd)
-				padding: 20px 0
-				& .row
-					max-width: 350px
-					margin: 0 auto
-			&_header
-				text-align: center
-				margin: 0 auto
-				flex-direction: column
-				max-width: 350px
-				height: 100%
-				max-height: 100%
-				img
-					max-width: 120px
-					max-height: 120px
-			&_title
-				margin-top: 10px
-				text-align: center
-				&:nth-child(even)
-					margin-left: 0
-				&:nth-child(odd)
-					margin-right: 0
-			&_special
+			padding: 20px 0
+		&__header
+			text-align: center
+			margin: 0 auto
+			flex-direction: column
+			max-width: 350px
+			height: 100%
+			max-height: 100%
+			&-text
+				margin-top: 20px
+			&-img
+				max-width: 110px
+				max-height: 110px
+			&-special
 				display: none
-				&-mob
+				&_mobile
+					margin-top: 20px
 					display: flex
 					align-items: center
 					width: 100%
@@ -896,8 +911,113 @@
 					text-align: center
 					font-size: 2rem
 					line-height: normal
-
-@media (max-width: 365px)
+		&__advantages
+			&-list
+				li
+					font-size: 1.6rem
+					list-style: circle inside
+					display: list-item
+					&::before
+						display: none
+		&__price
+			width: 350px
+			max-width: 350px
+			background: #fb9134
+			&_right
+				margin-right: 0
+			&_left
+				margin-left: 0
+			&-block
+				flex-direction: column
+				&_reverse
+					flex-direction: column-reverse
+		&__btn
+			margin: 0 auto
+			margin-top: 15px
+	.services
+		&__block
+			margin-left: 0
+		&__text
+			height: auto
+	.step-three
+		&__block
+			width: 100%
+		&__text
+			font-size: 1.8rem
+			line-height: normal
+	.step-four
+		margin-top: -10px
+	.document
+		&-block
+			padding: 0 75px 0 80px
+	.finish
+		padding: 30px 0
+		&__text
+			p
+				font-size: 2rem
+				line-height: normal
+	.about-us
+		height: auto
+		&::after, &::before
+			display: none
+	.review
+		&__blocks
+			padding: 0 90px
+	.our-case
+		&__slide
+			&_result
+				p.first
+					font-size: 1.8rem
+					span
+						font-size: 1.6rem
+				p.second
+					font-size: 1.8rem
+					span
+						font-size: 1.6rem
+					span.price
+						font-size: 3rem
+				p.text
+					margin-top: 10px
+					font-size: 1.6rem
+					line-height: 20px
+				a
+					width: 300px
+					height: 50px
+	.our-team
+		margin-top: 20px
+	.faq
+		&__card
+			padding: 25px 30px
+			border-radius: 30px
+		&__question
+			&-text
+				font-size: 1.8rem
+		&-text
+			font-size: 1.4rem
+		&_single_title
+			font-size: 1.8rem
+	.our-blog
+		&__card
+			padding: 20px 0
+		&__img
+			max-width: 100%
+			max-height: 100%
+			margin: 0 auto
+		&__content
+			margin-left: 0
+			&-name
+				font-size: 2.5rem
+			&-date
+				margin-top: 0
+				font-size: 1.4rem
+			&-text
+				font-size: 1.6rem
+				margin-top: 5px
+				line-height: normal
+			&-img
+				width: 35px
+				height: 35px
+@media (max-width: 375px)
 	html, body
 		max-width: 365px
 		width: 100%

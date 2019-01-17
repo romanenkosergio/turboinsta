@@ -114,8 +114,15 @@ $(document).ready(function() {
                 items: 1,
                 nav: true,
                 autoWidth: true,
+                margin: 0,
+                stagePadding: 5
+                    // center: true,
+            },
+            789: {
+                items: 1,
+                nav: true,
+                autoWidth: true,
                 margin: 0
-                    // center: true
             },
             1000: {
                 items: 3,
@@ -135,19 +142,24 @@ $(document).ready(function() {
         mouseDrag: false,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                margin: 0,
+                autoWidth: true
             },
             800: {
                 items: 2,
-                // margin: 20
+                autoWidth: false
+                    // margin: 20
             },
             1000: {
                 items: 3,
-                margin: 0
+                margin: 0,
+                autoWidth: false
             },
             1200: {
                 items: 3,
-                margin: 60
+                margin: 60,
+                autoWidth: false
             }
         }
     });
