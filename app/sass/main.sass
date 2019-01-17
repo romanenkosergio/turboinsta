@@ -336,48 +336,49 @@ nav
 	flex-wrap: wrap
 	justify-content: center
 	display: flex
-	position: relative
 	padding-bottom: 20px
-	&__down
-		cursor: pointer
-		transition: all .2s ease
-		margin-top: 10px
-		&-reverse
-			transform: rotate(180deg)
-			transition: all .2s ease
 	&__card
 		position: relative
 		width: 100%
 		max-width: 840px
 		border-radius: 40px
 		max-height: 100%
-		mih-height: 600px
+		// mih-height: 600px
 		margin: 30px
 		transition: .3s
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
-		padding: 50px 30px
+		padding: 50px 20px
+		&_right
+			margin-right: 0
+		&_left
+			margin-left: 0
 		&:hover
 			box-shadow: 0 5px 31px rgba(103,101,231,.5)
 			background-color: #fff
-		&_header
-			display: flex
-			max-height: 165px
+	&__header
+		display: flex
+		max-height: 165px
+		height: 100%
+		align-items: center
+		&-img
+			width: 100%
 			height: 100%
+			max-width: 120px
+			max-height: 120px
+		&-block
+			display: flex
 			align-items: center
-			img
-				width: 100%
-				height: 100%
-				max-width: 120px
-				max-height: 120px
-			&-block
-				display: flex
-		&_title
+		&-text
 			display: flex
 			flex-direction: column
 			align-items: flex-start
 			max-width: 250px
 			color: #7260e7
 			width: 100%
+			&_left
+				margin-left: 10px
+			&_right
+				margin-right: 10px
 			span.title
 				text-transform: uppercase
 				font-size: 4rem
@@ -395,15 +396,49 @@ nav
 				font-size: 3.5rem
 				font-weight: 400
 				line-height: 30px
-		&_list
+		&-special
+			width: 100%
+			width: 330px
+			height: 117px
+			position: absolute
+			top: 0
+			&_left
+				background: url("../img/step-two/promo/turbo-l.svg") no-repeat
+				background-size: 330px 117px
+				right: 0
+				position: absolute
+			&_right
+				background: url("../img/step-two/promo/turbo-r.svg") no-repeat
+				background-size: 330px 117px
+				left: 0
+				position: absolute
+			p
+				max-width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 100%
+				color: $white
+				font-size: 2rem
+				font-weight: 400
+				text-align: center
+				line-height: normal
+			&_mobile
+				display: none
+	&__advantages
+		max-width: 100%
+		display: flex
+		flex-direction: column
+		margin-bottom: 20px
+		min-height: 150px
+		&-list
 			min-height: auto
-			&:nth-child(2)
-				margin-top: 0 !important
 			li
 				font-size: 2.2rem
 				color: #6566e7
 				display: flex
 				align-items: center
+				line-height: normal
 				&::before
 					content: ""
 					width: 15px
@@ -412,72 +447,52 @@ nav
 					border-radius: 50%
 					background: #6566e7
 					margin-right: 13px
-			&-hidden
+			&_hidden
 				display: none
 				margin-bottom: 50px
-		&_advantages
-			max-width: 100%
+				margin-top: 0 !important
+		&_down
+			cursor: pointer
+			transition: all .2s ease
+			margin-top: 10px
+			&-reverse
+				transform: rotate(180deg)
+				transition: all .2s ease
+	&__price
+		max-width: 395px
+		width: 100%
+		height: 100%
+		font-size: 6.2rem
+		text-align: center
+		font-weight: 600
+		color: $white
+		transform: rotate(0deg)
+		&-block
 			display: flex
-			flex-direction: column
-			margin-bottom: 20px
-		&_special
-			width: 100%
-			max-width: 330px
-			height: 117px
-			position: absolute
-			top: 0
-			padding: 27.5px 0
-			&-l
-				background: url("../img/step-two/promo/turbo-l.svg") no-repeat
-				right: 0
-			&-r
-				background: url("../img/step-two/promo/turbo-r.svg") no-repeat
-				left: 0
-			&-mob
-				display: none
-			p
-				display:
-				align-items: center
-				color: $white
-				font-size: 2.2rem
-				font-weight: 400
-				text-align: center
-				line-height: normal
-		&_btn
-			width: 286px
-			height: 63px
-			border-radius: 32px
-			color: $white
-			background: #6765e7
-			display: flex
-			justify-content: center
-			align-items: center
-			font-size: 2.4rem
-			font-weight: 400
-			&-bot
-				display: none
-			&:hover
-				border: 2px solid $white
-				box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
-		&_price
-			max-width: 395px
-			width: 100%
-			height: 100%
-			font-size: 6.2rem
-			text-align: center
-			font-weight: 600
-			color: $white
-			transform: rotate(0deg)
-			&-block
-				display: flex
-				height: 107px
-				margin-bottom: 50px
-			&-r
-				background: url("../img/step-two/promo/price-r.svg") no-repeat
-				right: 0
-			&-l
-				background: url("../img/step-two/promo/price-l.svg") no-repeat
-				left: 0
+			height: 107px
+			margin-bottom: 50px
+		&_right
+			background: url("../img/step-two/promo/price-r.svg") no-repeat
+			margin-right: -20px
+		&_left
+			background: url("../img/step-two/promo/price-l.svg") no-repeat
+			margin-left: -20px
+	&__btn
+		width: 286px
+		height: 63px
+		border-radius: 32px
+		color: $white
+		background: #6765e7
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 2.4rem
+		font-weight: 400
+		&_bot
+			display: none
+		&:hover
+			border: 2px solid $white
+			box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
 .services
 	margin-top: 40px
 	width: 100%

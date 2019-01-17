@@ -46,45 +46,27 @@
 			width: 49%
 			margin: 0
 			margin-bottom: 25px
-			&:nth-child(odd)
-				padding: 50px 30px 50px 50px
-			&:nth-child(even)
-				padding: 50px 50px 50px 30px
-			&_header
-				img
-					max-width: 90px
-					max-height: 90px
-			&_title
-				&:nth-child(even)
-					margin-left: 10px
-				&:nth-child(odd)
-					margin-right: 10px
-				span:first-child
-					font-size: 5rem
-					// display: inline-block
-					width: 100%
-				span:nth-child(2)
+			min-height: 560px
+		&__header
+			&-img
+				max-width: 95px
+				max-height: 95px
+			&-text
+				max-width: 200px
+				span.subtitle
 					font-size: 2.5rem
-					&:last-child
-						left: -5%
-				span:nth-child(3)
-					font-size: 3rem
-			&_btn
-				width: 230px
-				height: 50px
-				&-top
-					margin-top: 0
-					position: absolute
-					bottom: 55px
-			&_price
-				max-width: 350px
-				background-size: 350px 100px
-				bottom: 35px
-				max-height: 100px
+		&__advantages
+			min-height: 175px
+			margin-top: 20px
+			&-list
+				li
+					font-size: 2rem
+		&__price
+			max-width: 320px
+			background-size: 320px 107px
 	.services
 		&__block
 			width: 300px
-			height: 400px
 			padding: 15px 30px
 		&__img
 			max-width: 80px
@@ -165,11 +147,27 @@
 			max-height: 130px
 	.promo
 		&__card
-			&_special
+			padding: 30px 10px
+			min-height: 520px
+		&__header
+			min-height: 120px
+			&-special
 				max-width: 300px
 				background-size: 100%
 				p
 					font-size: 1.6rem
+		&__advantages
+			&-list
+				li
+					font-size: 1.8rem
+		&__price
+			&-block
+				margin-bottom: 0
+			&_left
+				margin-left: -10px
+			&_right
+				margin-right: -10px
+
 	.step-two
 		&__sale
 			background: linear-gradient(#8557e8 0%, #6268e7 100%)
