@@ -114,8 +114,8 @@ $(document).ready(function() {
                 items: 1,
                 nav: true,
                 autoWidth: true,
-                margin: 0,
-                // center: true
+                margin: 0
+                    // center: true
             },
             1000: {
                 items: 3,
@@ -139,7 +139,7 @@ $(document).ready(function() {
             },
             800: {
                 items: 2,
-                margin: 40
+                // margin: 20
             },
             1000: {
                 items: 3,
@@ -174,8 +174,8 @@ $(document).ready(function() {
                 slideBy: 1
             },
             800: {
-                items: 2,
-                slideBy: 2
+                items: 3,
+                slideBy: 3
             },
             1300: {
                 items: 4,
