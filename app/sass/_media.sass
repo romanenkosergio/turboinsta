@@ -1,4 +1,4 @@
-@media (max-width: 1440px)
+@media (max-width: 1600px)
 	.header
 		height: 55px
 		padding-top: 11px
@@ -12,13 +12,21 @@
 		&__title
 			font-size: 3rem
 			line-height: 32px
+		&__subtitle
+			margin-top: 5px
 		&__blocks
 			width: 90%
+		&__call
+			margin-top: 0
 		&__block
 			margin-top: 15px
+			max-height: 235px
 			&::after
 				right: -13%
 				transform: translateX(-17%)
+		&__price
+			&-block
+				margin-top: 15px
 	.step-two
 		&__sale
 			background-size: 100%
@@ -1168,8 +1176,6 @@
 		&__slide
 			img
 				height: 460px
-	.our-team
-		margin-top: -60px
 		&__cards
 			margin-top: 20px
 		&__card

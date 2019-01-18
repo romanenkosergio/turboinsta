@@ -140,7 +140,12 @@ nav
 		text-align: center
 		font-size: 4rem
 		font-weight: 600
-		line-height: 60px
+		line-height: 40px
+		margin-bottom: 0
+		color: $white
+	&__second
+		font-size: 3rem
+		margin-top: 0
 		color: $white
 	&__blocks
 		display: flex
@@ -226,10 +231,13 @@ nav
 			color: #6a63e7
 			position: relative
 			top: -10px
+			text-transform: uppercase
+			font-weight: 600
 	&__subtitle
 		color: $white
 		margin: auto
 		margin-top: 20px
+		font-size: 1.8rem
 	&__btn
 		width: 400px
 		height: 70px
@@ -1100,14 +1108,12 @@ nav
 			margin-bottom: 20px
 			// transition: all .2s ease
 		&:hover
-			width: 330px !important
 			.our-work__slide_btn
 				display: flex
 			img
 				background: url("../img/our-work/bg.png")  no-repeat
 				background-size: cover
 				// padding: 20px
-				height: 100%
 				margin-right: 0 !important
 		&_btn
 			// transition: all .2s ease
@@ -1126,7 +1132,7 @@ nav
 				// transition: all .2s ease
 				background: $hover
 		img
-			height: 580px
+			height: 100%
 			width: 330px !important
 			margin-right: 0
 			// transition: all .2s ease
@@ -1174,11 +1180,11 @@ nav
 				width: 220px
 				height: 220px
 			&_2
-				background: url(../img/our-team/2.svg)  center/cover no-repeat
+				background: url(../img/our-team/2.svg)
 			&_3
-				background: url(../img/our-team/3.svg)  center/cover no-repeat
+				background: url(../img/our-team/3.svg)
 			&_4
-				background: url(../img/our-team/4.svg)  100%/cover no-repeat
+				background: url(../img/our-team/4.svg)
 		&-name
 			font-size: 3rem
 			font-weight: 600
