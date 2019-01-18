@@ -845,7 +845,7 @@
 	h2.title
 		font-size: 2rem
 	h3.subtitle
-		font-size: 1.8rem
+		font-size: 1.6rem
 		margin-top: 3px
 		line-height: normal
 	.header
@@ -875,6 +875,10 @@
 				display: block
 				bottom: -15%
 				left: 56%
+		&__btn
+			width: 300px
+			height: 50px
+			font-size: 2rem
 	.step-two
 		&__sale
 			&_block
@@ -893,8 +897,24 @@
 			max-width: 350px
 			height: 100%
 			max-height: 100%
+			align-items: center
+			&_reverse
+				flex-direction: column-reverse !important
+			&-block
+				flex-direction: column
 			&-text
+				align-items: center !important
 				margin-top: 20px
+				&_left
+					margin-left: 0
+					&:last-child
+						span.title
+							align-self: center
+				&_right
+					margin-right: 0
+				span.subtitle
+					&:last-child
+						text-align: center
 			&-img
 				max-width: 110px
 				max-height: 110px
@@ -985,6 +1005,14 @@
 					height: 50px
 	.our-team
 		margin-top: 20px
+		&__card
+			max-width: 100%
+			min-height: auto
+			&-img
+				width: 100px
+				height: 100px
+				background-size: cover
+
 	.faq
 		&__card
 			padding: 25px 30px
@@ -1017,19 +1045,25 @@
 			&-img
 				width: 35px
 				height: 35px
-@media (max-width: 375px)
-	html, body
-		max-width: 365px
-		width: 100%
-	.btn
-		height: 40px
-	.header
+	.footer
+		&__block
+			max-width: 100%
+		&__logo
+			margin: 0 auto
 		&__menu
-			&-button
-				width: 140px
-				height: 35px
-				text-align: center
-				line-height: normal
+			margin: 15px auto 0
+		&__adress
+			margin-left: 10px
+		&__social
+			margin-left: 0
+			&_block
+				img
+					width: 15px
+					height: 15px
+					margin-right: 3px
+				a
+					font-size: 1.4rem
+@media (max-width: 425px)
 	.offer
 		margin-top: 50px
 		&__title
@@ -1075,30 +1109,38 @@
 	.step-four
 		&__subtitle
 			margin-top: 20px
-	.finish
-		height: 420px
-		&__text
-			font-size: 1.6rem
-		&__title
-			margin-top: 10px
-		&__small
-			font-size: 1.4rem
-		&__pay
-			flex-wrap: wrap
-			justify-content: space-around
-			align-items: center
-			a:nth-child(4)
-				margin-top: 20px
+	.document
+		&-block
+			padding: 0 55px 0 55px
 	.about-us
 		&__text
 			font-size: 1.6rem
 		&__carousel
 			margin-top: 20px
+	.our-case
+		&__headline
+			font-size: 2rem
+		&__slide
+			padding: 0
+			&_img
+				width: 70%
+	.our-work
+		&__slider
+			width: 100%
+			height: 100%
+		&__slide
+			img
+				height: 460px
 	.our-team
+		margin-top: -60px
 		&__cards
 			margin-top: 20px
 		&__card
 			margin-right: 0
+			&-btn
+				width: 240px
+				height: 45px
+				font-size: 1.8rem
 	.faq
 		margin-top: 20px
 		&__block
@@ -1113,12 +1155,117 @@
 		&__social
 			padding-left: 0
 			margin-bottom: 15px
-
-
-
-
-
-
-
-
-
+@media (max-width: 375px)
+	.btn
+		width: 280px
+		height: 55px
+		font-size: 1.8rem
+	h2.title
+		font-size: 1.8rem
+	h3.title
+		font-size: 1.6rem
+	.offer
+		&__title
+			font-size: 1.8rem
+			line-height: 20px
+		&__block
+			min-width: 200px
+			min-height: 250px
+			&::after
+				bottom: -18%
+	.promo
+		&__header
+			&-block
+				width: 100%
+				flex-direction: column
+		&__price
+			width: 100%
+		&__btn
+			width: 280px
+			height: 55px
+			font-size: 1.8rem
+	.step-two
+		&__sale
+			&_action
+				min-width: 50px
+				margin-right: 10px
+				&:nth-child(2)
+					margin-right: 0
+				img
+					width: 100px
+					height: 100px
+				p
+					font-size: 1.2rem
+	.business
+		&__advantages
+			margin-left: 35px
+			li
+				padding-bottom: 10px
+				min-height: auto
+				font-size: 1.4rem
+				img
+					width: 25px
+					height: 25px
+					margin-right: 10px
+	.step-three
+		&__text
+			font-size: 1.6rem
+		&__btn
+			width: 100%
+			height: 55px
+			&-block
+				width: 280px
+				height: auto
+	.step-four
+		margin-top: -170px
+		&__text
+			font-size: 1.6rem
+			line-height: 20px
+		&__btn
+			margin: 20px 0
+	.document
+		&-block
+			padding: 0 35px
+			&.owl-carousel .owl-nav button.owl-prev, &.owl-carousel .owl-nav button.owl-next
+				top: calc(50% - 50px)
+	.finish
+		&__text
+			p
+				font-size: 1.6rem
+		&__btn
+			width: 280px
+			height: 55px
+			font-size: 1.8rem
+			margin-top: 20px
+	.review
+		&__blocks
+			padding: 0 40px
+			&.owl-carousel .owl-nav button.owl-prev
+				left: 0
+			&.owl-carousel .owl-nav button.owl-next
+				right: 0
+	.our-work
+		&__slider
+			&.owl-carousel .owl-nav button.owl-prev
+				left: 0
+			&.owl-carousel .owl-nav button.owl-next
+				right: 0
+	.our-team
+		&__card
+			&-text
+				max-height: 100%
+	.form-block
+		&__input, &__btn
+			width: 90%
+	.footer
+		&__menu
+			ul
+				li
+					margin-right: 5px
+					a
+						font-size: 1.2rem
+		&__social
+			margin: 10px auto 0
+		&__adress
+			margin: 10px auto 0
+			width: 250px
