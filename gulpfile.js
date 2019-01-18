@@ -46,15 +46,18 @@ var gulp = require('gulp'),
     notify = require("gulp-notify"),
     rsync = require('gulp-rsync');
 
+
+
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: 'app'
         },
-        notify: false,
-        // open: false,
-        // online: false, // Work Offline Without Internet Connection
-        // tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
+        // proxy: "localhost:8888",
+        notify: false
+            // open: false,
+            // online: false, // Work Offline Without Internet Connection
+            // tunnel: true, tunnel: "projectname", // Demonstration page: http://projectname.localtunnel.me
     })
 });
 
@@ -102,7 +105,8 @@ gulp.task('js', function() {
 gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
     gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles']);
     gulp.watch(['libs/**/*.js', 'app/js/index.js'], ['js']);
-    gulp.watch('app/*.html', browserSync.reload)
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/*.php', browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
