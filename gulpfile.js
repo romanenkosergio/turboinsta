@@ -77,6 +77,7 @@ gulp.task('js', function() {
             'app/libs/masked/jquery.maskedinput.min.js',
             // 'app/libs/wow/wow.min.js',
             'app/libs/owl/owl.carousel.min.js',
+            'app/libs/particles/particles.js',
             // 'app/libs/snowfall/snowfall.js',
             'app/js/index.js', // Always at the end
         ])

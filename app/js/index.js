@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    particlesJS.load('particles-js', '/libs/particles/config.json', function() {
+        console.log('particles.js loaded - callback');
+    });
     $('input,textarea').focus(function() {
         $(this).data('placeholder', $(this).attr('placeholder'))
         $(this).attr('placeholder', '');
