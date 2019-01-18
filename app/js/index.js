@@ -114,17 +114,24 @@ $(document).ready(function() {
                 items: 1,
                 nav: true,
                 autoWidth: true,
-                margin: 0,
-                stagePadding: 5
+                center: true,
+                margin: 25
+                    // stagePadding: 5
                     // center: true,
             },
-            789: {
-                items: 1,
-                nav: true,
+            // 768: {
+            //     items: 1,
+            //     nav: true,
+            //     autoWidth: true,
+            //     margin: 0
+            // },
+            960: {
+                items: 3,
+                nav: false,
                 autoWidth: true,
-                margin: 0
+                margin: 20
             },
-            1000: {
+            1024: {
                 items: 3,
                 nav: false,
                 margin: 58,

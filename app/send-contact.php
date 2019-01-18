@@ -195,6 +195,12 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
     <link rel="stylesheet" href="css/main.min.css">
     <!-- Fonts -->
 		<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+		 <!-- Favicon -->
+		 <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+    <link rel="manifest" href="img/fav/manifest.json">
+    <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#31004a">
 		<script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -232,12 +238,14 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 	.youtube{
 		margin-top: 15px;
 	}
+	iframe{
+		max-width: 100%;
+	}
 	.nazad{
 		font-size: 2rem;
 		display: flex;
     width: max-content;
     align-self: center;
-
 	}
 	h3{
 		font-size: 1.8rem;
@@ -265,16 +273,7 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
                     </div>
 										<!-- /.col-lg-6 -->
                     <div class="col-auto d-flex align-items-center justify-content-end">
-                        <nav class="d-flex align-items-center justify-content-end">
-                            <ul class="d-flex align-items-center header__menu">
-
-                                <li>
-                                    <a href="tel:+380931702224" class="header__menu-link header__menu-button btn" data-type="color"  onclick="ga('send', 'event', 'brief', 'Click');">+380931702224</a>
-                                </li>
-                                <!-- /.header__menu-link -->
-                            </ul>
-                        </nav>
-                        <!-- /.header__menu -->
+                                    <a href="tel:+380931702224" class="header__menu-link" data-type="color"  onclick="ga('send', 'event', 'brief', 'Click');">+380931702224</a>
                     </div>
                     <!-- /.col-lg-6 -->
                 </div>
