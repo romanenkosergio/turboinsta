@@ -51,6 +51,7 @@ nav
 	height: 100% !important
 #particles-js
 	position: relative
+	z-index: 1
 /* Конец Спецификации */
 /* Шаг 1 */
 .step-one
@@ -1028,8 +1029,8 @@ nav
 		height: 100%
 		position: relative
 		&_img
-			width: 45%
-			margin-right: 30px
+			width: auto
+			margin-right: 50px
 			display: flex
 			margin-left: 100px
 		&_before, &_after
@@ -1051,30 +1052,31 @@ nav
 			img
 				width: 360px
 		&_result
-			width: 45%
+			width: auto
 			color: #8158e7
 			span
-				font-size: 3rem
+				font-size: 2.4rem
 				font-weight: 400
 				text-decoration: underline
 				&.price
-					font-size: 7rem
+					font-size: 5rem
 					font-weight: 600
 					text-decoration: none
 			p.first
-				font-size: 4.2rem
+				font-size: 3rem
 				font-weight: 600
 			p.second
-				font-size: 3.4rem
+				font-size: 2.8rem
 				font-weight: 600
 				margin-top: 10px
 			p.text
-				font-size: 2.8rem
+				font-size: 2.5rem
 				font-weight: 400
 				line-height: 40px
 				text-align: left
 				margin-top: 30px
-				width: 90%
+				width: 100%
+				padding-right: 35px
 			a
 				max-width: 100%
 				max-height: 100%
@@ -1090,7 +1092,6 @@ nav
 				background: $button
 				margin-top: 55px
 				margin-bottom: 10px
-				box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.16)
 				&:hover
 					background: $hover
 /* Наши Работы */
@@ -1120,7 +1121,7 @@ nav
 				// padding: 20px
 				margin-right: 0 !important
 		&_btn
-			// transition: all .2s ease
+			transition: all .2s ease
 			width: 330px
 			height: 63px
 			background: $button
@@ -1133,13 +1134,13 @@ nav
 			font-size: 2.2rem
 			display: none
 			&:hover
-				// transition: all .2s ease
+				transition: all .2s ease
 				background: $hover
 		img
-			height: 100%
+			height: auto
 			width: 330px !important
 			margin-right: 0
-			// transition: all .2s ease
+			transition: all .2s ease
 /* Наш коллектив */
 .our-team
 	margin-top: 50px

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    particlesJS.load('particles-js', '/libs/particles/config.json', function() {
+    particlesJS.load('particles-js', '/js/config.json', function() {
         console.log('particles.js loaded - callback');
     });
     $('input,textarea').focus(function() {
