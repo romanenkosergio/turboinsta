@@ -1,4 +1,4 @@
-@media (max-width: 1600px)
+@media (max-width: 1800px)
 	.header
 		height: 55px
 		padding-top: 11px
@@ -115,11 +115,6 @@
 			font-size: 520px
 	.review
 		width: 80%
-	.our-case
-		&__slide
-			&_result
-				p.text
-					font-size: 2.6rem
 	.our-team
 		&__card
 			&-text
@@ -132,6 +127,19 @@
 			&_block
 				margin-right: 0
 				margin-bottom: 10px
+@media (max-width: 1660px)
+	.offer
+		&__blocks
+			width: 77%
+		&__block
+			max-height: 280px
+	.our-work
+		&__slide
+			width: 300px
+			img
+				width: 300px !important
+			&_btn
+				width: 300px
 @media (max-width: 1366px)
 	.btn
 		height: 55px
@@ -244,6 +252,8 @@
 		&__title
 			font-size: 3rem
 			line-height: 32px
+		&__blocks
+			width: 100%
 		&__block
 			margin-top: 20px
 			&::after
@@ -257,7 +267,7 @@
 				padding: 0
 	.promo
 		&__card
-			width: 580px
+			max-width: 580px
 			margin-bottom: 35px
 		&__header
 			&-img
@@ -277,10 +287,12 @@
 			// flex-wrap: wrap
 		&__block
 			// flex: 1 1 calc(33.33% - 30px)
-			width: 280px
+			max-width: 280px
 			// min-width: 430px
 			margin-bottom: 30px
 			margin-left: 30px
+			&:first-child
+				margin-left: 0
 		&__img
 			width: 100px
 			height: 100px
@@ -376,9 +388,6 @@
 				margin: 0 auto
 			&-btn
 				margin-top: 15px
-			&-text
-				max-height: 120px
-				height: auto
 	.faq
 		width: 100%
 		margin-top: 30px
@@ -773,10 +782,6 @@
 			&_after
 				img
 					height: auto
-			&_result
-				p.text
-					font-size: 2.2rem
-					line-height: 35px
 				p.first
 					font-size: 2.7rem
 					span
@@ -949,6 +954,7 @@
 					font-size: 1.6rem
 					list-style: circle inside
 					display: list-item
+					padding-left: 8px
 					&::before
 						display: none
 		&__price
@@ -1005,6 +1011,8 @@
 	.our-case
 		&__slide
 			&_result
+				span
+					font-size: 1.6rem
 				p.first
 					font-size: 1.8rem
 					span
@@ -1014,11 +1022,12 @@
 					span
 						font-size: 1.6rem
 					span.price
-						font-size: 3rem
+						font-size: 2.4rem
 				p.text
 					margin-top: 10px
 					font-size: 1.6rem
 					line-height: 20px
+					padding: 0
 				a
 					width: 300px
 					height: 50px
@@ -1293,10 +1302,6 @@
 				left: 0
 			&.owl-carousel .owl-nav button.owl-next
 				right: 0
-	.our-team
-		&__card
-			&-text
-				max-height: 100%
 	.form-block
 		&__input, &__btn
 			width: 90%

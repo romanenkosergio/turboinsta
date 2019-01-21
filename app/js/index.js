@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    particlesJS.load('particles-js', '/js/config.json', function() {
-        console.log('particles.js loaded - callback');
+    particlesJS.load('step-one', '/js/config.json', function() {
     });
     $('input,textarea').focus(function() {
         $(this).data('placeholder', $(this).attr('placeholder'))
         $(this).attr('placeholder', '');
     });
-    console.log(2);
     $('a[href*="#"]')
         .not('[href="#"]')
         .not('[href="#0"]')
@@ -44,7 +42,12 @@ $(document).ready(function() {
     });
     $('input,textarea').blur(function() {
         $(this).attr('placeholder', $(this).data('placeholder'));
-    });
+		});
+		$(".our-team__card_down").click(function(e){
+      e.stopImmediatePropagation();
+			$(this).parent(".our-team__card").find(".our-team__card-text span").toggleClass('our-team__card-text_hidden');
+			$(this).toggleClass('our-team__card_down-reverse');
+		})
     $(".faq__card").click(function() {
         $(this).toggleClass("faq-hide")
         $(this).find(".faq-text").slideToggle(400)
