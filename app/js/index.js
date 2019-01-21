@@ -1,16 +1,10 @@
 $(document).ready(function() {
-    setTimeout(function() {
-        $(".black-friday").css({ 'display': 'none' });
-    }, 15000);
-    $(".black-friday").find(".modal__close").click(function() {
-        $(".black-friday").css({ 'display': 'none' });
-    })
-
+    particlesJS.load('step-one', '/js/config.json', function() {
+    });
     $('input,textarea').focus(function() {
         $(this).data('placeholder', $(this).attr('placeholder'))
         $(this).attr('placeholder', '');
     });
-
     $('a[href*="#"]')
         .not('[href="#"]')
         .not('[href="#0"]')
@@ -38,45 +32,48 @@ $(document).ready(function() {
                 }
             }
         });
+    $(".services__down").click(function() {
+        $(this).parent(".services__block").find(".services__list-item").toggleClass('services__list-hidden');
+        $(this).toggleClass('services__down-reverse');
+    });
+    $(".promo__advantages_down").click(function() {
+        $(this).parent(".promo__advantages").find(".promo__advantages-list_active").toggleClass('promo__advantages-list_hidden');
+        $(this).toggleClass('promo__advantages_down-reverse');
+    });
     $('input,textarea').blur(function() {
         $(this).attr('placeholder', $(this).data('placeholder'));
-    });
+		});
+		$(".our-team__card_down").click(function(e){
+      e.stopImmediatePropagation();
+			$(this).parent(".our-team__card").find(".our-team__card-text span").toggleClass('our-team__card-text_hidden');
+			$(this).toggleClass('our-team__card_down-reverse');
+		})
     $(".faq__card").click(function() {
         $(this).toggleClass("faq-hide")
         $(this).find(".faq-text").slideToggle(400)
         $(this).fadeIn(400, function() {
-            $(this).find(".faq__question-text").toggleClass('faq__question-before');
+            $(this).find(".faq__question_img").toggleClass('faq__question_img-reverse');
 
         });
+
     })
     $(".our-blog__card_toggle").click(function() {
-        $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full')
-        $(this).find(".our-blog__content-img").toggleClass('our-blog__content-img-reverse')
-
-
+        $(this).find(".our-blog__content-text").toggleClass('our-blog__content-text_full');
+        $(this).find(".our-blog__content-img").toggleClass('our-blog__content-img-reverse');
     });
     $(".our-blog__more").click(function() {
-        $(this).toggleClass('our-blog__more-reverse', 4000);
+        this.textContent = this.textContent === 'Скрыть' ? 'Смотреть еще' : 'Скрыть';
         $(".our-blog__card-none").slideToggle("slow", function() {
             $(".our-blog__card-none").toggleClass('our-blog__card');
         })
-    })
-    $(".case__body").click(function() {
-        $(this).find('.case__more').toggleClass('our-blog__more-reverse', 4000);
-        $(this).find('.case__text_full').toggleClass('case__text_full-active');
-        $(this).find('.case__more_text').toggleClass('case__more_text-dis');
-    });
 
+    })
     $(".btn").click(function() {
         $(".textarea").css({ "display": "none" })
     });
     $(".our-team__card-btn").click(function() {
         $(".textarea").css({ "display": "block" })
     });
-    $(".about-us-button-more").click(function() {
-        $(this).hide();
-        $(".about-us-review-hidden").removeClass("about-us-review-hidden")
-    })
     $('input[type="tel"]').mask("+38 (999) 999-99-99")
 
     $("form").submit(function() {
@@ -109,73 +106,110 @@ $(document).ready(function() {
         }
         return false
     })
-    $('.slide-one').owlCarousel({
-        loop: true,
-        margin: 20,
-        dots: true,
-        nav: false,
+
+    $('.document-block').owlCarousel({
+        dots: false,
+        nav: true,
+        loop: false,
+        navText: false,
+        slideBy: 1,
+        margin: 55,
+        mouseDrag: false,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: true,
+                // autoWidth: true,
+                center: true,
+                margin: 25
+                    // stagePadding: 5
+                    // center: true,
             },
-            650: {
-                items: 2
+            // 768: {
+            //     items: 1,
+            //     nav: true,
+            //     autoWidth: true,
+            //     margin: 0
+            // },
+            960: {
+                items: 3,
+                nav: false,
+                autoWidth: true,
+                margin: 20
             },
-            800: {
-                items: 2
-            },
-            1000: {
-                items: 3
+            1024: {
+                items: 3,
+                nav: false,
+                margin: 58,
+                center: false
             }
         }
     });
-    $('.slide-two').owlCarousel({
-        loop: true,
-        margin: 20,
-        dots: true,
-        nav: false,
+    $('.review__blocks').owlCarousel({
+        dots: false,
+        nav: true,
+        loop: false,
+        navText: false,
+        slideBy: 3,
+        margin: 60,
+        mouseDrag: false,
         responsive: {
             0: {
-                items: 2
+                items: 1,
+                margin: 0,
+                autoWidth: true
             },
             800: {
-                items: 3
+                items: 2,
+                autoWidth: false
+                    // margin: 20
             },
             1000: {
-                items: 5
+                items: 3,
+                margin: 0,
+                autoWidth: false
             },
-            1500: {
-                items: 6
+            1200: {
+                items: 3,
+                margin: 60,
+                autoWidth: false
             }
         }
     });
-    $('.slide-three').owlCarousel({
-        loop: true,
-        margin: 20,
-        dots: true,
-        nav: false,
+
+    $('.our-case__slider').owlCarousel({
+        dots: false,
+        nav: true,
+        loop: false,
+        navText: false,
+        items: 1,
+        mouseDrag: false
+    });
+    $('.our-work__slider').owlCarousel({
+        dots: false,
+        nav: true,
+        loop: false,
+        navText: false,
+        items: 5,
+        slideBy: 5,
+        mouseDrag: false,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                slideBy: 1
             },
             800: {
-                items: 3
+                items: 3,
+                slideBy: 3
             },
-            1000: {
-                items: 4
+            1300: {
+                items: 4,
+                slideBy: 4
             },
-            1500: {
-                items: 4
+            1600: {
+                items: 5,
+                slideBy: 5
             }
         }
     });
-    $(document).snowfall({
-        flakeCount: 200,
-        image: "img/snow/2.png",
-        minSize: 5,
-        maxSize: 10,
-        round: true,
-        shadow: false,
-    });
-    new WOW().init();
-})
+});

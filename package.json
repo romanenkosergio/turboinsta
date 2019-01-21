@@ -22,6 +22,7 @@
         "gulp-util": "^3.0.8"
     },
     "dependencies": {
-        "npm": "^6.5.0"
+        "gulp-mamp": "0.0.5",
+        "npm": "^6.6.0"
     }
 }
