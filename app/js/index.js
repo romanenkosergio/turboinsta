@@ -4,6 +4,13 @@ $(document).ready(function() {
         $(this).data('placeholder', $(this).attr('placeholder'))
         $(this).attr('placeholder', '');
     });
+    $(function() {
+        $("img.lazy").lazyload({
+            threshold: 200,
+            effect: "fadeIn"
+        });
+    });
+
     $('a[href*="#"]')
         .not('[href="#"]')
         .not('[href="#0"]')

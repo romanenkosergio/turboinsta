@@ -1,37 +1,3 @@
-// var gulp = require('gulp'),
-//     sass = require('gulp-sass'),
-//     plumber = require('gulp-plumber'),
-//     browserSync = require('browser-sync'),
-//     autoprefixer = require('gulp-autoprefixer'),
-//     cssmin = require('gulp-cssmin'),
-//     rename = require('gulp-rename');
-
-
-// gulp.task('sass', function () {
-//    return gulp.src('sass/*.sass')
-//         .pipe(plumber())
-//         .pipe(sass())
-//         .pipe(autoprefixer(['last 15 versions']))
-//         .pipe(cssmin())
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(gulp.dest('css'))
-//         .pipe(browserSync.reload({stream: true}))
-// });
-
-// gulp.task('browser-sync', function() {
-//     browserSync.init(["css/*.min.css", "js/*.js", "*.html"], {
-//         server: {
-//             baseDir: "./"
-//         }
-//     });
-// });
-
-// gulp.task('default', ['sass', 'browser-sync'], function () {
-//     gulp.watch("sass/*.sass", ['sass']);
-// });
-
-
-
 var syntax = 'sass'; // Syntax: sass or scss;
 
 var gulp = require('gulp'),
@@ -44,6 +10,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
     notify = require("gulp-notify"),
+    imagemin = require('gulp-imagemin'),
     rsync = require('gulp-rsync');
 
 
@@ -77,6 +44,7 @@ gulp.task('js', function() {
             'app/libs/masked/jquery.maskedinput.min.js',
             // 'app/libs/wow/wow.min.js',
             'app/libs/owl/owl.carousel.min.js',
+            'app/libs/lazy/jquery.lazyload.min.js',
             'app/libs/particles/particles.js',
             // 'app/libs/snowfall/snowfall.js',
             'app/js/index.js', // Always at the end
@@ -86,8 +54,6 @@ gulp.task('js', function() {
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({ stream: true }))
 });
-
-
 // gulp.task('rsync', function() {
 // 	return gulp.src('app/**')
 // 	.pipe(rsync({
@@ -107,7 +73,6 @@ gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
     gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles']);
     gulp.watch(['libs/**/*.js', 'app/js/index.js'], ['js']);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/*.php', browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
