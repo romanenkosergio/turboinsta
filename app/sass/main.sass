@@ -35,6 +35,15 @@ ul, li
 p
 	margin: 0
 	padding: 0
+img
+	opacity: 1
+	transition: opacity 0.3s
+	&[data-src]
+		opacity: 0
+.grecaptcha-badge
+	display: none
+
+
 .title
 	font-weight: 600
 	text-align: center
@@ -51,7 +60,6 @@ nav
 	height: 100% !important
 .particles-js-canvas-el
 	position: absolute
-	z-index: 1
 	top: 0
 	left: 0
 /* Конец Спецификации */
@@ -63,6 +71,8 @@ nav
 	background: linear-gradient(#8557e8 0%, #6268e7 100%)
 	padding-bottom: 20px
 	// position: absolute
+	z-index: 3
+
 	top: 0
 	left: 0
 .header
@@ -131,6 +141,7 @@ nav
 		display: flex
 		align-items: center
 		justify-content: center
+		z-index: 3
 		font:
 			size: 1.6rem
 			weight: 400
@@ -211,6 +222,7 @@ nav
 		height: 140px
 		background: url("../img/step-one/offer/offer-bg.svg") center/cover no-repeat
 		position: relative
+		filter: drop-shadow(0px 5px 6px rgba($button, 0.2))
 		left: 50%
 		transform: translateX(-50%)
 		margin-top: 20px
@@ -299,6 +311,7 @@ nav
 		color: #4f4fd9
 		font-weight: 1.8rem
 		font-weight: 400
+		z-index: 99
 	&__sale
 		background: url("../img/step-two/sale-bg.svg") no-repeat
 		max-width: 100%
@@ -488,10 +501,10 @@ nav
 			margin-bottom: 50px
 			align-items: center
 		&_right
-			background: url("../img/step-two/promo/price-r.svg") no-repeat
+			background: url("../img/step-two/promo/price-r.svg") no-repeat center
 			margin-right: -20px
 		&_left
-			background: url("../img/step-two/promo/price-l.svg") no-repeat
+			background: url("../img/step-two/promo/price-l.svg") no-repeat center
 			margin-left: -20px
 	&__btn
 		width: 286px
@@ -666,7 +679,7 @@ nav
 			left: 0
 			max-width: 890px
 			max-height: 790px
-			z-index: 0
+			z-index: -99
 		&__title
 			font-weight: 600
 			font-size: 4.8rem
@@ -677,6 +690,7 @@ nav
 			color: #7260e7
 			font-weight: 400
 			margin-top: 7px
+			z-index: 99
 		&__content
 			display: flex
 			position: relative

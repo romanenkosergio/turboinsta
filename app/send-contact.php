@@ -1,8 +1,3 @@
-<?
-session_start();
-$site = $_SERVER['SERVER_NAME'];
-$cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,13 +14,10 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 	// include_once __DIR__ . '/unsorted/accept.php';
 	$theme = $_POST['theme'];
 	$phone = $_POST['phone'];
+	$message = $_POST['msg'];
 	$phone = preg_replace('![^0-9]+!','',$phone);
-	$first = substr($phone, "0",1);
-	// echo '<pre>';
-	// print_r($phone);
-	// print_r($first);
-	// echo '</pre>';
-	if($first == 3) {
+
+	if (!preg_match ('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $message)) {
 		try {
 			// Создание клиента
 			$subdomain = 'turboinsta';            // Поддомен в амо срм
@@ -33,9 +25,6 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 			$apikey    = 'feb8f31899f8afc44a02bf56fd7d0553';            // api ключ
 
 			$amo = new \AmoCRM\Client($subdomain, $login, $apikey);
-
-
-
 				// Вывести полученые из амо данные
 				// echo '<pre>';
 				// print_r($amo->account->apiCurrent());
@@ -96,10 +85,10 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 					$note['element_id'] = $contactId;
 					$note['element_type'] = \AmoCRM\Models\Note::TYPE_CONTACT; // 1 - contact, 2 - lead
 					$note['note_type'] = \AmoCRM\Models\Note::COMMON; // @see https://developers.amocrm.ru/rest_api/notes_type.php
-					$note['text'] = $_POST['msg'];
+					$note['text'] = "Сообщение Клиента:" + $message;
 					$noteId = $note->apiAdd();
 				}
-			  if( count($contacts) > 0){
+				if( count($contacts) > 0){
 					$task = $amo->task;
 					$task['element_id'] = $contactsId;
 					$task['element_type'] = 1;
@@ -109,6 +98,13 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 					$task['responsible_user_id'] = 13823083;
 					$task['complete_till'] = '0 DAY';
 					$taskId = $task->apiAdd();
+					$note = $amo->note;
+					// $note->debug(true); // Режим отладки
+					$note['element_id'] = $contactsId;
+					$note['element_type'] = \AmoCRM\Models\Note::TYPE_CONTACT; // 1 - contact, 2 - lead
+					$note['note_type'] = \AmoCRM\Models\Note::COMMON; // @see https://developers.amocrm.ru/rest_api/notes_type.php
+					$note['text'] = "Повторная заявка";
+					$noteId = $note->apiAdd();
 				}
 
 		} catch (\AmoCRM\Exception $e) {
@@ -128,15 +124,15 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 		$headers .= "X-Mailer: PHPMail Tool\r\n";
 
 		if($_POST['name']){
-  	$body  = "Имя: " . $_POST['name'];
-  	}
+		$body  = "Имя: " . $_POST['name'];
+		}
 
-  	$body .= "\nНомер телефона: " . $_POST['phone'];
-		$body .= "\nСообщение: " . $_POST['msg'];
-  	mail($emailTo, $subject, $body, $headers);
+		$body .= "\nНомер телефона: " . $_POST['phone'];
+		$body .= "\nСообщение: " . $message;
+		mail($emailTo, $subject, $body, $headers);
 
-  	// Отправка заявки в телеграм
-		$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$_POST['phone']."\r\n"."*Сообщение*: " .$_POST['msg'];
+		// Отправка заявки в телеграм
+		$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$_POST['phone']."\r\n"."*Сообщение*: " .$message;
 		include "telegram.php";
 
 		$timetable = array(
@@ -176,11 +172,15 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
 			list($sms_id, $sms_cnt, $cost, $balance) = send_sms($phone, "Благодарим Вас за оставленную заявку на нашем сайте: turboinsta.com.ua. В рабочее время наш менеджер свяжется с Вами и проведет консультацию.",  0);
 		}
 
-
-
-
-
+	} else {
+		die('Спам фильтр обнаружил ссылку, введите повторные данные');
 	}
+
+	// echo '<pre>';
+	// print_r($phone);
+	// print_r($first);
+	// echo '</pre>';
+
 
 
 ?>
@@ -273,7 +273,7 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
                     </div>
 										<!-- /.col-lg-6 -->
                     <div class="col-auto d-flex align-items-center justify-content-end">
-                                    <a href="tel:+380931702224" class="header__menu-link" data-type="color"  onclick="ga('send', 'event', 'brief', 'Click');">+380931702224</a>
+                                    <a href="tel:+380931702224" class="header__menu-link" >+380931702224</a>
                     </div>
                     <!-- /.col-lg-6 -->
                 </div>
@@ -286,8 +286,10 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-										<h1 class="offer__title">Комплексное продвижение в социальных сетях,<br>мы работаем на качество аудитории, а не количество!</h1>
+										<h1 class="offer__title">Комплексное продвижение в социальных сетях.</h1>
                         <!-- /.main-title -->
+                        <h2 class="offer__second title">Мы работаем на качество аудитории!</h2>
+                        <!-- /.offer__subtitle title -->
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -315,24 +317,8 @@ $cookie = md5($_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT']);
             </div>
             <!-- /.container-fluid -->
         </div>
-        <!-- /.step-one__block -->
-
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-		 <!-- Snowfall -->
-    <script src="js/library/snowfall.js"></script>
-    <!-- Index JS -->
-    <script src="js/index-min.js "></script>
-    <script type="text/javascript ">
-        $(document).snowfall({
-            flakeCount: 100,
-            image: "img/snow/2.png",
-            minSize: 5,
-            maxSize: 10,
-            round: true,
-            shadow: false,
-        });
-    </script>
+				<!-- /.step-one__block -->
+				<script src="js/index.min.js"></script>
 </body>
 
 </html>
