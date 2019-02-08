@@ -44,5 +44,49 @@
             "api",
             "crm"
         ]
+    },
+    {
+        "name": "privatbank/payparts",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/OCHPrivatBank/ochprivatbank.github.io.git",
+            "reference": "c07ae6d8ecd956099e8ec9ae824adb37048e9150"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/OCHPrivatBank/ochprivatbank.github.io/zipball/c07ae6d8ecd956099e8ec9ae824adb37048e9150",
+            "reference": "c07ae6d8ecd956099e8ec9ae824adb37048e9150",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2016-06-24T08:55:46+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "PayParts\\": "src/"
+            },
+            "psr-0": {
+                "PayParts": "src/",
+                "": "src/"
+            },
+            "classmap": [
+                "src/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "Класс оплаты частями ПриватБанка",
+        "keywords": [
+            "pay",
+            "pay part",
+            "privatbank"
+        ]
     }
 ]

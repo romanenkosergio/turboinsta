@@ -15,7 +15,9 @@
 	$theme = $_POST['theme'];
 	$phone = $_POST['phone'];
 	$message = $_POST['msg'];
+	$price = $_POST['price'];
 	$phone = preg_replace('![^0-9]+!','',$phone);
+
 
 	if (!preg_match ('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $message)) {
 		try {
@@ -29,7 +31,7 @@
 				// echo '<pre>';
 				// print_r($amo->account->apiCurrent());
 				// print_r($contacts);
-				// print_r($theme);
+				// print_r($price);
 				// echo '</pre>';
 				$contacts = $amo->contact->apiList([
 					"query" => $phone,
@@ -41,6 +43,7 @@
 					$lead = $amo->lead;
 					$lead['name'] =  $theme;
 					$lead['responsible_user_id'] = 13823083; // ID ответсвенного
+					$lead['price'] = $price; // ID ответсвенного
 					$lead['pipeline_id'] = 23076754; // ID воронки
 
 					$lead->addCustomField(305117, [ // ID  поля в которое будт приходить заявки
@@ -132,7 +135,10 @@
 		mail($emailTo, $subject, $body, $headers);
 
 		// Отправка заявки в телеграм
-		$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$_POST['phone']."\r\n"."*Сообщение*: " .$message;
+		$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$_POST['phone']."\r\n";
+		if($message){
+		$telegram_text .= "*Сообщение*: " .$message;
+		}
 		include "telegram.php";
 
 		$timetable = array(
@@ -188,15 +194,10 @@
 
 	<title>Ваша заявка успешно отправлена</title>
 	<!-- Style -->
- <!-- Bootstrap core CSS -->
- 		<link href="css/bootstrap-grid.min.css" rel="stylesheet">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-reboot.min.css" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" href="css/main.min.css">
-    <!-- Fonts -->
-		<link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 		 <!-- Favicon -->
-		 <link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
     <link rel="manifest" href="img/fav/manifest.json">
@@ -215,7 +216,7 @@
         })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
         ga('create', 'UA-92168083-1', 'auto');
         setTimeout(function() {
-            ga('send', 'event', 'Новый посетитель', location.pathname);
+            ga('send', 'event', 'Оставленный Лид', location.pathname);
         }, 15000);
     </script>
 </head>
@@ -230,15 +231,22 @@
     background: -webkit-linear-gradient(left, #4776E6 0, #8E54E9 100%);
     background: -o-linear-gradient(left, #4776E6 0, #8E54E9 100%);
     background: linear-gradient(90deg, #4776E6 0, #8E54E9 100%);
+		z-index: 3;
+	}
+	.step-one__advantages{
+		z-index: 3;
+		margin-bottom: 20px
 	}
 	.offer__title{
 		font-size: 3rem;
 		line-height: normal;
 	}
 	.youtube{
+		z-index: 3;
 		margin-top: 15px;
 	}
 	iframe{
+		z-index: 3;
 		max-width: 100%;
 	}
 	.nazad{
@@ -254,7 +262,7 @@
 		font-size: 1.6rem;
 	}
 	</style>
-<div class="step-one" id="step-one">
+<div class="step-one" >
         <header class="header d-flex align-items-center">
             <div class="container-fluid">
                 <div class="row d-flex justify-content-between">
@@ -273,7 +281,7 @@
                     </div>
 										<!-- /.col-lg-6 -->
                     <div class="col-auto d-flex align-items-center justify-content-end">
-                                    <a href="tel:+380931702224" class="header__menu-link" >+380931702224</a>
+                                    <a href="tel:+380931702224" class="header__menu-link" onclick="ga( 'send', 'event', 'Прямой набор номера', 'Нажатие номера на сайте');">Тел: +380931702224</a>
                     </div>
                     <!-- /.col-lg-6 -->
                 </div>
@@ -286,7 +294,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-										<h1 class="offer__title">Комплексное продвижение в социальных сетях.</h1>
+											<h1 class="offer__title">Комплексное продвижение в социальных сетях.</h1>
                         <!-- /.main-title -->
                         <h2 class="offer__second title">Мы работаем на качество аудитории!</h2>
                         <!-- /.offer__subtitle title -->
@@ -310,10 +318,38 @@
 											<a  class="nazad"href="javascript: history.back(-1);" style="text-decoration: none; border-bottom: 1px dotted; text-align: center" >Вернуться назад</a>
 										</div>
 										<!-- /.row -->
-
-
                 </div>
-                <!-- /.step-one__advantages -->
+								<!-- /.step-one__advantages -->
+								<div class="row flex-xl-row flex-column justify-content-center">
+               	 <div class="step-two__sale_main">
+                    <img data-src="img/step-two/sale.svg" alt="Акция" class="lazy">
+                    <p><span>АКЦИЯ!!!</span> <br>продвигайте больше - платите меньше</p>
+               	 </div>
+               	 <div class="step-two__sale_block">
+                    <div class="step-two__sale_action">
+                        <img data-src="img/step-two/10.svg" alt="" class="lazy">
+                        <p>
+                            При покупке продвижения<br> 2-х аккаунтов
+                        </p>
+                    </div>
+                    <!-- /.step-two__sale_action -->
+                    <div class="step-two__sale_action">
+                        <img data-src="img/step-two/15.svg" alt="" class="lazy">
+                        <p>
+                            При покупке продвижения<br> 3-х аккаунтов
+                        </p>
+                    </div>
+                    <!-- /.step-two__sale_action -->
+                    <div class="step-two__sale_action">
+                        <img data-src="img/step-two/20.svg" alt="" class="lazy">
+                        <p>
+                            При покупке продвижения<br> 4-х и более аккаунтов
+                        </p>
+                    </div>
+                    <!-- /.step-two__sale_action -->
+               	 </div>
+								<!-- /.ste-two__sale-block -->
+          		  </div>
             </div>
             <!-- /.container-fluid -->
         </div>

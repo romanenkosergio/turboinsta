@@ -8,7 +8,9 @@
 			font-size: 1.6rem
 			font-weight: 400
 	.offer
-		margin-top: 10px
+		margin-top: 0
+		&__next
+			margin-top: 0
 		&__title
 			font-size: 3rem
 			line-height: 32px
@@ -69,6 +71,8 @@
 				li
 					font-size: 2rem
 		&__price
+			p
+				font-size: 1.8rem
 			&-block
 				margin-bottom: 0
 			max-width: 320px
@@ -104,10 +108,6 @@
 			&-cart
 				max-width: 85%
 				max-height: 85%
-			a
-				img
-					max-width: 65%
-					max-height: 65%
 		&__text
 			line-height: normal
 	.about-us
@@ -140,6 +140,14 @@
 				width: 300px !important
 			&_btn
 				width: 300px
+	.chast
+		background-size: 1660px
+		&-block
+			h3
+				margin-left: 0
+			p
+				font-size: 2.3rem
+				max-width: 900px
 @media (max-width: 1440px)
 	.offer
 		&__blocks
@@ -154,6 +162,17 @@
 			&_result
 				p.text
 					font-size: 2rem
+	.chast
+		background-position: right
+		&-block
+			h3
+				margin-left: 0
+			img
+
+				margin-left: 5px
+			p
+				font-size: 1.9rem
+				max-width: 750px
 @media (max-width: 1366px)
 	.btn
 		height: 55px
@@ -176,6 +195,12 @@
 		&__img
 			max-width: 150px
 			max-height: 130px
+	.chast-block p
+		max-width: 650px
+		font-size: 2.3rem
+		line-height: 30px
+		margin-left: 5px
+		text-align: center
 	.promo
 		&__card
 			padding: 30px 10px
@@ -186,6 +211,10 @@
 				background-size: 100%
 				p
 					font-size: 1.6rem
+					max-width: 90%
+					margin: 0 auto
+				&_left_bot, &_right_bot
+					background-position: bottom
 		&__advantages
 			&-list
 				li
@@ -271,7 +300,7 @@
 		&__block
 			margin-top: 20px
 			&::after
-				right: -11%
+				right: -15%
 	.step-two
 		&__sale
 			&_action
@@ -279,6 +308,7 @@
 				margin-right: 15px
 			& .col-auto
 				padding: 0
+
 	.promo
 		&__card
 			max-width: 580px
@@ -471,8 +501,56 @@
 		&__img
 			max-width: 250px
 			max-height: 200px
+	.chast
+		background-position: left
+		&-block
+			img
+				max-width: 120px
+				margin-left: 10px
 	.promo
-		justify-content: center
+		flex-flow: column
+		&__card
+			padding: 30px 30px
+			width: 700px
+		&__header
+			&-text
+				&_right
+					margin-left: auto
+				&_left
+					&:last-child
+						span.title
+							align-self: flex-end
+							width: 100%
+			&-special
+				max-width: 300px
+				background-size: cover
+				height: 100px
+				&_left_bot, &_right_bot
+					top: 0
+				&_left_bot
+					background: url(../img/step-two/promo/turbo-l.svg) no-repeat
+					background-size: cover
+				&_right_bot
+					background: url(../img/step-two/promo/turbo-r.svg) no-repeat
+					background-size: contain
+					left: 0
+				p
+					font-size: 1.8rem
+		&__price
+			display: flex
+			align-items: center
+			justify-content: center
+			&-block
+				justify-content: space-between !important
+			&_right
+				margin-right: -30px
+			&_left
+				margin-left: -30px
+		&__btn
+			&_big
+				display: none
+			&_bot
+				display: flex
 	.step-two
 		&__sale
 			width: 98%
@@ -512,12 +590,8 @@
 			margin-top: 30px
 			flex-direction: column
 		&__pay
-			width: 80%
+			width: 100%
 			margin: 10px auto 0
-			a
-				img
-					max-width: 100%
-					max-height: 100%
 			&-cart
 				width: 80%
 				margin: 0 auto
@@ -596,29 +670,11 @@
 		&__menu
 			display: none !important
 	.promo
-		&__card
-			padding: 30px 30px
-			width: 700px
 		&__header
 			&-text
-				&_left
-					&:last-child
-						span.title
-							align-self: flex-end
-			&-special
-				max-width: 300px
-				p
-					font-size: 1.8rem
-		&__price
-			&_right
-				margin-right: -30px
-			&_left
-				margin-left: -30px
-		&__btn
-			&_big
-				display: none
-			&_bot
-				display: flex
+				&_right
+					span.title
+						align-self: flex-end
 	.step-two
 		&__sale
 			width: 100%
@@ -675,6 +731,14 @@
 			&_btn
 					width: 170px
 					font-size: 1.4rem
+	.finish
+		&__pay
+			a
+				margin-right: 0
+				p
+					font-size: 2rem
+				img
+					max-width: 70%
 @media (max-width: 768px)
 	h2.title
 		font-size: 2.5rem
@@ -694,6 +758,15 @@
 			max-width: 280px
 			&:first-child, &:nth-child(3)
 				margin-left: 0
+	.chast
+		&-block
+			h3
+				font-size: 2rem
+			img
+				max-width: 80px
+			p
+				font-size: 1.8rem
+				line-height: normal
 	.promo
 		margin-top: 15px
 		&__card
@@ -704,7 +777,7 @@
 				max-width: 100px
 				max-height: 100px
 			&-special
-				height: 117px
+				background-size: contain
 				p
 					font-size: 1.6rem
 		&__advantages
@@ -889,6 +962,7 @@
 	.step-two
 		&__title
 			margin-top: 20px
+
 	.offer
 		&__title
 			font-size: 2.5rem
@@ -914,6 +988,14 @@
 		&__sale
 			&_block
 				margin-left: 0
+	.chast
+		padding: 15px 0
+		height: 100%
+		background-size: cover
+		&-block
+			height: auto
+			flex-flow: column
+			display: flex
 	.promo
 		align-items: center
 		justify-content: center
@@ -942,7 +1024,9 @@
 						span.title
 							align-self: center
 				&_right
-					margin-right: 0
+					margin: 0 auto
+					span.title
+						align-self: center
 				span.subtitle
 					&:last-child
 						text-align: center
@@ -1010,11 +1094,13 @@
 			&.owl-carousel .owl-nav button.owl-prev, &.owl-carousel .owl-nav button.owl-next
 				top: calc(50% - 40px)
 	.finish
-		padding: 30px 0
+		padding: 30px 0 60px 0
 		&__text
 			p
 				font-size: 2rem
 				line-height: normal
+		&__pay
+			flex-wrap: wrap
 	.about-us
 		height: auto
 		&::after, &::before
@@ -1094,6 +1180,14 @@
 			margin: 0 auto
 		&__menu
 			margin: 15px auto 0
+			ul
+				flex-wrap: wrap
+				margin-left: 0
+				margin: 0 auto
+				text-align: center
+				justify-content: center
+				&:last-child
+					margin-left: 0
 		&__adress
 			margin-left: 10px
 		&__social
@@ -1262,6 +1356,10 @@
 					height: 100px
 				p
 					font-size: 1.2rem
+	.services
+		&__block
+			max-width: 350px
+			min-width: 100px
 	.business
 		&__advantages
 			margin-left: 35px
@@ -1295,6 +1393,19 @@
 			&.owl-carousel .owl-nav button.owl-prev, &.owl-carousel .owl-nav button.owl-next
 				top: calc(50% - 50px)
 	.finish
+		height: 100%
+		padding: 30px 0
+		&__pay
+			height: 100%
+			img
+				max-width: 100px
+				margin-right: 10px
+			&_chast
+				img
+					max-width: 100px
+					margin-right: 0
+				p
+					font-size: 1.8rem
 		&__text
 			p
 				font-size: 1.6rem

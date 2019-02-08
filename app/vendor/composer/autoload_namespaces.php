@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'PayParts' => array($vendorDir . '/privatbank/payparts/src'),
+    '' => array($vendorDir . '/privatbank/payparts/src'),
 );
