@@ -268,6 +268,64 @@ $(document).ready(function() {
         $(this).attr('placeholder', $(this).data('placeholder'));
     });
     /********** * placeholder blur end * **********/
+    /********** * range * **********/
+
+    var pipsSlider = document.getElementById('range');
+    noUiSlider.create(pipsSlider, {
+        start: 2,
+        range: {
+            'min': 2,
+            'max': 6
+        },
+        connect: [true, false],
+        step: 1,
+        pips: {
+            mode: 'steps',
+            stepped: true
+        }
+
+    });
+    var pips = pipsSlider.querySelectorAll('.noUi-value');
+
+    function clickOnPip() {
+        var value = Number(this.getAttribute('data-value'));
+        pipsSlider.noUiSlider.set(value);
+    }
+
+    for (var i = 0; i < pips.length; i++) {
+
+        // For this example. Do this in CSS!
+        pips[i].style.cursor = 'pointer';
+        pips[i].addEventListener('click', clickOnPip);
+    }
+
+    /********** * range end * **********/
+
+    /********** * calculator  * **********/
+    $(".pay-parts__promo-block").on('click', function(e) {
+        e.preventDefault();
+        let partsPrice = parseInt($(this).attr('data-sum'));
+        let partsTitle = $(this).attr('data-title');
+        pipsSlider.noUiSlider.on('update', function(values) {
+            let rangeValue = parseInt(values.join(''));
+            let sumForMonth = (partsPrice / rangeValue);
+            let commision = (partsPrice * 2.9 / 100);
+            let totalSum = Math.round(commision + sumForMonth);
+            // console.log(totalSum);
+            let totalSumBody = $('#totalSum');
+            totalSumBody.text(totalSum + "");
+        });
+
+        //
+
+    })
+
+
+    // let payPartsPrice = commision;
+
+
+    /********** * calculator end * **********/
+
 
     /********** * send form * **********/
     let price = $("input[name=price]");
@@ -286,10 +344,8 @@ $(document).ready(function() {
         //     $("form").trigger("reset");
         // }, 2000);
     });
-
-
-
-
+    /********** * send form end* **********/
+    /********** * pay form * **********/
     $('form#form-pay').submit(function(e) {
         e.preventDefault();
         res = true;
@@ -333,6 +389,7 @@ $(document).ready(function() {
 
     });
 
+    /********** * pay form end* **********/
 
 
 });

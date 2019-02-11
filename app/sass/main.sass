@@ -932,6 +932,106 @@ nav
 			background: $hover
 		&:active
 			box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16)
+/* Оплата частями */
+.pay-parts
+	width: 1190px
+	max-width: 100%
+	margin: 50px auto 0
+	min-height: 425px
+	&__title
+		font-size: 4.8rem
+		font-weight: 600
+		color: #8158E7
+		text-transform: uppercase
+		text-align: center
+		margin: 0
+	&__subtitle
+		font-size: 1.8rem
+		font-weight: 400
+		text-align: center
+		color: #8158E7
+	&__content, &__promo, &__range
+		display: flex
+		justify-content: space-between
+	&__promo, &__range
+		width: 870px
+		max-width: 100%
+		p
+			font-size: 2.6rem
+			text-align-last:
+			width: 247px
+			max-width: 100%
+			line-height: normal
+			font-weight: 40
+			color: #8158e7
+			opacity: .5
+	&__promo
+		margin-top: 30px
+		min-height: 75px
+		&-blocks
+			display: flex
+			justify-content: space-between
+			width: 570px
+			max-width: 100%
+		&-block
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+			width: 200px
+			height: 90px
+			border-radius: 45px
+			cursor: pointer
+			transition: .5s ease-in-out
+			color: #8158e7
+			font-size: 2.8rem
+			font-weight: 300
+			line-height: 28px
+			span
+				font-size: 3.2rem
+				font-weight: 600
+			&:hover, &:active
+				background: $button
+				color: $white
+	&__range
+		margin-top: 35px
+		align-items: center
+		height: 75px
+		.range
+			width: 555px
+			max-width: 100%
+			background: #D9CCF8
+			margin: 0 15px
+	&__total
+		align-self: center
+		line-height: 75px
+		h5
+			font-size: 1.8rem
+			font-weight: 400
+			color: #8158e7
+			width: 200px
+			line-height: normal
+		&-sum
+			font-size: 7rem
+			color: #8158e7
+			font-weight: 600
+	&__btn
+		width: 365px
+		height: 63px
+		background: $button
+		color: $white
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 30px auto 50px
+		border-radius: 32px
+		font-size: 2.2rem
+		font-weight: 400
+		transition: .3s ease
+		border: none
+		&:hover
+			background: $hover
 /* О нас */
 .about-us
 	background: linear-gradient(#6566e7 0%, #9392f5 100%)
@@ -1683,6 +1783,7 @@ nav
 			&:active
 				box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16)
 
+@import "range"
 @import "pop"
 @import "owl"
 @import "media"

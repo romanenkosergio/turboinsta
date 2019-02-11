@@ -54,6 +54,7 @@ gulp.task('js', function() {
             'app/libs/owl/owl.carousel.min.js',
             'app/libs/lazy/jquery.lazyload.min.js',
             'app/libs/particles/particles.js',
+            'app/libs/range/nouislider.min.js',
             // 'app/libs/snowfall/snowfall.js',
             'app/js/index.js', // Always at the end
         ])

@@ -19,6 +19,8 @@
     <!-- /.step-four -->
     <?include("container/finish.php");?>
     <!-- /.finish -->
+    <?include("container/pay-parts.php");?>
+    <!-- /.pay-parts -->
     <?include("container/about-us.php");?>
     <!-- /.about-us -->
     <?include("container/our-case.php");?>

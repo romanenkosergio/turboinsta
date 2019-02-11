@@ -22,7 +22,8 @@
         "gulp-sass": "^4.0.1",
         "gulp-uglify": "^3.0.1",
         "gulp-util": "^3.0.8",
-        "gulp-webp": "^4.0.0"
+        "gulp-webp": "^4.0.0",
+        "nouislider": "^13.1.0"
     },
     "dependencies": {
         "gulp-mamp": "0.0.5",
