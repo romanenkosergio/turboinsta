@@ -289,7 +289,7 @@ $(document).ready(function() {
 
     function clickOnPip() {
         var value = Number(this.getAttribute('data-value'));
-        pipsSlider.noUiSlider.set(value);
+        let Value = pipsSlider.noUiSlider.set(value);
     }
 
     for (var i = 0; i < pips.length; i++) {
@@ -302,35 +302,75 @@ $(document).ready(function() {
     /********** * range end * **********/
 
     /********** * calculator  * **********/
-    $(".pay-parts__promo-block").on('click', function(e) {
+
+    let partsPrice = 5990;
+    let totalSumBody = $('#totalSum');
+    let rangeValue = parseInt(pipsSlider.noUiSlider.get());
+
+    function calcSum() {
+        pipsSlider.noUiSlider.on('update', (values) => {
+            let rangeValue = parseInt(values.join(''));
+            let sumForMonth = (partsPrice / rangeValue);
+            let commision = (partsPrice * 2.9 / 100);
+            let totalSum = Math.round(commision + sumForMonth);
+            totalSumBody.text(totalSum + "");
+        });
+    }
+
+    function getPrice(e) {
         e.preventDefault();
+        $('.pay-parts__promo-block').removeClass('pay-parts__promo-block_active');
+        $(this).addClass('pay-parts__promo-block_active');
         let partsPrice = parseInt($(this).attr('data-sum'));
-        let partsTitle = $(this).attr('data-title');
-        pipsSlider.noUiSlider.on('update', function(values) {
+        pipsSlider.noUiSlider.on('update', (values) => {
             let rangeValue = parseInt(values.join(''));
             let sumForMonth = (partsPrice / rangeValue);
             let commision = (partsPrice * 2.9 / 100);
             let totalSum = Math.round(commision + sumForMonth);
             // console.log(totalSum);
-            let totalSumBody = $('#totalSum');
             totalSumBody.text(totalSum + "");
         });
 
-        //
+    }
+    // priceCalck();
+    $(".pay-parts__promo-block").on('click', getPrice);
 
-    })
 
-
-    // let payPartsPrice = commision;
-
+    calcSum();
 
     /********** * calculator end * **********/
+
+    /********** * send pay-parts * **********/
+    $('.noUi-handle').on('change', function(e) {
+        console.log(e);
+    });
+
+    $('#pay-parts__btn').on('click', (e) => {
+        e.preventDefault();
+        let totaPrice = parseInt($(".pay-parts__promo-block_active").attr("data-sum"));
+        let totaTitle = $(".pay-parts__promo-block_active").attr("data-title");
+        let totaPart = parseInt(pipsSlider.noUiSlider.get());
+
+
+        // console.log(totaPrice);
+        // console.log(totaTitle);
+        // console.log(totaPart);
+        let query = {
+            name: totaTitle,
+            price: totaPrice,
+            part: totaPart,
+        }
+
+        $.post("payParts.php", { query: query }, function(data) {
+            let url = $.cookie('url');
+            window.location.href = url;
+        });
+    });
+    /********** * send pay-parts end * **********/
 
 
     /********** * send form * **********/
     let price = $("input[name=price]");
-
-
 
     $("form").submit(function() {
         $(this).attr("action", "send-contact.php");
@@ -349,7 +389,6 @@ $(document).ready(function() {
     $('form#form-pay').submit(function(e) {
         e.preventDefault();
         res = true;
-
         var google_target = $(this).find("[type='submit']").attr('data-ga')
         var theme = $(this).parent().find("#promo");
         var name = $(this).parent().find("input[name=name]");

@@ -48,6 +48,7 @@ gulp.task('form', function() {
 gulp.task('js', function() {
     return gulp.src([
             'app/libs/jquery/dist/jquery.min.js',
+            'app/libs/jquery/dist/jquery.cookie.js',
             // 'app/libs/jquery/dist/ajax.min.js',
             'app/libs/masked/jquery.maskedinput.min.js',
             // 'app/libs/wow/wow.min.js',

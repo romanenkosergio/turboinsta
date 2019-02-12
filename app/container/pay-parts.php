@@ -10,7 +10,7 @@
 				<div class="pay-parts__promo">
 					<p>Выберите пакет продвижения</p>
 					<div class="pay-parts__promo-blocks">
-						<a href="#" class="pay-parts__promo-block" data-sum="5990" data-title="TURBO 3 месяца"><span>TURBO</span>3 месяца</a>
+						<a href="#" class="pay-parts__promo-block pay-parts__promo-block_active" data-sum="5990" data-title="TURBO 3 месяца"><span>TURBO</span>3 месяца</a>
 						<!-- /.pay-parts__promo-block -->
 						<a href="#" class="pay-parts__promo-block" data-sum="4700" data-title="TURBO 2 месяца"><span>TURBO</span>2 месяца</a>
 						<!-- /.pay-parts__promo-block -->
@@ -28,12 +28,12 @@
 			<!-- /.pay-parts__block -->
 			<div class="pay-parts__total">
 				<h5>Сумма ежемесячного платежа:</h5>
-				<div class="pay-parts__total-sum"><span id="totalSum">1500</span>&#8372;</div>
+				<div class="pay-parts__total-sum"><span id="totalSum">3169</span>&#8372;</div>
 				<!-- /.pay-parts__total-sum -->
 			</div>
 			<!-- /.pay-parts__total -->
 		</div>
 		<!-- /.pay-parts__content -->
-		<button class="pay-parts__btn btn" type="submit">Оплатить</button> <!-- /.pay-parts__btn -->
+		<button class="pay-parts__btn btn" type="submit" id="pay-parts__btn">Оплатить</button> <!-- /.pay-parts__btn -->
 </div>
 <!-- /.pay-parts -->
