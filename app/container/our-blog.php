@@ -19,6 +19,38 @@
             <div class="row">
                 <div class="our-blog__cards">
                     <div class="our-blog__card our-blog__card_toggle">
+                        <img data-src="img/our-blog/budget.jpg" alt="Бюджеты для рекламы в Facebook и Instagram" class="our-blog__img lazy">
+                        <div class="our-blog__content">
+                            <p class="our-blog__content-name">Бюджеты для рекламы в Facebook и Instagram</p>
+                            <p class="our-blog__content-date">
+                                12 февраля 2019
+                            </p>
+                            <!-- /.our-blog__content-date -->
+                            <p class="our-blog__content-text">
+														В последнее время все больше людей, в том числе наших клиентов, задаются вопросом - <strong>«сколько надо тратить денег в день, чтоб моя реклама давала результат в Instagram и Facebook?!».</strong>
+
+														<br><br>Скажем Вам сразу, это очень не однозначный вопрос, что-то вроде пальцем в небо. Ведь для того, чтоб хоть немного прикинуть оптимальный бюджет по любому отдельно взятому человеку, необходимо в индивидуальном порядке, сделать предварительные настройки в рекламном кабинете Бизнес Менеджера Facebook исходя из запросов данного человека. А именно: какой вид деятельности, какой пол и возраст аудитории, география показа рекламы и тд. и тп. Только после таких, поверхностных настроек мы сможем приблизительно понять, какой средний-оптимальный бюджет будет для того или иного клиента. Стоит обратить внимание на слово приблизительный, оно тут ключевое, ведь для определения точного значения по суммам рекламу необходимо настроить, запустить, протестить ее и только после нескольких дней, желательно одной недели, можно уже говорить о каких-то более точных цифрах.
+
+														<br><br>НО, как мы написали выше, вопрос такой все равно задают все и поэтому, исходя из нашего, довольно-таки не малого опыта в настройке рекламы (это более чем 100 клиентов только за последние месяцев 7-8 и десятки тысяч долларов потраченных на рекламу в Facebook и Instagram) мы вывели некие средние значения, чтоб любому человеку и нашему потенциальному клиенту было легче ориентироваться и хоть немного понимать, на что он может расчитывать и какие суммы ему для этого понадобятся.
+
+														<br><br>Ниже представлена выдержка, которую мы с недавних пор, в обязательном порядке, начали прописывать в наших договорах, которые заключаем со ВСЕМИ нашими клиентами перед началом работ, она разбита на 3 категории - слабо эффективная реклама, средне эффективная реклама и высоко эффективная реклама.
+
+
+														<br><br><strong>1) Ежедневный рекламный бюджет на уровне 1-5 долларов США в день</strong> - это самый низкий уровень бюджета, при котором идет низкий охват аудитории и малое количество показов рекламы, как следствие - слабые результаты от рекламной кампании.
+
+														<br><br><strong>2) Ежедневный рекламный бюджет на уровне 5-10 долларов США в день</strong> - это средний уровень бюджета, при котором идет средний по количеству охват аудитории и показов рекламы, что в итоге позволяет добиться средних-оптимальные результаты от рекламной кампании.
+
+														<br><br><strong>3) Ежедневный рекламный бюджет на уровне от 10 долларов США в день</strong> и выше - это хороший-оптимальный уровень бюджета в день! При котором идет большой охват по целевой аудитории и достаточное количество показов рекламы в день. Результаты от рекламы при подобных бюджетах хорошие и выше среднего!
+
+
+														Хотелось бы еще раз отметит, что вышеперечисленные бюджеты это приблизительные значения! И для точных прогнозов необходимо все определять сугубо в индивидуальном порядке исходя из конечных потребностей каждого отдельно взятого человека. Но хотя бы такая информаци дает немного понимания и ответ на вопрос - «сколько мне надо тратить на эту рекламу?!».
+                            </p>
+                            <img data-src="img/our-blog/next.svg" alt="next" class="our-blog__content-img lazy">
+                        </div>
+                        <!-- /.our-blog__contant -->
+                    </div>
+                    <!-- /.our-blog__crad -->
+                    <div class="our-blog__card our-blog__card_toggle">
                         <img data-src="img/our-blog/tags.jpg" alt="Shopping Tags" class="our-blog__img lazy">
                         <div class="our-blog__content">
                             <p class="our-blog__content-name">Shopping Tags</p>
@@ -97,7 +129,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class="our-blog__card our-blog__card_toggle">
+                    <div class="our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/kor_text.jpg" alt="Короткий текст" class="our-blog__img lazy">
 
@@ -128,7 +160,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class="our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class="our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/marketplace.jpg" alt="Маркетплэйсы что это?" class="our-blog__img lazy">
 
@@ -161,7 +193,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class="our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class="our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/algoritm.jpg" alt="Как работают алгоритмы Instagram" class="our-blog__img lazy">
 
@@ -196,7 +228,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class=" our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class=" our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
                         <img data-src="img/our-blog/retarg.jpg" alt="Что такое ремаркетинг и ретаргетинг?" class="our-blog__img lazy">
 
                         <div class="our-blog__content">
@@ -229,7 +261,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class=" our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class=" our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/target21.jpg" alt="Таргет, реклама 21 века" class="our-blog__img lazy">
 
@@ -268,7 +300,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class=" our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class=" our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/plat.jpg" alt="Платный трафик, контекстная реклама" class="our-blog__img lazy">
 
@@ -307,7 +339,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class=" our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class=" our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/traf.jpg" alt="Что такое трафик" class="our-blog__img lazy">
 
@@ -337,7 +369,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class=" our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class=" our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/prodazh.jpg" alt="Что нужно для эффективных продаж" class="our-blog__img lazy">
 
@@ -364,7 +396,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class=" our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class=" our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/sohr.jpg" alt="Сохраняем вовлеченность" class="our-blog__img lazy">
 
@@ -392,7 +424,7 @@
                         <!-- /.our-blog__contant -->
                     </div>
                     <!-- /.our-blog__crad -->
-                    <div class=" our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
+                    <div class=" our-blog__card our-blog__card-hidden our-blog__card-none our-blog__card_toggle">
 
                         <img data-src="img/our-blog/vovl.jpg" alt="Вовлекает или не вовлекает" class="our-blog__img lazy">
 
@@ -423,10 +455,8 @@
                     <!-- /.our-blog__crad -->
                 </div>
                 <!-- /.our-blog__cards -->
-                <a href="javascript:void(0)" class="our-blog__more d-flex justify-content-center align-items-center">
-					Смотреть еще
-				</a>
-                <!-- /.our-blog__card-hidden -->
+                <a href="#" class="our-blog__more d-flex justify-content-center align-items-center">Смотреть еще</a>
+                <!-- /.our-blog__card our-blog__card-hidden -->
             </div>
             <!-- /.row -->
         </div>

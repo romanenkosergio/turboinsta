@@ -20,12 +20,15 @@ a
 a,a:hover, button, button:hover
 	text-decoration: none
 	color: $white
+
+
 button
 	outline: none
 	cursor: pointer
 	z-index: 1
 	overflow: hidden
 	transition: .2s ease all
+	box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800
 	&:focus
 		outline: none
 ul, li
@@ -46,7 +49,7 @@ img
 	margin-bottom: 0
 .subtitle
 	text-align: center
-	font-size: 1.6rem
+	font-size: 1.8rem
 	font-weight: 400
 .btn
 	border: 2px solid $white
@@ -539,6 +542,9 @@ nav
 		transform: rotate(0deg)
 		background-position: center
 		font-size: 6.2rem
+		display: flex
+		align-items: center
+		justify-content: center
 		&-block
 			display: flex
 			height: auto
@@ -624,7 +630,7 @@ nav
 				font-style: italic
 	&__list
 		display: block
-		min-height: 72px
+		min-height: 145px
 		margin-top: 15px
 		li
 			font-size: 1.6rem
@@ -864,6 +870,14 @@ nav
 	padding: 50px 0
 	max-width: 1530px
 	margin: 0 auto
+	&::after
+		content: ""
+		display:
+		bottom: 0
+		width: 100%
+		height: 1px
+		position: absolute
+		background: linear-gradient(#6566e7 0%, #9392f5 100%)
 	&__title
 		font-size: 4.8rem
 		font-weight: 600
@@ -954,10 +968,10 @@ nav
 		display: flex
 		justify-content: space-between
 	&__promo, &__range
-		width: 870px
-		max-width: 100%
+		width: 100%
+		max-width: 870px
 		p
-			font-size: 2.6rem
+			font-size: 2.4rem
 			text-align-last:
 			width: 247px
 			max-width: 100%
@@ -971,15 +985,15 @@ nav
 		&-blocks
 			display: flex
 			justify-content: space-between
-			width: 570px
-			max-width: 100%
+			width: 100%
+			max-width: 570px
 		&-block
 			display: flex
 			flex-direction: column
 			justify-content: center
 			align-items: center
 			text-align: center
-			width: 200px
+			width: 180px
 			height: 90px
 			border-radius: 45px
 			cursor: pointer
@@ -1015,9 +1029,11 @@ nav
 			width: 200px
 			line-height: normal
 		&-sum
-			font-size: 7rem
+			font-size: 6.5rem
 			color: #8158e7
 			font-weight: 600
+		&_tablet
+			display: none
 	&__btn
 		width: 365px
 		height: 63px
@@ -1312,10 +1328,11 @@ nav
 		display: block
 		padding: 0 30px
 	&__slide
-		width: 330px
+		max-width: 330px
 		height: 100%
 		cursor: pointer
 		margin: 0 auto
+		padding: 0 5px
 		&_block
 			margin-bottom: 20px
 			// transition: all .2s ease
@@ -1329,7 +1346,7 @@ nav
 				margin-right: 0 !important
 		&_btn
 			transition: all .2s ease
-			width: 330px
+			max-width: 330px
 			height: 63px
 			background: $button
 			color: $white
@@ -1346,7 +1363,7 @@ nav
 				box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16)
 		img
 			height: auto
-			width: 330px !important
+			max-width: 330px !important
 			margin-right: 0
 			transition: all .2s ease
 /* Наш коллектив */
@@ -1560,19 +1577,16 @@ nav
 	&__card
 		width: 100%
 		height: fit-content
-		display: flex !important
+		display: flex
 		justify-content: center
 		padding: 40px 25px 40px 0
-		transition: all 1s
+		transition:  .5s
 		position: relative
 		border-top: 1px solid #8158E7
 		border-bottom: 1px solid #8158E7
 		margin-bottom: 35px
 		&:last-child
 			margin-bottom: 0
-		&-hidden
-			display: none
-			transition: all 1s
 		&:hover
 			cursor: pointer
 	&__more

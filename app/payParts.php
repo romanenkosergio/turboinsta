@@ -11,7 +11,7 @@ $price = $query['price'];
 $part = $query['part'];
 
 $host=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
-
+print_r($host);
 $ProductsList = array(
     array('name' => $name,
         'count' => 1,
@@ -20,8 +20,8 @@ $ProductsList = array(
 
 
 $options = array(
-    // 'ResponseUrl' => $host.'/response.php',          //URL, на который Банк отправит результат сделки (НЕ ОБЯЗАТЕЛЬНО)
-    // 'RedirectUrl' => $host.'/redirect.php',          //URL, на который Банк сделает редирект клиента (НЕ ОБЯЗАТЕЛЬНО)
+    'ResponseUrl' => $host.'/redirect.php',          //URL, на который Банк отправит результат сделки (НЕ ОБЯЗАТЕЛЬНО)
+    'RedirectUrl' => $host.'/redirect.php',          //URL, на который Банк сделает редирект клиента (НЕ ОБЯЗАТЕЛЬНО)
     'PartsCount' => $part,                               //Количество частей на которые делится сумма транзакции ( >1)
     'Prefix' => '',                                  //параметр не обязательный если Prefix указан с пустотой или не указа вовсе префикс будет ORDER
     'OrderID' => '',                                 //если OrderID задан с пустотой или не укан вовсе OrderID сгенерится автоматически

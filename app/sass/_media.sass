@@ -702,6 +702,14 @@
 				img
 					max-width: 280px
 					max-height: 280px
+	.pay-parts
+		&__total
+			display: none
+			&_tablet
+				display: flex
+				margin: 25px auto 15px
+				justify-content: center
+				align-items: center
 	.our-case
 		&__slide
 			&_img
@@ -845,6 +853,24 @@
 	.finish
 		&__block
 			margin-top: 20px
+	.pay-parts
+		&__block
+			max-width: 100%
+		&__promo, &__range
+			flex-direction: column
+			width: 100%
+			max-width: 100%
+			p
+				text-align: center
+				width: 100%
+
+		&__promo
+			p
+				margin-bottom: 25px
+			&-blocks
+				max-width: 100%
+		&__range
+			margin-bottom: 30px
 	.about-us
 		min-height: 600px
 		height: 700px
@@ -1101,6 +1127,17 @@
 				line-height: normal
 		&__pay
 			flex-wrap: wrap
+	.pay-parts
+		&__promo
+			&-blocks
+				padding: 10px
+			&-block
+				font-size: 2rem
+				span
+					font-size: 2.8rem
+		&__range
+			max-width: 85%
+			margin: 0 auto 30px
 	.about-us
 		height: auto
 		&::after, &::before
@@ -1414,6 +1451,27 @@
 			height: 55px
 			font-size: 1.8rem
 			margin-top: 20px
+	.pay-parts
+		&__promo, &__range
+			p
+				font-size: 2rem
+				margin-bottom: 10px
+		&__promo
+			margin-top: 15px
+			&-block
+				width: 105px
+				height: 47px
+				border-radius: 45px
+				font-size: 1.4rem
+				line-height: normal
+				span
+					font-size: 1.6rem
+		&__total
+			h5
+				font-size: 1.6rem
+			&-sum
+				font-size: 4.5rem
+
 	.review
 		&__blocks
 			padding: 0 40px

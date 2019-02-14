@@ -81,17 +81,27 @@ $(document).ready(function() {
             .find(".our-blog__content-img")
             .toggleClass('our-blog__content-img-reverse');
     });
-    $(".our-blog__more").click(function() {
-            this.textContent = this.textContent === 'Скрыть' ?
-                'Смотреть еще' :
-                'Скрыть';
-            $(".our-blog__card-none").slideToggle("slow", function() {
-                $(".our-blog__card-none").toggleClass('our-blog__card');
-            })
+    $(".our-blog__card-none").hide();
+    $(".our-blog__more").on('click', (e) => {
+        e.preventDefault();
+        $(".our-blog__more").text() == 'Смотреть еще' ? $(".our-blog__more").text("Скрыть") :
+            $(".our-blog__more").text("Смотреть еще");
+        //  if($(this).text())
+        $(".our-blog__card-none").slideToggle(300, (e) => {
+            $(".our-blog__card-none").toggleClass("our-blog__card-hidden");
+            if ($(this).is(':visible')) {
+                $(this).css('display', 'flex');
+            }
+        });
 
-        })
-        /********** * Our-Blog Down Button End * **********/
-        /************** * Other Functions Blocks End * **************/
+    });
+    // $(".our-blog__more").click(function() {
+    //     $(".our-blog__card-none").slideToggle("slow", function() {
+    //         $(".our-blog__card-none").toggleClass('our-blog__card-hidden');
+    //     });
+    //
+    /********** * Our-Blog Down Button End * **********/
+    /************** * Other Functions Blocks End * **************/
 
     /************** * Sliders Block * **************/
     /********** * document-block * **********/
@@ -332,19 +342,13 @@ $(document).ready(function() {
         });
 
     }
-    // priceCalck();
     $(".pay-parts__promo-block").on('click', getPrice);
-
 
     calcSum();
 
     /********** * calculator end * **********/
 
     /********** * send pay-parts * **********/
-    $('.noUi-handle').on('change', function(e) {
-        console.log(e);
-    });
-
     $('#pay-parts__btn').on('click', (e) => {
         e.preventDefault();
         let totaPrice = parseInt($(".pay-parts__promo-block_active").attr("data-sum"));
@@ -367,7 +371,6 @@ $(document).ready(function() {
         });
     });
     /********** * send pay-parts end * **********/
-
 
     /********** * send form * **********/
     let price = $("input[name=price]");

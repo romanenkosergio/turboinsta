@@ -24,6 +24,7 @@
 						<p>Количество оплат</p>
 						<div  class="range" name="calc-range" id="range"></div>
 					</div>
+
 			</div>
 			<!-- /.pay-parts__block -->
 			<div class="pay-parts__total">
@@ -33,6 +34,12 @@
 			</div>
 			<!-- /.pay-parts__total -->
 		</div>
+		<div class="pay-parts__total pay-parts__total_tablet">
+				<h5>Сумма ежемесячного платежа:</h5>
+				<div class="pay-parts__total-sum"><span id="totalSum">3169</span>&#8372;</div>
+				<!-- /.pay-parts__total-sum -->
+			</div>
+			<!-- /.pay-parts__total -->
 		<!-- /.pay-parts__content -->
 		<button class="pay-parts__btn btn" type="submit" id="pay-parts__btn">Оплатить</button> <!-- /.pay-parts__btn -->
 </div>
