@@ -88,7 +88,7 @@
 					$note['element_id'] = $contactId;
 					$note['element_type'] = \AmoCRM\Models\Note::TYPE_CONTACT; // 1 - contact, 2 - lead
 					$note['note_type'] = \AmoCRM\Models\Note::COMMON; // @see https://developers.amocrm.ru/rest_api/notes_type.php
-					$note['text'] = "Сообщение Клиента:" + $message;
+					// $note['text'] = "Сообщение Клиента:" + $message;
 					$noteId = $note->apiAdd();
 				}
 				if( count($contacts) > 0){
@@ -131,7 +131,9 @@
 			}
 
 			$body .= "\nНомер телефона: " . $phone;
-			$body .= "\nСообщение: " . $message;
+			if($message){
+				$body .= "\nСообщение: " . $message;
+				}
 			mail($emailTo, $subject, $body, $headers);
 
 			// Отправка заявки в телеграм
@@ -139,7 +141,7 @@
 			if($message){
 			$telegram_text .= "*Сообщение*: " .$message;
 			}
-			include "../send/telegram.php";
+			include "send/telegram.php";
 		}
 
 
