@@ -10,7 +10,7 @@ $name = $query['name'];
 $price = $query['price'];
 $part = $query['part'];
 
-$host=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
+// $host=$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'];
 
 $ProductsList = array(
     array('name' => $name,
@@ -18,6 +18,8 @@ $ProductsList = array(
         'price' => $price)
 );
 
+$_SESSION['StoreId'] =  $params['StoreId'];   //Идентификатор магазина
+$_SESSION['Password'] = $params['Password'];  //Пароль вашего магазина
 
 $options = array(
     // 'ResponseUrl' => $host.'/response.php',          //URL, на который Банк отправит результат сделки (НЕ ОБЯЗАТЕЛЬНО)
@@ -26,12 +28,12 @@ $options = array(
     'Prefix' => '',                                  //параметр не обязательный если Prefix указан с пустотой или не указа вовсе префикс будет ORDER
     'OrderID' => '',                                 //если OrderID задан с пустотой или не укан вовсе OrderID сгенерится автоматически
     'merchantType' => 'II',                          //II - Мгновенная рассрочка; PP - Оплата частями
-    'Currency' => '980',                                //можна указать другую валюту 980 – Украинская гривна; 840 – Доллар США; 643 – Российский рубль. Значения в соответствии с ISO
-    'ProductsList' => $ProductsList                 //Список продуктов, каждый продукт содержит поля: name - Наименование товара price - Цена за еденицу товара (Пример: 100.00) count - Количество товаров данного вида
-    // 'recipientId' => ''                              //Идентификатор получателя, по умолчанию берется основной получатель. Установка основного получателя происходит в профиле магазина.
+    'Currency' => '',                                //можна указать другую валюту 980 – Украинская гривна; 840 – Доллар США; 643 – Российский рубль. Значения в соответствии с ISO
+    'ProductsList' => $ProductsList,                 //Список продуктов, каждый продукт содержит поля: name - Наименование товара price - Цена за еденицу товара (Пример: 100.00) count - Количество товаров данного вида
+    'recipientId' => '3361D1D188A64E7AAC9E'                              //Идентификатор получателя, по умолчанию берется основной получатель. Установка основного получателя происходит в профиле магазина.
 );
 
-$pp = new PayParts($params['StoreId'], $params['Password']);
+$pp = new PayParts($_SESSION['StoreId'], $_SESSION['Password']);
 
 $pp->setOptions($options);
 
@@ -39,7 +41,9 @@ $send = $pp->create('pay');//hold //pay
 
 $_SESSION['OrderID'] = $pp->getLOG()['OrderID'];
 // var_dump($pp->getLOG());
-$form = ('https://payparts2.privatbank.ua/ipp/v2/payment?token='.$send['token']);
-
+$form = ('https://payparts2.privatbank.ua/ipp/v2/payment?token=' . $send['token']);
+// header('Location: https://payparts2.privatbank.ua/ipp/v2/payment?token=' . $send['token']);
+// echo $form;
 setcookie("url", $form);
+
 ?>

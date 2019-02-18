@@ -368,7 +368,8 @@ $(document).ready(function() {
         $.post("payParts.php", { query: query }, function(data) {
             let url = $.cookie('url');
             // console.log(url);
-            window.location.href = url;
+            // window.location.href = url;
+            window.open(url, '_blank');
         });
     });
     /********** * send pay-parts end * **********/

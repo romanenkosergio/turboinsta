@@ -19,7 +19,7 @@
 	$phone = preg_replace('![^0-9]+!','',$phone);
 
 
-	if (!preg_match ('#((https?|ftp)://(\S*?\.\S*?))([\s)\[\]{},;"\':<]|\.\s|$)#i', $message)) {
+	if ($phone) {
 		try {
 			// Создание клиента
 			$subdomain = 'turboinsta';            // Поддомен в амо срм
@@ -119,27 +119,29 @@
 		if($theme){
 			$theme = $theme;
 		}
+		if($phone){
+			$subject = "Order from turboinsta.com.ua. ".$theme;
 
-		$subject = "Order from turboinsta.com.ua. ".$theme;
+			$headers  = "From: \"TurboInsta\" <info@turboinsta.com.ua>\r\n";
 
-		$headers  = "From: \"TurboInsta\" <info@turboinsta.com.ua>\r\n";
+			$headers .= "X-Mailer: PHPMail Tool\r\n";
 
-		$headers .= "X-Mailer: PHPMail Tool\r\n";
+			if($_POST['name']){
+			$body  = "Имя: " . $_POST['name'];
+			}
 
-		if($_POST['name']){
-		$body  = "Имя: " . $_POST['name'];
+			$body .= "\nНомер телефона: " . $phone;
+			$body .= "\nСообщение: " . $message;
+			mail($emailTo, $subject, $body, $headers);
+
+			// Отправка заявки в телеграм
+			$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$phone."\r\n";
+			if($message){
+			$telegram_text .= "*Сообщение*: " .$message;
+			}
+			include "../send/telegram.php";
 		}
 
-		$body .= "\nНомер телефона: " . $_POST['phone'];
-		$body .= "\nСообщение: " . $message;
-		mail($emailTo, $subject, $body, $headers);
-
-		// Отправка заявки в телеграм
-		$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$_POST['phone']."\r\n";
-		if($message){
-		$telegram_text .= "*Сообщение*: " .$message;
-		}
-		include "telegram.php";
 
 		$timetable = array(
 			1 => array('08:30', '19:00'),

@@ -48,7 +48,7 @@ session_start();
 			'order_id'      => $Nzakaz,
 			'language'		=> 'ru',
 			'type'			=> 'pay',
-			'result_url'	=> 'https://turboinsta.com.ua/php/success_payment.php'
+			'result_url'	=> 'https://turboinsta.com.ua/pay/liqpay/success_payment.php'
 			// 'sandbox'		=> 1
 	));
 	echo $html;

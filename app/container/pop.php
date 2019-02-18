@@ -30,6 +30,7 @@
 					<option value="TURBO 3 месяца" data-price="5 990">TURBO 3 месяца</option>
 					<option value="TURBO 2 месяца" data-price="4 700">TURBO 2 месяца</option>
 					<option value="TURBO 1 месяц" data-price="3 000">TURBO 1 месяц</option>
+					<!-- <option value="Test" data-price="1">Test</option> -->
 					<option value="TARGET" data-price="2 700">TARGET</option>
 					<option value="Продвижение на 3 месяца" data-price="2 500">Продвижение на 3 месяца</option>
 					<option value="Продвижение на 1 месяц" data-price="1 200">Продвижение на 1 месяц</option>

@@ -15,7 +15,7 @@ if ($name) {
     mail("info@turboinsta.com.ua", $header, $mess, "From: Turboinsta.com.ua <info@turboinsta.com.ua>\nContent-Type: text/html;\n charset=utf-8\nX-Priority: 0");
 
     $telegram_text = "*$header*\r\n\n" . "*Имя*: " . $name . "\r\n" . "*Номер телефона*: " . $phone;
-    include "../telegram.php";
+    include "../../send/telegram.php";
 }
 ?>
 <!DOCTYPE html>
@@ -23,12 +23,12 @@ if ($name) {
 <head>
 		<title>Успешно проведенная оплата</title>
 		 <!-- Favicon -->
-		 <link rel="stylesheet" href="../css/main.min.css">
-		<link rel="apple-touch-icon" sizes="114x114" href="../img/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/fav/favicon-16x16.png">
-    <link rel="manifest" href="../img/fav/manifest.json">
-		<link rel="mask-icon" href="../img/fav/safari-pinned-tab.svg" color="#31004a">
+		 <link rel="stylesheet" href="../../css/main.min.css">
+		<link rel="apple-touch-icon" sizes="114x114" href="../../img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/fav/favicon-16x16.png">
+    <link rel="manifest" href="../../img/fav/manifest.json">
+		<link rel="mask-icon" href="../../img/fav/safari-pinned-tab.svg" color="#31004a">
 		<script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -175,7 +175,7 @@ if ($name) {
 					<div class="row d-flex flex-column justify-content-center">
 
 						<!-- /.h2 -->
-						<a class="nazad" href="../index.html"
+						<a class="nazad" href="../../index.php"
 							style="text-decoration: none; border-bottom: 1px dotted; text-align: center">Вернуться
 							назад
 						</a>
@@ -186,26 +186,26 @@ if ($name) {
 				<div class="step-two__action">
 					<div class="row flex-xl-row flex-column justify-content-center">
 					<div class="step-two__sale_main">
-						<img data-src="../img/step-two/sale.svg" alt="Акция" class="lazy">
+						<img data-src="../../img/step-two/sale.svg" alt="Акция" class="lazy">
 						<p><span>АКЦИЯ!!!</span> <br>продвигайте больше - платите меньше</p>
 					</div>
 					<div class="step-two__sale_block">
 						<div class="step-two__sale_action">
-							<img data-src="../img/step-two/10.svg" alt="" class="lazy">
+							<img data-src="../../img/step-two/10.svg" alt="" class="lazy">
 							<p>
 								При покупке продвижения<br> 2-х аккаунтов
 							</p>
 						</div>
 						<!-- /.step-two__sale_action -->
 						<div class="step-two__sale_action">
-							<img data-src="../img/step-two/15.svg" alt="" class="lazy">
+							<img data-src="../../img/step-two/15.svg" alt="" class="lazy">
 							<p>
 								При покупке продвижения<br> 3-х аккаунтов
 							</p>
 						</div>
 						<!-- /.step-two__sale_action -->
 						<div class="step-two__sale_action">
-							<img data-src="../img/step-two/20.svg" alt="" class="lazy">
+							<img data-src="../../img/step-two/20.svg" alt="" class="lazy">
 							<p>
 								При покупке продвижения<br> 4-х и более аккаунтов
 							</p>
@@ -221,6 +221,6 @@ if ($name) {
 		<!-- /.step-one__block -->
 </div>
 
-<script src="../js/index.min.js"></script>
+<script src="../../js/index.min.js"></script>
 </body>
 </html>
