@@ -29,14 +29,14 @@
 			<!-- /.pay-parts__block -->
 			<div class="pay-parts__total">
 				<h5>Сумма ежемесячного платежа:</h5>
-				<div class="pay-parts__total-sum"><span id="totalSum">3169</span>&#8372;</div>
+				<div class="pay-parts__total-sum"><span id="totalSum">3169</span><sub>грн<sub></div>
 				<!-- /.pay-parts__total-sum -->
 			</div>
 			<!-- /.pay-parts__total -->
 		</div>
 		<div class="pay-parts__total pay-parts__total_tablet">
 				<h5>Сумма ежемесячного платежа:</h5>
-				<div class="pay-parts__total-sum"><span id="totalSum">3169</span>&#8372;</div>
+				<div class="pay-parts__total-sum"><span id="totalSum">3169</span><sub>грн<sub></div>
 				<!-- /.pay-parts__total-sum -->
 			</div>
 			<!-- /.pay-parts__total -->

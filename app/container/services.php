@@ -34,7 +34,7 @@
                         </li>
                     </ul>
                     <!-- /.services__list -->
-                    <p class="services__price">1 200&#8372;</p>
+                    <p class="services__price">1 200<sub>грн<sub></p>
                     <a href="" class="services__btn btn" pop="#pop-callback" pop-title="Продвижение на 1 месяц" pop-price="1 200" pop-btn="Узнать подробнее" link-ga="ga('send', 'event', 'Старт 1 Месяц', 'Нажатие кнопки подробнее');">Подробнее</a>
                     <!-- /.services__btn -->
                 </div>
@@ -65,7 +65,7 @@
                         </li>
                     </ul>
                     <!-- /.services__list -->
-                    <p class="services__price">2 500&#8372;</p>
+                    <p class="services__price">2 500<sub>грн<sub></p>
                     <a href="" class="services__btn btn" pop="#pop-callback" pop-title="Продвижение на 3 месяца" pop-price="2 500" pop-btn="Узнать подробнее" link-ga="ga( 'send', 'event', 'Про 3 Месяца', 'Нажатие кнопки подробнее');">Подробнее</a>
                     <!-- /.services__btn -->
                 </div>
@@ -92,7 +92,7 @@
                             Постинг согласно графику конттент-плана
                         </li>
                     </ul>
-                    <p class="services__price"><sub>от</sub> 2 000&#8372;/<sub>мес</sub></p>
+                    <p class="services__price"><sub>от</sub> 2 000<sub>грн/мес</sub></p>
                     <a href="" class="services__btn btn" pop="#pop-callback" pop-title="Ведение аккаунта" pop-btn="Узнать подробнее" link-ga="ga( 'send', 'event', 'Ведение аккаунта', 'Нажатие кнопки Подробнее');">Подробнее</a>
                     <!-- /.services__btn -->
                 </div>
@@ -108,7 +108,7 @@
                         <li>Настройка и запуск Telegram-бота на сайт клиента для приема заявок</li>
                     </ul>
                     <!-- /.services__list -->
-                    <p class="services__price"><sub>от</sub>600&#8372;</p>
+                    <p class="services__price"><sub>от</sub>600<sub>грн<sub></p>
                     <a href="" class="services__btn btn" pop="#pop-callback" pop-title="Форма для приема заявок" pop-btn="Узнать подробнее" link-ga="ga( 'send', 'event', 'Создание форм для заявок', 'Нажатие кнопки подробнее');">Подробнее</a>
                     <!-- /.services__btn -->
                 </div>

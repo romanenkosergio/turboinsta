@@ -20,14 +20,14 @@
                             <div class="offer__blocks">
                                 <div class="offer__block">
                                     <img data-src="img/step-one/offer/target.svg" alt="" class="offer__img lazy" width="120" height="139">
-                                    <p class="offer__text">Профессиональная настройка таргетированной рекламы
+                                    <p class="offer__text">Профессиональная настройка рекламы в Instagram и Facebook
                                     </p>
                                     <!-- /.offer__text -->
                                 </div>
                                 <!-- /.offer__block -->
                                 <div class="offer__block">
                                     <img data-src="img/step-one/offer/instagram.svg" alt="" class="offer__img offer__img_inst lazy" width="137" height="147">
-                                    <p class="offer__text">Автоматизированное продвижение в Instagram
+                                    <p class="offer__text">Автоматизированное привлечение подписчиков в Instagram
                                     </p>
                                     <!-- /.offer__text -->
                                 </div>
@@ -52,7 +52,7 @@
                             <div class="offer__price-block">
                                 <p class="offer__price-block_text">
                                     <span class="offer__price-block_after">всего за</span>
-                                    <span class="offer__price-block_price">1 995&#8372;</span>
+                                    <span class="offer__price-block_price">1 995<sub>грн</sub></span>
                                     <span class="offer__price-block_before">в месяц</span>
                                 </p>
                                 <!-- /.offer__price-block_text -->

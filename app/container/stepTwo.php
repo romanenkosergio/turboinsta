@@ -78,7 +78,7 @@
                     <!-- /.promo__advantages -->
                     <div class="promo__price-block justify-content-between align-items-center">
                         <div class="promo__price promo__price_left">
-                            5 990&#8372;
+                            5 990<sub>грн<sub>
                         </div>
                         <!-- /.promo__price -->
                         <!-- <a href="#" class="promo__btn promo__btn_top" pop="#pop-pay" pop-title="TURBO 3 месяца" pop-price="5 990" pop-btn="Оплатить" link-ga="ga('send', 'event', 'Turbo 3 месяца', 'Нажатие кнопки Подробнее');">Оплатить</a> -->
@@ -130,7 +130,7 @@
                         <a href="" class="promo__btn promo__btn_top" pop="#pop-callback" pop-title="TURBO 2 месяца" pop-price="4 700" pop-btn="Узнать подробнее" link-ga="ga('send', 'event', 'Turbo 2 Месяца', 'Нажатие кнопки Подробнее');">Подробнее</a>
                         <!-- /.promo__btn -->
                         <div class="promo__price promo__price_right">
-                            4 700&#8372;
+                            4 700<sub>грн<sub>
                         </div>
                         <!-- /.promo__price -->
                     </div>
@@ -178,7 +178,7 @@
                     <!-- /.promo__advantages -->
                     <div class="promo__price-block align-items-center justify-content-between">
                         <div class="promo__price promo__price_left">
-                            3 000&#8372;
+                            3 000<sub>грн<sub>
                         </div>
                         <!-- /.promo__price -->
                         <!-- <a href="#" class="promo__btn promo__btn_bot" pop="#pop-pay" pop-title="TURBO 1 месяц" pop-price="3 000" pop-btn="Оплатить" link-ga="ga('send', 'event', 'Turbo 1 Месяц', 'Нажатие кнопки Подробнее');">Оплатить</a> -->
@@ -235,7 +235,7 @@
 
                         <a href="" class="promo__btn promo__btn_bot" pop="#pop-callback" pop-title="TARGET" pop-price="2 700" pop-btn="Узнать подробнее" link-ga="ga('send', 'event', 'Target', 'Нажатие кнопки Подробнее');">Подробнее</a>
                         <div class="promo__price promo__price_right">
-                            2 700&#8372;
+                            2 700<sub>грн<sub>
                         </div>
                         <!-- /.promo__price -->
                     </div>

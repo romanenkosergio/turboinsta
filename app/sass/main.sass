@@ -20,8 +20,8 @@ a
 a,a:hover, button, button:hover
 	text-decoration: none
 	color: $white
-
-
+sub
+	font-size: 0.5em
 button
 	outline: none
 	cursor: pointer
@@ -593,6 +593,8 @@ nav
 		width: 400px
 		border-radius: 40px
 		padding: 20px 40px
+		height: 100%
+		min-height: 597px
 		display: flex
 		flex-direction: column
 		align-items: center
@@ -613,7 +615,7 @@ nav
 		align-items: center
 		justify-content: center
 		line-height: normal
-		height: auto
+		// height: auto
 		p
 			font-size: 2.8rem
 			font-weight: 600
@@ -1572,7 +1574,9 @@ nav
 		font-weight: 400
 		margin-top: 7px
 	&__cards
-		margin-top: 50px
+		margin: 50px auto 0
+		// display: flex
+		// flex-direction: column
 	&__card
 		width: 100%
 		height: fit-content
@@ -1606,10 +1610,12 @@ nav
 		width: 480px
 		height: 270px
 		border-radius: 49px
+		float: left
+		margin: 0 30px 30px 0
 	&__content
 		height: auto
 		max-height: 100%
-		margin-left: 50px
+
 		padding-right: 50px
 		text-align: left
 		&-name
@@ -1634,6 +1640,7 @@ nav
 			&_full
 				height: auto
 				transition: .6s ease all
+				// overflow: visible
 		&-img
 			width: 54px
 			height: 54px
