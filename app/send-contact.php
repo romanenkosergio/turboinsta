@@ -11,15 +11,16 @@
 <?php
 
 	require __DIR__ . '/vendor/autoload.php';
+	mb_internal_encoding('UTF-8');
 	// include_once __DIR__ . '/unsorted/accept.php';
 	$theme = $_POST['theme'];
 	$phone = $_POST['phone'];
 	$message = $_POST['msg'];
 	$price = $_POST['price'];
 	$phone = preg_replace('![^0-9]+!','',$phone);
+	$siteName = "Turbotarget";
 
 
-	if ($phone) {
 		try {
 			// Создание клиента
 			$subdomain = 'turboinsta';            // Поддомен в амо срм
@@ -113,17 +114,19 @@
 		} catch (\AmoCRM\Exception $e) {
 			printf('Error (%d): %s' . PHP_EOL, $e->getCode(), $e->getMessage());
 		}
-		$subject = 'Заявка Turboinsta';
+
 		$emailTo = "turboinsta.com.ua@gmail.com, turboinsta@mail.ua, info@turboinsta.com.ua";
 
 		if($theme){
 			$theme = $theme;
 		}
 		if($phone){
-			$subject = "Order from turboinsta.com.ua. ".$theme;
+			$subject = 'Заявка с сайта: ' . $siteName;
+			$subject = mb_encode_mimeheader($subject, "UTF-8", "Q") . "\r\n";
+
+			$subjectTg = 'Заявка с сайта: ' . $siteName;
 
 			$headers  = "From: \"TurboInsta\" <info@turboinsta.com.ua>\r\n";
-
 			$headers .= "X-Mailer: PHPMail Tool\r\n";
 
 			if($_POST['name']){
@@ -137,7 +140,7 @@
 			mail($emailTo, $subject, $body, $headers);
 
 			// Отправка заявки в телеграм
-			$telegram_text = "*$theme*\r\n\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$phone."\r\n";
+			$telegram_text = "*$subjectTg*\r\n\n"."*Тема*: " . $theme ."\r\n"."*Имя*: " . $_POST['name']."\r\n"."*Номер телефона*: " .$phone."\r\n";
 			if($message){
 			$telegram_text .= "*Сообщение*: " .$message;
 			}
@@ -179,12 +182,10 @@
 
 		if ($isNeedSms) {
 			include "smsc_api.php";
-			list($sms_id, $sms_cnt, $cost, $balance) = send_sms($phone, "Благодарим Вас за оставленную заявку на нашем сайте: turboinsta.com.ua. В рабочее время наш менеджер свяжется с Вами и проведет консультацию.",  0);
+			list($sms_id, $sms_cnt, $cost, $balance) = send_sms($phone, "Благодарим Вас за оставленную заявку на нашем сайте: turbotarget.com.ua. В рабочее время наш менеджер свяжется с Вами и проведет консультацию.",  0);
 		}
 
-	} else {
-		die('Спам фильтр обнаружил ссылку, введите повторные данные');
-	}
+
 
 	// echo '<pre>';
 	// print_r($phone);
@@ -232,9 +233,9 @@
 	}
 	#step-one.step-one{
 		background: -webkit-gradient(linear, left top, right top, from(#4776E6), to(#8E54E9));
-    background: -webkit-linear-gradient(left, #4776E6 0, #8E54E9 100%);
-    background: -o-linear-gradient(left, #4776E6 0, #8E54E9 100%);
-    background: linear-gradient(90deg, #4776E6 0, #8E54E9 100%);
+    background: -webkit-linear-gradient(to top, #4f32b3 0%, #884ec6 100%);
+    background: -o-linear-gradient(to top, #4f32b3 0%, #884ec6 100%);
+    background: linear-gradient(to top, #4f32b3 0%, #884ec6 100%);
 		z-index: 3;
 	}
 	.step-one__advantages{
@@ -276,8 +277,8 @@
                             <div class="header-logo-img d-inline-flex">
                                 <img src="img/logo.svg" alt="">
                             </div>
-                            <p class="header__logo-about">Эффективное продвижение
-                                <br> Online
+                            <p class="header__logo-about">Профессиональная настройка
+                                <br> таргетированной рекламы
                             </p>
                         </a>
                     </div>

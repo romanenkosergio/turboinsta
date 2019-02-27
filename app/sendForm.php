@@ -30,6 +30,7 @@ $formBudget = $_POST['formBudget'];
 
 $ageForm = implode(",", $formAge);
 $formPhone = preg_replace('![^0-9]+!', '', $formPhone);
+$siteName = "Turbotarget";
 try {
 
     // Создание клиента
@@ -352,7 +353,10 @@ try {
 } catch (\AmoCRM\Exception $e) {
     printf('Error (%d): %s' . PHP_EOL, $e->getCode(), $e->getMessage());
 }
-$subject = 'Форма с сайта';
+$subject = 'Форма с сайта: '. $siteName;
+$subject = mb_encode_mimeheader($subject, "UTF-8", "Q") . "\r\n";
+
+$subjectTg = 'Форма с сайта: ' . $siteName;
 $emailTo = "turboinsta.com.ua@gmail.com, turboinsta@mail.ua, info@turboinsta.com.ua";
 $headers = "From: \"TurboInsta\" <info@turboinsta.com.ua>\r\n";
 $headers .= "X-Mailer: PHPMail Tool\r\n";
@@ -379,7 +383,7 @@ $body .= "\nРекламный бюджет: " . $formBudget;
 
 mail($emailTo, $subject, $body, $headers);
 // Отправка заявки в телеграм
-$telegram_text = "*$subject*\r\n\n" . "*Имя*: " . $formName . "\r\n" . "*Номер телефона*: " . $formPhone;
+$telegram_text = "*$subjectTg*\r\n\n" . "*Имя*: " . $formName . "\r\n" . "*Номер телефона*: " . $formPhone;
 include "send/telegram.php";
 
 $timetable = array(
@@ -528,8 +532,8 @@ if ($isNeedSms) {
 								<div class="header-logo-img d-inline-flex">
 									<img src="img/logo.svg" alt="">
 								</div>
-								<p class="header__logo-about">Эффективное продвижение
-									<br> Online
+								<p class="header__logo-about">Профессиональная настройка
+                                <br> таргетированной рекламы
 								</p>
 							</a>
 						</div>

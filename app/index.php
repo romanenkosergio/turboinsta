@@ -9,9 +9,9 @@ session_start();
     <!-- /.step-one -->
 		<?include("container/stepTwo.php");?>
     <!-- /.step-two__sale -->
-		<?include("container/services.php");?>
+
     <!-- /.services -->
-    <?include("container/business.php");?>
+ 		<?include("container/business.php");?>
     <!-- /.business -->
     <?include("container/stepThree.php");?>
     <!-- /.step-three -->

@@ -25,7 +25,7 @@
                     <!-- /.our-team__card-bg -->
                     <p class="our-team__card-name">Илья</p>
                     <!-- /.our-team__card-name -->
-                    <p class="our-team__card-proffesion">Руководитель TurboInsta</p>
+                    <p class="our-team__card-proffesion">Руководитель TurboTarget</p>
                     <!-- /.our-team__card-proffesion -->
                     <p class="our-team__card-text">Наша задача - предоставить качественные услуги по продвижению бизнеса клиентов в Online! Со своей стороны, я - как руководитель, стараюсь контролировать все процессы нашей работы и если вдруг, кто-то из клиентов остался чем-то не доволен
                         <span class="our-team__card-text_hidden">

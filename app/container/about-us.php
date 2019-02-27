@@ -26,14 +26,14 @@
                             </div>
                             <!-- /.review__block-bg -->
                             <div class="review__block-content">
-                                <p class="review__block-content-title">Turboinsta</p>
+                                <p class="review__block-content-title">Turbotarget</p>
                                 <!-- /.review__block-content-title -->
                                 <p class="review__block-content-text">Инстаграмм на сегодняшний день является самой быстрорастущей и динамично развивающейся соц. сетью...
                                 </p>
                                 <!-- /.review__block-content-text -->
                             </div>
                             <div class="review__block-author">
-                                <p>Илья Могильдя - Директор Turboinsta</p>
+                                <p>Илья Могильдя - Директор Turbotarget</p>
                             </div>
                         </a>
                         <a class="review__block" href="javascript:void(0)" pop='#video-pop' pop-video="https://www.youtube.com/embed/rlxr0CJjtNQ">
@@ -46,7 +46,7 @@
                             <div class="review__block-content">
                                 <p class="review__block-content-title">Веб-студия Leets</p>
                                 <!-- /.review__block-content-title -->
-                                <p class="review__block-content-text">Компания Turboinsta уже несколько месяцев помогает нам находить новых клиетов в Instagram...
+                                <p class="review__block-content-text">Компания Turbotarget уже несколько месяцев помогает нам находить новых клиетов в Instagram...
                                 </p>
                                 <!-- /.review__block-content-text -->
                             </div>
@@ -65,7 +65,7 @@
                                 <p class="review__block-content-title">Качественная детская обувь</p>
                                 <!-- /.review__block-content-title -->
                                 <p class="review__block-content-text">
-                                    Очень нравится как работает техподдержка Turboinsta. Помогают максимально быстро и всегда информативно...
+                                    Очень нравится как работает техподдержка Turbotarget. Помогают максимально быстро и всегда информативно...
                                 </p>
                                 <!-- /.review__block-content-text -->
                             </div>
@@ -130,7 +130,7 @@
                                 <p class="review__block-content-title">Продажа детской одежды</p>
                                 <!-- /.review__block-content-title -->
                                 <p class="review__block-content-text">
-                                    Ребята из Turboinsta ведут работы сразу по трем моим аккаунтам инстаграм...
+                                    Ребята из Turbotarget ведут работы сразу по трем моим аккаунтам инстаграм...
                                 </p>
                                 <!-- /.review__block-content-text -->
                             </div>

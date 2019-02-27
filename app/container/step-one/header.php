@@ -8,8 +8,8 @@
                             <div class="header-logo-img d-inline-flex">
                                 <img data-src="img/logo.svg" alt="" class="lazy">
                             </div>
-                            <p class="header__logo-about">Эффективное продвижение
-                                <br> Online
+                            <p class="header__logo-about">Профессиональная настройка
+                                <br> таргетированной рекламы
                             </p>
                         </a>
                     </div>
